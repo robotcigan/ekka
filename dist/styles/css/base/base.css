@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 0;
+}
+*:focus {
+  outline: 0;
+}
+html {
+  font-size: 62.5%;
+  width: 100%;
+}
+body {
+  color: #111;
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  line-height: 1.6;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+img {
+  max-width: 100%;
+}
+.grid--container {
+  max-width: 1120px;
+}
+.link {
+  color: #169bd4;
+  display: inline-block;
+  border-bottom: 1px solid rgba(22,155,212,0.3);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.link:hover {
+  border-color: rgba(22,155,212,0.5);
+  color: #148bbf;
+}
+.text-center {
+  text-align: center;
+}
+.ruble:before {
+  content: '₽';
+  font-family: 'Segoe UI', 'Arial', 'Helvetica';
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
+.btn {
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+  transition: background-color 0.2s;
+}
+.btn--primary {
+  background-color: #169bd4;
+  color: #fff;
+}
+.btn--primary:hover {
+  background-color: #148fc3;
+}
+.btn--secondary {
+  background-color: #ffd35e;
+  color: #fff;
+}
+.btn--secondary:hover {
+  background-color: $secondary- 8%;
+}
+.btn--dashed {
+  border: 1px dashed #ccc;
+}
+.btn--dashed-active {
+  background-color: #eee;
+  border: 1px solid #eee;
+}

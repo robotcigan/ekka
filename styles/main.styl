@@ -1,0 +1,140 @@
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'base/base'
+@import 'base/typography'
+
+// Pages
+@import 'pages/index'
+
+.grid--container
+  max-width 1216px
+
+.row
+  margin-left -16px
+  margin-right -16px
+
+.background
+  background #fafafa
+
+.main-header
+  background-color rgba($main, .7)
+  left 0
+  position fixed
+  top 0
+  width 100%
+  z-index 100
+  &__container
+    align-items center
+    justify-content space-between
+    display flex
+    height 7.2rem
+  &__logo
+    width 20%
+  &__phone
+    color #fff
+    width 10%
+
+.logo
+  background url('../../img/logo.png') no-repeat
+  background-size contain
+  height 5rem
+  width 23rem
+
+
+.header-nav
+  width 70%
+  text-align center
+  li
+    display inline-block
+    margin 0 .8rem
+    a
+      color #fff
+      font-size 1.1rem
+      font-weight 700
+      letter-spacing 1px
+      text-decoration none
+      text-transform uppercase
+
+
+
+
+
+
+.hotel
+  &__img
+    margin-bottom 1rem
+    img
+      width 100%
+  &__header
+    clearfix()
+    &_left
+      float left
+      width 75%
+    &_right
+      float right
+  &__title
+    line-height 1.2
+    font-size 2.2rem
+    font-weight 700
+    margin-bottom 1rem
+  // &__stars
+    // width 20%
+  &__adress
+    color #bbb
+    margin-bottom 1rem
+  &__anons
+    margin-bottom 1rem
+
+.stars
+  .fa
+    color $secondary
+
+
+.map
+  iframe
+    height 40rem
+    width 100%
+
+.main-footer
+  background #fff
+  margin-top 8rem
+  padding-top 8rem
+  &__phone
+    line-height 1
+    margin-bottom 1rem
+    & .code
+      display inline-block
+      font-weight 400
+      font-size 3rem
+    & .phone-number
+      display inline-block
+      font-size 3rem
+      font-weight 700
+  &__header
+    font-weight 700
+    margin-bottom 2rem
+  &__navigation
+    a
+      color $main
+      font-size 1.2rem
+      text-decoration none
+  &__socials
+    line-height 1
+    margin-top -.5rem
+    & .social
+      display inline-block
+      margin-right 1rem
+      .fa
+        color $gray
+        margin-right 1rem
+  
+  &__bottom
+    border-top 1px solid $light-gray
+    margin-top 4rem
+    padding-bottom 1rem
+    padding-top 2.5rem
+
+// .webformula
+//   text-align right
+
+
