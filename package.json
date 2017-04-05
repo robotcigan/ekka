@@ -15,8 +15,10 @@
     "lightbox2": "^2.9.0",
     "masonry-layout": "^4.1.1",
     "normalize-styl": "^4.1.1",
+    "nouislider": "^9.2.0",
     "pug": "^2.0.0-beta11",
     "reflex-grid": "^1.5.0",
+    "select2": "^4.0.3",
     "slick-carousel": "^1.6.0"
   },
   "devDependencies": {

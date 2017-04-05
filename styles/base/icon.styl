@@ -1,0 +1,54 @@
+.icon
+  &-avatar
+    background url('../../img/avatar.png')
+  &-plus
+    &:before
+      content '+'
+      font-family 'Segoe UI', 'Arial', 'Helvetica'
+      font-size 1.4rem
+      margin 0 .2rem
+      text-align center
+
+.icon
+  display inline-block
+  color #999
+  background-size contain
+  background-repeat no-repeat
+  line-height 1
+  vertical-align bottom
+  &:before
+    font-size 2.4rem
+    color #999
+  // &--small
+  //   height 2rem
+  //   width 2em
+  &--big
+    &:before
+      font-size 4rem
+
+.ruble:before
+  content '₽'
+  font-family 'Segoe UI', 'Arial', 'Helvetica'
+  font-size 1.4rem
+  font-weight 400
+  margin-left .5rem
+
+.likes
+  color $light-gray
+  display inline-block
+  margin-bottom 1rem
+  span
+    color $main
+    margin-right 1rem
+  .fa
+    cursor pointer
+    margin 0
+    margin-right 2px
+    &:hover,
+    &.active
+      color $red
+
+
+.stars
+  .fa
+    color $secondary

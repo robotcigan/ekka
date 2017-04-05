@@ -1,0 +1,78 @@
+.card
+  border 1px solid $light-gray
+  cursor pointer
+  display flex
+  justify-content space-between
+  margin-bottom 2rem
+  transition all .4s
+  &:hover
+    box-shadow 0 12px 30px rgba($gray, .3)
+    border-color $gray
+  &__img
+    position relative
+    img
+      display block
+  &__plate
+    color #fff
+    border-radius $radius
+    font-weight 800
+    position absolute
+    padding .5rem 1rem
+    top 1rem
+    .ruble:before
+      font-weight 700
+    &--type-1
+      background-color $green
+      left 1rem
+    &--type-2
+      background-color $red
+      right 1rem
+  &__middle
+    align-content space-between
+    display flex
+    flex-basis 55%
+    flex-wrap wrap
+    padding 2rem
+  &__right
+    align-content space-between
+    display flex
+    flex-basis 15rem
+    flex-wrap wrap
+    justify-content flex-end
+    padding 2rem
+    text-align right
+  &__title
+    font-size 2.2rem
+    font-weight 700
+    line-height 1.1
+    margin-bottom 1rem
+  &__adress
+    color $gray
+    margin-bottom 1rem
+    .fa
+      margin-right .4rem
+  &__services
+    i:not(:last-child)
+      margin-right 2rem
+  &__rating
+    &_title
+      color $primary
+      font-size 1.1rem
+    &_number
+      color $primary
+      font-size 2.4rem
+      font-weight 700
+      line-height 1
+  &__price
+    font-size 3rem
+    font-weight 700
+    line-height 1
+    .ruble:before
+      font-size 3rem
+      font-weight 600
+  &__sale
+    color $gray
+    text-decoration line-through
+  &__guests
+    color $gray
+    font-size 1.2rem

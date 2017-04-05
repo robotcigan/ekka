@@ -1,0 +1,55 @@
+extends layout.pug
+
+block content
+
+  .empty
+
+  .grid.grid--container
+    .row
+      .col.col--lg-2
+        h3 Фильтры
+        form
+          label.form-label Категории
+          select
+            option Санатории
+            option Отели
+      .col.col--lg-10
+        - for (var i = 0; i < 3; i++)
+          .card
+            .card__img
+              .card__plate.card__plate--type-1 Акция
+              .card__plate.card__plate--type-2
+                span - 2 500
+                span.ruble
+              img(src="img/card-1.jpg", alt="")
+            .card__middle
+              .card__middle_top
+                .title-stars
+                  .card__title Свиссотель Сочи Камелия или отель с очень длинным названием
+                  .stars.card__stars
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                .card__adress
+                  i.fa.fa-map-marker
+                  span Сочи, Курорный проспект, 89
+                .card__anons Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют определения и уточнения модели развития. Идейные соображения высшего порядка&hellip;
+              .card__services
+                i.icon.icon--big.flaticon-bathtub
+                i.icon.icon--big.flaticon-bed
+                i.icon.icon--big.flaticon-cocktail
+                i.icon.icon--big.flaticon-air-conditioner
+                i.icon.icon--big.flaticon-television
+            .card__right
+              .card__rating
+                .card__rating_title оценка
+                .card__rating_number 8.7
+              .card__main-info
+                .card__sale 15 500
+                .card__price
+                  span 13 000
+                  span.ruble
+                .card__guests 2 ночи для 1 гостя
+              a(href="").btn.btn--middle.btn--secondary Подробнее

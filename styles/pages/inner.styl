@@ -1,0 +1,177 @@
+.inner-header
+  align-items center
+  background url('../../img/header.jpg') 50% no-repeat
+  background-size cover
+  display flex
+  height 10rem
+  justify-content center
+  margin-bottom 4rem
+  margin-top -3.8rem
+  position relative
+  text-align center
+  .grid
+    position relative
+  h1
+    color #fff
+    line-height 1
+    margin 0
+  .btn--inner
+    position absolute
+    left 0
+    top .2rem
+
+
+.gallery
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  margin-bottom 2rem
+  margin-top 2rem
+  &__img
+    display block
+    float left
+    margin-bottom .8rem
+    width 8.8rem
+    height 8.8rem
+    img
+      width 100%
+
+
+.comment
+  display flex
+  margin-bottom 3rem
+  &-form
+    margin-bottom 5rem
+  &__date
+    display inline-block
+    span
+      margin-right 2rem
+    .fa
+      color $secondary
+      margin-right 1rem
+  &__left
+    margin-right 2rem
+  &__right
+    width 90%
+  &__photo
+    border-radius $radius
+    display inline-block
+    height 7.2rem
+    overflow hidden
+    width 7.2rem
+  &__name
+    font-size 1.8rem
+    font-weight 700
+    margin-bottom 1rem
+  &__textarea
+    margin-bottom 1rem
+
+
+
+h3
+  font-size 2.4rem
+  font-weight 600
+
+.regular-slider
+  margin-left -1rem
+  margin-right -1rem
+  .slide
+    margin 0 1rem
+  img
+    width 100%
+
+
+.slick-prev,
+.slick-next
+  top 35%
+
+.slick-prev:before,
+.slick-next:before
+  color $gray
+  font-family FontAwesome
+  font-size 2.4rem
+
+.slick-prev:before
+  content '\f104'
+
+.slick-next:before
+  content '\f105'
+
+
+.tabs
+  &__nav
+    margin-bottom 3rem
+    position relative
+    &:after
+      bottom -.7rem
+      border-bottom 1px solid $light-gray
+      content ''
+      left 0
+      position absolute
+      width 100%
+      z-index 0
+    li
+      display inline-block
+      a
+        color #777
+        padding 0 2rem
+        text-decoration none
+        &:hover
+          color $main
+        &.active
+          color $main
+          font-weight 700
+          position relative
+          &:before
+            content ''
+            background-color $secondary
+            bottom -1rem
+            height 2px
+            left 0
+            position absolute
+            width 100%
+            z-index 10
+  &__content
+    display none
+    &--active
+      display block
+
+.accordion
+  &__title
+    display inline-block
+    line-height 1
+    width 25rem
+  &__icon
+    border 1px solid $light-gray
+    border-radius 50%
+    color $primary
+    display inline-block
+    height 2.4rem
+    text-align center
+    transition all .2s
+    width 2.4rem
+    .fa
+      transform translateY(-2px)
+      transition transform .2s
+    .fa:before
+      line-height 2.4rem
+    &:hover,
+    &--active
+      background $primary
+      border-color $primary
+      color #fff
+      cursor pointer
+    &--active
+      .fa
+        transform rotate(180deg) translateX(1px)
+  &__body-unvisible
+    display none
+
+
+.aside-map
+  height 25rem
+  overflow hidden
+  width 100%
+  iframe
+    height 25rem
+    width 100%

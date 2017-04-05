@@ -1,0 +1,23 @@
+block viewed
+  .grid.grid--container
+    section.page-section
+      header.subheader
+        h2 Недавно вы смотрели
+      .hotels.row
+        - for (i = 0; i < 3; i++)
+          .col.col--lg-4.col--md-4
+            .hotel
+              .hotel__img
+                img(src="img/_hotel-1.jpg", alt="")
+              .hotel__header
+                .hotel__header_left
+                  .hotel__title Санаторий «Авангард» или с длинным названием
+                .hotel__header_right
+                  .stars.hotel__stars
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+              .hotel__adress г. Сочи, Курортный проспект, 83
+              .hotel__anons Уютная территория санатория прилегает непосредственно к берегу моря с великолепным
+              a(href="").link Подробнее

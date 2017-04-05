@@ -1,0 +1,75 @@
+.room
+  border 1px solid $light-gray
+  margin-bottom 3rem
+  clearfix()
+  &__img
+    float left
+    display block
+    margin-right 1rem
+    img
+      display block
+  &__parameters
+    display flex
+    flex-wrap wrap
+    height 12rem
+    padding 1rem 2rem
+  &__title
+    max-width 75%
+    a
+      color $main
+      border-bottom 1px solid rgba($gray, .4)
+      font-size 1.8rem
+      font-weight 700
+      line-height 1
+      text-decoration none
+      transition all .2s
+      &:hover
+        color $primary
+        border-bottom 1px solid rgba($primary, .3)
+  &__subtitle
+    font-size 1.2rem
+    margin-bottom 1rem
+  &__parameters__items
+    align-items flex-end
+    display flex
+    justify-content space-between
+    width 100%
+  &__services
+    i
+      line-height 1
+      margin-right 1.5rem
+      &:before
+        font-size 3.2rem
+  select
+    background #e6ebf1
+    color $main
+    border none
+    border-radius $radius
+    font-weight 600
+    padding .2rem 1rem
+    text-align center
+  &__price
+    color $main
+    font-size 2.4rem
+    font-weight 700
+    text-align right
+    .ruble:before
+      font-size 2.4rem
+
+.hotel-header
+  margin 2rem 0
+  display flex
+  .inner-h1
+    font-size 2.4rem
+    margin 0
+  .stars
+    margin-top .6rem
+    width 9rem
+    .fa
+      float right
+  // .inner-h1
+  //   float left
+  //   max-width 90%
+  // .stars
+  //   float left
+  //   max-width 10%

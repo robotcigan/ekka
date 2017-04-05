@@ -2,9 +2,15 @@
 @import 'helpers/mixins'
 @import 'base/base'
 @import 'base/typography'
+@import 'base/icon'
 
 // Pages
 @import 'pages/index'
+@import 'pages/inner'
+@import 'pages/agencies'
+@import 'pages/hotel'
+@import 'pages/room'
+@import 'pages/search'
 
 .grid--container
   max-width 1216px
@@ -17,12 +23,14 @@
   background #fafafa
 
 .main-header
-  background-color rgba($main, .7)
+  background #fff
   left 0
   position fixed
   top 0
   width 100%
   z-index 100
+  &--scroll
+    box-shadow 0 0 40px rgba($gray, .3)
   &__container
     align-items center
     justify-content space-between
@@ -31,12 +39,15 @@
   &__logo
     width 20%
   &__phone
-    color #fff
+    color $main
+    font-weight 600
+    text-align right
     width 10%
 
 .logo
-  background url('../../img/logo.png') no-repeat
+  background url('../../img/logo_white.png') no-repeat
   background-size contain
+  display inherit
   height 5rem
   width 23rem
 
@@ -48,16 +59,22 @@
     display inline-block
     margin 0 .8rem
     a
-      color #fff
+      color $main
       font-size 1.1rem
       font-weight 700
-      letter-spacing 1px
+      letter-spacing .5px
       text-decoration none
       text-transform uppercase
 
-
-
-
+.main-header--black
+  background-color rgba($main, .7)
+  li
+    a
+      color #fff
+  & .main-header__phone
+    color #fff
+  .logo
+    background url('../../img/logo.png') no-repeat
 
 
 .hotel
@@ -85,10 +102,6 @@
   &__anons
     margin-bottom 1rem
 
-.stars
-  .fa
-    color $secondary
-
 
 .map
   iframe
@@ -99,6 +112,17 @@
   background #fff
   margin-top 8rem
   padding-top 8rem
+  position relative
+  &:before
+    content ""
+    background url('../../img/svg/wave.svg')
+    display block
+    left 0
+    height 6px
+    position absolute
+    top 0
+    width 100%
+    z-index 10
   &__phone
     line-height 1
     margin-bottom 1rem
@@ -130,11 +154,55 @@
   
   &__bottom
     border-top 1px solid $light-gray
-    margin-top 4rem
+    margin-top 8rem
     padding-bottom 1rem
     padding-top 2.5rem
 
 // .webformula
 //   text-align right
 
+.title-stars
+  display flex
+  .stars
+    text-align right
+    min-width 70px
 
+
+.menu-toggle
+  display none
+  &,
+  &:after,
+  &:before
+    width: 30px
+    height: 2px
+  &
+    position: relative
+    background: $main
+    transition: all 0ms 300ms
+    &--active
+      background: rgba(255, 255, 255, 0) 
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    bottom: 8px
+    background: $main
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+  &:after
+    content: ""
+    position: absolute
+    left: 0
+    top: 8px
+    background: $main
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+  &--active:after
+    top: 0
+    transform: rotate(45deg)
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+  &--active:before
+    bottom: 0
+    transform: rotate(-45deg)
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+@import 'base/adapt'
