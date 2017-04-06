@@ -2,7 +2,7 @@ extends layout.pug
 
 block content
 
-  .background
+  .background.page-section
     main.hero
       .grid.grid--container
         .row
@@ -14,7 +14,7 @@ block content
                   .hero__input
                     input(type="text" value="Сочи, Россия")
                   .hero__input
-                    input(type="date")
+                    input(type="text").datepicker
                   .hero__input
                     input(type="text" value="1 номер, 1 гость")
                   .hero__input

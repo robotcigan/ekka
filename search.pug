@@ -9,12 +9,40 @@ block content
       .col.col--lg-2
         h3 Фильтры
         form
-          label.form-label Категории
-          select
-            option Санатории
-            option Отели
+          .form-group
+            label.form-label Категории
+            select
+              option Санатории
+              option Отели
+          .form-group
+            label.form-label Цены
+            #range-slider
+          .form-group
+            label.form-label Цены
+            #slider
+            #slider-value
+            span.slider-value-text и выше
+          .form-group
+            label.form-label Звездность
+            .stars
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star.disable
+              i.fa.fa-star.disable
+            .stars
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+              i.fa.fa-star
+          .form-group
+            label.form-label Услуги
+            i.icon.flaticon-cocktail
+            i.icon.flaticon-cocktail
+            i.icon.flaticon-cocktail
       .col.col--lg-10
-        - for (var i = 0; i < 3; i++)
+        .card-container
           .card
             .card__img
               .card__plate.card__plate--type-1 Акция
@@ -52,4 +80,156 @@ block content
                   span 13 000
                   span.ruble
                 .card__guests 2 ночи для 1 гостя
-              a(href="").btn.btn--middle.btn--secondary Подробнее
+              a(href="").btn.btn--middle.btn--secondary
+                span Подробнее
+                i.fa.fa-angle-right
+
+          .card__bottom
+            .tabs
+              nav.tabs__nav
+                li: a(href="#").active Номера
+                li: a(href="#") Детали
+                li: a(href="#") Отзывы
+                li: a(href="#") Карта
+              .tabs__content.tabs__content--active
+                .rooms
+                  .accordion
+                    header.accordion__header
+                      h3.accordion__title Стандартный номер
+                      .accordion__icon
+                        i.fa.fa-angle-up
+
+                    .accordion__body-visible
+                      form.room
+                        .room__img
+                          img(src="img/room-2.jpg", alt="")
+                        .room__parameters
+                          .room__title
+                            a(href="") Двухместный номер бизнес-класса с 2 отдельными большими кроватями
+                          .room__parameters__items
+                            .room__services
+                              .room__subtitle Удобства
+                              i.icon.flaticon-laptop
+                              i.icon.flaticon-laptop
+                              i.icon.flaticon-laptop
+                            .room__guests
+                              .room__subtitle Число гостей
+                              i.icon.icon-avatar
+                              i.icon.icon-avatar
+                              i.icon.icon-plus
+                              i.icon.icon--small.icon-avatar
+                            .room__count
+                              .room__subtitle Количество
+                              select
+                                option 1
+                                option 2
+                                option 3
+                            .room__book
+                              .room__price
+                                span 8 700
+                                span.ruble
+                              .btn.btn--primary Забронировать
+
+                    .accordion__body-unvisible
+                      -for(var i = 0; i < 3; i++)
+                        form.room
+                          .room__img
+                            img(src="img/room-2.jpg", alt="")
+                          .room__parameters
+                            .room__title
+                              a(href="") Двухместный номер бизнес-класса с 2 отдельными большими кроватями
+                            .room__parameters__items
+                              .room__services
+                                .room__subtitle Удобства
+                                i.icon.flaticon-laptop
+                                i.icon.flaticon-laptop
+                                i.icon.flaticon-laptop
+                              .room__guests
+                                .room__subtitle Число гостей
+                                i.icon.icon-avatar
+                                i.icon.icon-avatar
+                                i.icon.icon-plus
+                                i.icon.icon--small.icon-avatar
+                              .room__count
+                                .room__subtitle Количество
+                                select
+                                  option 1
+                                  option 2
+                                  option 3
+                              .room__book
+                                .room__price
+                                  span 8 700
+                                  span.ruble
+                                .btn.btn--primary Забронировать
+
+                  .accordion
+                    header.accordion__header
+                      h3.accordion__title Улучшенный номер
+                      .accordion__icon
+                        i.fa.fa-angle-up
+
+                    .accordion__body-visible
+                      form.room
+                        .room__img
+                          img(src="img/room-2.jpg", alt="")
+                        .room__parameters
+                          .room__title
+                            a(href="") Двухместный номер бизнес-класса с 2 отдельными большими кроватями
+                          .room__parameters__items
+                            .room__services
+                              .room__subtitle Удобства
+                              i.icon.flaticon-laptop
+                              i.icon.flaticon-laptop
+                              i.icon.flaticon-laptop
+                            .room__guests
+                              .room__subtitle Число гостей
+                              i.icon.icon-avatar
+                              i.icon.icon-avatar
+                              i.icon.icon-plus
+                              i.icon.icon--small.icon-avatar
+                            .room__count
+                              .room__subtitle Количество
+                              select
+                                option 1
+                                option 2
+                                option 3
+                            .room__book
+                              .room__price
+                                span 8 700
+                                span.ruble
+                              .btn.btn--primary Забронировать
+
+                    .accordion__body-unvisible
+                      -for(var i = 0; i < 2; i++)
+                        form.room
+                          .room__img
+                            img(src="img/room-2.jpg", alt="")
+                          .room__parameters
+                            .room__title
+                              a(href="") Двухместный номер бизнес-класса с 2 отдельными большими кроватями
+                            .room__parameters__items
+                              .room__services
+                                .room__subtitle Удобства
+                                i.icon.flaticon-laptop
+                                i.icon.flaticon-laptop
+                                i.icon.flaticon-laptop
+                              .room__guests
+                                .room__subtitle Число гостей
+                                i.icon.icon-avatar
+                                i.icon.icon-avatar
+                                i.icon.icon-plus
+                                i.icon.icon--small.icon-avatar
+                              .room__count
+                                .room__subtitle Количество
+                                select
+                                  option 1
+                                  option 2
+                                  option 3
+                              .room__book
+                                .room__price
+                                  span 8 700
+                                  span.ruble
+                                .btn.btn--primary Забронировать
+                        - for (var x = 0; x < 4; x++)
+                          .tabs__content
+                            p Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.

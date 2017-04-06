@@ -32,7 +32,23 @@ block content
             .tabs__content
               p Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.
 
-        h2 Доступные номера
+        .row.room-change
+          .col.col--lg-4
+            h2 Доступные номера
+          .col.col--lg-8
+            form.room-change__form
+              input(type="text").datepicker
+              .guest-clicker
+                input(type="text").guest-clicker__input
+                .guest-clicker__modal
+                  .guest-clicker__group
+                    .guest-clicker__label Номера
+                    .guest-clicker__btn -
+                    .guest-clicker__number 1
+                    .guest-clicker__btn +
+              input(type="submit" value="Обновить").btn.btn--secondary
+
+
 
         .rooms
           .accordion

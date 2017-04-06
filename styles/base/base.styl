@@ -92,6 +92,12 @@ body
   padding .5rem 2rem
   transition background-color .2s
   text-decoration none
+  &:hover
+    .fa
+      transform translate(7px, 1px)
+  .fa
+    transition transform .4s
+    transform translate(5px, 1px)
   &--primary
     background-color $primary
     color #fff
@@ -101,7 +107,7 @@ body
     background-color $secondary
     color $main
     &:hover
-      background-color $secondary- 8%
+      background-color $secondary - 15%
   &--gray
     background-color #f6f6f6
   &--dashed
@@ -139,6 +145,57 @@ textarea
 textarea
   padding 1rem
 
-.form-label
+select,
+option
+  cursor pointer
+
+.form-group
+  margin-bottom 4rem
+label
+  display block
+  margin-bottom 1rem
+
+#slider-value
+  color #999
   display inline-block
-  margin-bottom .2rem
+  font-size 1.1rem
+  margin-top 1rem
+.slider-value-text
+  color #999
+  display inline-block
+  font-size 1.1rem
+  font-weight 600
+  margin-left .5rem
+  margin-top 1rem
+
+.guest-clicker
+  position relative
+  &__modal
+    box-shadow $shadow
+    bottom -200%
+    border-radius $radius
+    display block
+    left 0
+    padding 2rem
+    position absolute
+    width 20rem
+  &__label
+    display inline-block
+    margin-right 1rem
+  &__number
+    display inline-block
+    margin 0 .5rem
+  &__btn
+    display inline-block
+    border 1px solid $light-gray
+    border-radius 50%
+    cursor pointer
+    height 2.4rem
+    text-align center
+    transition all .2s
+    width 2.4rem
+    &:hover
+      background $primary
+      border-color $primary
+      color #fff
+  
