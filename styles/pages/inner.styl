@@ -72,12 +72,26 @@
   h2
     line-height 1
   &__form
-    display flex
-    justify-content space-between
     margin-top 3rem
+    .datepicker
+      border-radius $radius 0 0 $radius
+      display block
+      float left
+      margin 0
+      width 35%
+    .guest-clicker__input
+      border-radius 0 $radius $radius 0
+      border-left 0
+      float left
+      margin 0
+      padding-left 1rem
+      width 35%
     input,
     select
       margin 0 1rem
+    .btn
+      display inline-block
+      width initial
 
 
 h3
@@ -116,7 +130,7 @@ h3
     position relative
     &:after
       bottom -.7rem
-      border-bottom 1px solid $light-gray
+      // border-bottom 1px solid $light-gray
       content ''
       left 0
       position absolute
@@ -145,6 +159,8 @@ h3
             z-index 10
   &__content
     display none
+    & > .hotels
+      margin-top 4rem
     &--active
       display block
 
@@ -175,7 +191,7 @@ h3
       cursor pointer
     &--active
       .fa
-        transform rotate(180deg) translateX(1px)
+        transform rotate(180deg) translateX(0px)
   &__body-unvisible
     display none
 

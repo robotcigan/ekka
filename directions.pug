@@ -1,0 +1,49 @@
+extends layout.pug
+
+block content
+  .empty
+
+  .grid.grid--container.page-section
+    h1 Направления
+
+    a(href="").country
+      img(src="img/directions/russia.jpg", alt="")
+      .country__text
+        .country__title Россия
+
+    .row
+      - for(var i = 0; i < 9; i++)
+        .col.col--lg-4.col--md-4
+          a(href="").city
+            img(src="img/directions/1.jpg", alt="")
+            .city__text
+              .city__title Лазаревское
+              .city__objects 211 объектов
+
+
+    - for(var x = 0; x < 3; x++)
+      a(href="").country
+        img(src="img/directions/russia.jpg", alt="")
+        .country__text
+          .country__title Россия
+
+      .row
+        - for(var i = 0; i < 3; i++)
+          .col.col--lg-4.col--md-4
+            a(href="").city
+              img(src="img/directions/1.jpg", alt="")
+              .city__text
+                .city__title Лазаревское
+                .city__objects 211 объектов
+
+
+  include viewed.pug
+
+
+
+
+
+
+
+
+

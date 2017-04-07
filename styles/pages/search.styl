@@ -1,14 +1,20 @@
-.card
+.card-container
   border 1px solid $light-gray
+  transition box-shadow .4s, border-color .5s
+  &:hover
+    box-shadow 0 12px 30px rgba($gray, .3)
+    border-color $gray
+  &--active
+    border-color rgba($main, .7)
+    &:hover
+      border-color rgba($main, .7)
+.card
   cursor pointer
   display flex
   justify-content space-between
   // margin-bottom 2rem
-  transition all .4s
-  &:hover
-    box-shadow 0 12px 30px rgba($gray, .3)
-    border-color $gray
   &__img
+    overflow hidden
     position relative
     img
       display block
@@ -33,6 +39,9 @@
     flex-basis 55%
     flex-wrap wrap
     padding 2rem
+    &_top
+      max-height 15.5rem
+      overflow hidden
   &__right
     align-content space-between
     display flex

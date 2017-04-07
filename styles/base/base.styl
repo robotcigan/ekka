@@ -10,6 +10,7 @@ import '../helpers/variables.styl'
 
 html
   font-size 62.5%
+  max-width 100%
   width 100%
 
 body
@@ -20,6 +21,7 @@ body
   font-weight 400
   font-size 1.4em
   line-height 1.6
+  max-width 100%
   text-size-adjust 100%
   text-rendering optimizeLegibility
   -webkit-font-smoothing antialiased
@@ -74,6 +76,9 @@ body
   display block
   height 8rem
   margin-bottom 3rem
+  &--special
+    margin-bottom 0
+    height 7.2rem
 
 .back
   color $gray
@@ -121,6 +126,10 @@ body
     padding .5rem 1.5rem
     .fa
       margin-right 1rem
+      transform translate(3px, 0)
+    &:hover
+      .fa
+        transform translate(1px, 0)
   &--middle
     font-size 1.6rem
     font-weight 600
@@ -133,6 +142,20 @@ body
     width 100%
     text-align center
 
+
+.relative
+  position relative
+
+.custom-checkbox
+  display none
+  &-label
+    display inline-block
+    cursor pointer
+    margin-right 1rem
+    &--active
+      i:before
+        color $primary
+
 input,
 select,
 textarea
@@ -141,6 +164,7 @@ textarea
   border-radius $radius
   padding .5rem
   width 100%
+  -webkit-appearance none
 
 textarea
   padding 1rem
@@ -171,18 +195,21 @@ label
 .guest-clicker
   position relative
   &__modal
-    box-shadow $shadow
-    bottom -200%
+    bottom -113px
     border-radius $radius
     display block
     left 0
-    padding 2rem
+    padding 1rem 2rem
     position absolute
     width 20rem
+  &__group:not(:last-child)
+    margin-bottom 1rem
   &__label
     display inline-block
     margin-right 1rem
-  &__number
+    width 40%
+  &__room-number,
+  &__guest-number
     display inline-block
     margin 0 .5rem
   &__btn
@@ -191,11 +218,33 @@ label
     border-radius 50%
     cursor pointer
     height 2.4rem
+    font-weight 600
     text-align center
     transition all .2s
+    user-select none
     width 2.4rem
     &:hover
       background $primary
       border-color $primary
       color #fff
-  
+
+
+.popup
+  border 1px solid $light-gray
+  box-shadow $shadow
+  // position relative
+  // z-index 10
+  // &:before
+  //   content ''
+  //   border-left 10px solid transparent
+  //   border-right 10px solid transparent
+  //   border-bottom 10px solid #fff
+  //   // box-shadow $shadow
+  //   height 0
+  //   left 0
+  //   right 0
+  //   margin 0 auto
+  //   top -5px
+  //   position absolute
+  //   width 0
+  //   z-index 0

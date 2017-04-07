@@ -40,12 +40,17 @@ block content
               input(type="text").datepicker
               .guest-clicker
                 input(type="text").guest-clicker__input
-                .guest-clicker__modal
+                .guest-clicker__modal.popup
                   .guest-clicker__group
                     .guest-clicker__label Номера
-                    .guest-clicker__btn -
-                    .guest-clicker__number 1
-                    .guest-clicker__btn +
+                    .guest-clicker__btn.js-room-minus -
+                    .guest-clicker__room-number 1
+                    .guest-clicker__btn.js-room-plus +
+                  .guest-clicker__group
+                    .guest-clicker__label Гости
+                    .guest-clicker__btn.js-guest-minus -
+                    .guest-clicker__guest-number 1
+                    .guest-clicker__btn.js-guest-plus +
               input(type="submit" value="Обновить").btn.btn--secondary
 
 

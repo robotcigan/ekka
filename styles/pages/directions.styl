@@ -1,0 +1,78 @@
+.country,
+.city
+  display block
+  margin-bottom 4rem
+  overflow hidden
+  position relative
+  text-decoration none
+  transition box-shadow .3s
+  &:before
+    content ''
+    background linear-gradient(to top, rgba($main, .7), transparent)
+    height 100%
+    position absolute
+    width 100%
+  &__text
+    bottom 3rem
+    left 3rem
+    transition transform .2s
+    position absolute
+  &__title
+    color #fff
+    display inline-block
+    font-size 2.4rem
+    font-weight 800
+    line-height 1
+    letter-spacing .5px
+    text-decoration none
+    text-transform uppercase
+    transition transform .2s
+    z-index 20
+  &__objects
+    color #fff
+    display block
+    // bottom 1.5rem
+    // left 2rem
+    // position absolute
+    transition transform .3s
+  img
+    display block
+    width 100%
+
+
+a.country,
+a.city
+  &:hover
+    box-shadow $shadow
+
+.country
+  & > .relative > &__text
+    left 0
+  &__title
+    font-size 6rem
+    left 3rem
+    bottom 2.5rem
+
+.city
+  &__text
+    bottom 2rem
+    left 2rem
+
+.directions-links
+  margin-bottom 4rem
+  margin-top 4rem
+  .direction-link
+    margin-bottom 2rem
+    text-decoration none
+    &__title
+      color $primary
+      font-size 1.8rem
+      font-weight 600
+      line-height 1
+      text-decoration none
+
+
+.all-objects-btn
+  margin-bottom 4rem
+  margin-top 5rem
+  text-align center

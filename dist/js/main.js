@@ -28,7 +28,25 @@ $(document).ready(function () {
 
   $('.regular-slider').slick({
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
 
@@ -93,10 +111,10 @@ $(document).ready(function () {
   });
 
   $('.card').on('click', function() {
+    $(this).parent().toggleClass('card-container--active');
     $(this).parent().find('.card__bottom').stop().slideToggle();
   });
 
-  console.log('dgsd')
 
 });
 
@@ -131,11 +149,30 @@ $(document).ready(function() {
     $(this).addClass('hero__input--active');
   });
 
+  $('.guest-clicker__input').val('1 номер., 1 гость');
+  var roomCount = 1;
+  var guestCount = 1;
+
   // Гости и комнаты селект
   $('.guest-clicker__btn').on('click', function() {
-    var guestCount = $('.guest-clicker__number').text();
-    console.log(guestCount)
-    $('.guest-clicker__input').val(guestCount);
+    if ( $(this).hasClass('js-room-minus') ) roomCount--;
+    if ( $(this).hasClass('js-room-plus') ) roomCount++;
+    if ( $(this).hasClass('js-guest-minus') ) guestCount--;
+    if ( $(this).hasClass('js-guest-plus') ) guestCount++;
+
+    if(roomCount < 1) roomCount = 1;
+    if(roomCount > 4) roomCount = 4;
+    if(guestCount > 4) guestCount = 4;
+    if(guestCount < 1) guestCount = 1;
+    
+    $('.guest-clicker__room-number').text(roomCount);
+    $('.guest-clicker__guest-number').text(guestCount);
+    $('.guest-clicker__input').val(roomCount + ' номер., ' + guestCount + ' гостя');
+  });
+
+  // Чекбоксы
+  $('.custom-checkbox-label').on('click', function() {
+    $(this).toggleClass('custom-checkbox-label--active');
   })
 
 })
