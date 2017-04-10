@@ -118,19 +118,13 @@
 .masonry
   &-column
     padding 0 1.6rem 3.2rem 1.6rem
-    width 41.2rem
+    // width 41.2rem
+    width 33.33%
 
 .direction
   background-size cover !important
-  position relative
   height 47rem
-  position relative
-  &:after
-    content ''
-    background linear-gradient(to top, rgba($main, .7), transparent)
-    display block
-    height 100%
-    width 100%
+  shadow()
   &--type-2
     height 27rem
   &--type-3

@@ -2,6 +2,7 @@
 @import 'helpers/mixins'
 @import 'base/base'
 @import 'base/typography'
+@import 'base/form'
 @import 'base/icon'
 
 // Pages
@@ -32,6 +33,7 @@
   z-index 100
   &--scroll
     box-shadow 0 0 40px rgba($gray, .3)
+    top 0 !important
   &__container
     align-items center
     justify-content space-between
@@ -111,7 +113,7 @@
 
 .main-footer
   background #fff
-  margin-top 8rem
+  // margin-top 8rem
   padding-top 8rem
   position relative
   &:before
@@ -121,7 +123,7 @@
     left 0
     height 6px
     position absolute
-    top 0
+    top -3px
     width 100%
     z-index 10
   &__phone

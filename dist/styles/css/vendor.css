@@ -4619,6 +4619,11 @@ font-style: normal;
   height: 10px;
   left: -5px;
   top: -3px;
+  transition: all .2s;
+}
+.noUi-horizontal .noUi-handle:hover {
+  transform: scale(1.2);
+  top: -7px;
 }
 .noUi-vertical {
   width: 18px;
@@ -4789,12 +4794,13 @@ font-style: normal;
 .pickmeup {
   background: #fff;
   box-shadow: 0 10px 20px rgba(17,17,17,0.1);
-  border-radius: 4px;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #eee;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   display: inline-block;
   position: absolute;
-  transform: translateY(48px);
+  margin-top: -1px;
   touch-action: manipulation;
 }
 .pickmeup * {
@@ -4809,8 +4815,8 @@ font-style: normal;
 }
 .pickmeup .pmu-instance {
   display: inline-block;
-  height: 17em;
-  margin: 20px;
+  height: 23.5rem;
+  margin: 8px;
   padding: 0.5em;
   text-align: center;
   width: 15em;
@@ -4825,7 +4831,7 @@ font-style: normal;
   font-weight: 800;
 }
 .pickmeup .pmu-instance .pmu-button:hover {
-  background: #eee;
+  background: rgba(255,211,94,0.3);
   color: #111;
 }
 .pickmeup .pmu-instance .pmu-not-in-month {
@@ -4837,11 +4843,12 @@ font-style: normal;
   cursor: default;
 }
 .pickmeup .pmu-instance .pmu-selected {
-  background: #169bd4;
-  color: #fff;
+  background: #ffd35e;
+  color: #111;
+  font-weight: 600;
 }
 .pickmeup .pmu-instance .pmu-not-in-month.pmu-selected {
-  background: rgba(22,155,212,0.6);
+  background: rgba(33,165,222,0.6);
 }
 .pickmeup .pmu-instance nav {
   color: #111;

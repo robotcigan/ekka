@@ -12,17 +12,25 @@
     &-column
       padding 0 1.3rem 3.2rem 1.3rem
       width 31.1rem
+      width 50%
 
-@media(max-width 768px)
-  // .grid--container
-  //   max-width 96%
+// @media(max-width 768px)
+//   // .grid--container
+//   //   max-width 96%
+
+
+@media(max-width 767px)
+  .hero
+    background-position-Y 50%
+    height 100vh
+    .index-header
+      line-height 1
+      font-size 3rem
   .masonry
     &-column
       padding 0 1.6rem 3.2rem 1.6rem
       width 38rem
-
-
-@media(max-width 767px)
+      width 100%
   .inner-h1
     font-size 2.4rem
     margin 2rem 0
@@ -32,18 +40,33 @@
       height 30rem
       img
         width 100%
+    &__plate
+      font-size 1.6rem
+      top 2rem
+      &--type-1
+        left 1.5rem
+      &--type-2
+        right 1.5rem
     &__middle
       &_top
         max-height initial
     &__anons
       margin-bottom 2rem
     &__right
-      display block
-      text-align left
+      justify-content space-between
+      align-items center
     &__rating
       margin-bottom 2rem
+      &_title
+        font-size 1.5rem
+        line-height 1
+      &_number
+        font-size 3.6rem
     &__guests
       margin-bottom 2rem
+    &__bottom
+      padding 2rem 1rem
+      padding-bottom 0
     .btn
       text-align center
       width 100%
@@ -53,11 +76,70 @@
     .stars
       text-align left
   .inner-header
+    height 7rem
     h1
       font-size 2.4rem
-  .btn--inner
-    padding 0.5rem 1rem
-    span
-      display none
+    .btn--inner
+      padding 0.5rem 1rem
+      top -3px
+      .fa
+        transform translate(4px, 0)
+      span
+        display none
   .comment
     flex-wrap wrap
+  
+  .noUi-horizontal .noUi-handle
+    height 16px
+    top -6px
+    width 16px
+  
+
+  .room
+    &__img
+      float none
+      margin-right 0
+      img
+        width 100%
+    &__title
+      max-width 100%
+      margin-bottom 2rem
+      a
+        font-size 1.5rem
+    &__subtitle
+      margin-bottom 1px
+    &__parameters
+      height initial
+      padding 1rem
+      &__items
+        display block
+    &__services
+      margin-bottom 1rem
+    &__guests
+      margin-bottom 1rem
+    & select
+      margin-bottom 1rem
+    &__price
+      font-size 3.6rem
+      text-align center
+      margin-bottom 1rem
+      .ruble:before
+        font-size 3.6rem
+    .btn
+      padding 1rem
+      text-align center
+      width 100%
+
+  .accordion
+    &__header
+      h3
+        width initial
+        margin-right 1rem
+
+  .tabs
+    &__nav
+      display flex
+      justify-content space-between
+      li
+        a
+          padding .5rem

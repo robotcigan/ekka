@@ -1,0 +1,143 @@
+extends layout.pug
+
+block content
+  .empty
+
+  .grid.grid--container.page-section
+    .row
+      .col.col--lg-6.col--lg-offset-3
+        .book
+          .book__img
+            img(src="img/book.jpg", alt="")
+            h1.book__title Имеретинский курорт «Русские сезоны»
+          form.book__form
+            .row
+              .col.col--lg-12
+                .form-header Ваша информация
+              .col.col--lg-6
+                .form-group
+                  label ФИО
+                  input(type="text")
+              .col.col--lg-6
+                .form-group
+                  label Агенство (организация)
+                  input(type="text")
+              .col.col--lg-6
+                .form-group
+                  label Страна
+                  select.custom-select
+                    option Россия
+                    option Абхазия
+                    option Грузия
+                    option Армения
+              .col.col--lg-6
+                .form-group
+                  label Город
+                  select.custom-select
+                    option Краснодар
+                    option Сочи
+              .col.col--lg-6
+                .form-group
+                  label Контактный телефон
+                  input(type="text").phone-mask
+              .col.col--lg-6
+                .form-group
+                  label E-mail
+                  input(type="text")
+              .col.col--lg-12
+                .form-header Объект размещения
+              .col.col--lg-6
+                .form-group
+                  label Объект
+                  input(type="text")
+              .col.col--lg-6
+                .form-group
+                  label Тип номера
+                  select.custom-select
+                    option Одноместный номер бизнес-класса
+                    option Двухместный номер бизнес-класса
+              .col.col--lg-6
+                .form-group
+                  label C
+                  .date-input.input-with-icon
+                    .input-with-icon__icon
+                      i.fa.fa-calendar-o
+                    input(type="text").datepicker
+              .col.col--lg-6
+                .form-group
+                  label По
+                  .date-input.input-with-icon
+                    .input-with-icon__icon
+                      i.fa.fa-calendar-o
+                    input(type="text").datepicker
+              .col.col--lg-6
+                .form-group
+                  label Количество номеров
+                  select.custom-select
+                    option 1
+                    option 2
+                    option 3
+                    option 4
+              .col.col--lg-6
+                .form-group
+                  label Количество гостей
+                  #book-guest-count
+                    select.custom-select
+                      option 1
+                      option 2
+                      option 3
+                      option 4
+              .col.col--lg-12
+                .form-header Информация о гостях
+              .col.col--lg-6
+                .form-group
+                  label ФИО
+                  input(type="text")
+              .col.col--lg-6
+                .form-group
+                  label Дата рождения
+                  .date-input.input-with-icon
+                    .input-with-icon__icon
+                      i.fa.fa-calendar-o
+                    input(type="text").datepicker
+              .col.col--lg-6
+                .form-group
+                  label Серия
+                  input(type="text")
+              .col.col--lg-6
+                .form-group
+                  label Номер паспорта
+                  input(type="text")
+            - for (var x = 0; x < 3; x++)
+              .row.guest-information
+                .col.col--lg-12
+                  .form-header Информация о гостях
+                .col.col--lg-6
+                  .form-group
+                    label ФИО
+                    input(type="text")
+                .col.col--lg-6
+                  .form-group
+                    label Дата рождения
+                    .date-input.input-with-icon
+                      .input-with-icon__icon
+                        i.fa.fa-calendar-o
+                      input(type="text").datepicker
+                .col.col--lg-6
+                  .form-group
+                    label Серия
+                    input(type="text")
+                .col.col--lg-6
+                  .form-group
+                    label Номер паспорта
+                    input(type="text")
+            .btn.btn--big.btn--secondary Забронировать
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+extends layout.pug
+
+block content
+  .empty.empty--special
+  
+  .image-background
+
+    .grid.grid--container
+      .row
+        .col.col--lg-6.col--lg-offset-3
+          form.sending-form
+            .sending-form__title Регистрация организации
+            .row
+              .col.col--lg-6.col--md-6
+                .form-group
+                  label Организация
+                  input(type="text")
+              .col.col--lg-6.col--md-6
+                .form-group
+                  label ФИО ответственного лица
+                  input(type="text")
+              .col.col--lg-6.col--md-6
+                .form-group
+                  label Страна
+                  input(type="text")
+              .col.col--lg-6.col--md-6
+                .form-group
+                  label Город
+                  input(type="text")
+              .col.col--lg-12
+                .form-group
+                  label Юридический адрес
+                  input(type="text")
+              .col.col--lg-12
+                .form-group
+                  label Почтовый адрес
+                  input(type="text")
+              .col.col--lg-6.col--md-6
+                .form-group
+                  label ИНН
+                  input(type="text")
+              .col.col--lg-6.col--md-6
+                .form-group
+                  label Банковские реквизиты
+                  input(type="text")
+              .col.col--lg-12
+                .form-group
+                  label E-mail
+                  input(type="email")
+              .col.col--lg-6.col--md-6
+                .form-group
+                  label Пароль
+                  input(type="password")
+              .col.col--lg-6.col--md-6
+                .form-group
+                  label Повторите пароль
+                  input(type="password")
+            .row.row--sm-center.sending-form__bottom
+              .col.col--lg-6.col--md-6
+                button.btn.btn--primary Зарегистрироваться
+              .col.col--lg-6.col--md-6.text-right
+                a(href="").link На главную
+

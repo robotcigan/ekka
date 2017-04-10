@@ -72,6 +72,9 @@ body
 .text-center
   text-align center
 
+.text-right
+  text-align right
+
 .empty
   display block
   height 8rem
@@ -135,116 +138,36 @@ body
     font-weight 600
     padding .6rem 3rem
   &--big
-    font-size 1.8rem
+    font-size 1.6rem
     font-weight 600
-    padding .8rem
+    padding .8rem 2rem
   &--full-size
     width 100%
     text-align center
+  &--type-2
+    border 1px solid $primary
+    background transparent
+    color $primary
+    &:hover
+      color #fff
 
 
 .relative
   position relative
 
-.custom-checkbox
-  display none
-  &-label
-    display inline-block
-    cursor pointer
-    margin-right 1rem
-    &--active
-      i:before
-        color $primary
-
-input,
-select,
-textarea
-  background #fff
-  border 1px solid $light-gray
-  border-radius $radius
-  padding .5rem
-  width 100%
-  -webkit-appearance none
-
-textarea
-  padding 1rem
-
-select,
-option
-  cursor pointer
-
-.form-group
-  margin-bottom 4rem
-label
-  display block
-  margin-bottom 1rem
-
-#slider-value
-  color #999
-  display inline-block
-  font-size 1.1rem
-  margin-top 1rem
-.slider-value-text
-  color #999
-  display inline-block
-  font-size 1.1rem
-  font-weight 600
-  margin-left .5rem
-  margin-top 1rem
-
-.guest-clicker
+.image-background
+  background url('../../img/bg.jpg') 50%
+  background-size cover
+  height 100%
+  margin-bottom -1rem
   position relative
-  &__modal
-    bottom -113px
-    border-radius $radius
-    display block
+  width 100%
+  &:before
+    background rgba($main, .5)
+    content ''
+    height 100%
     left 0
-    padding 1rem 2rem
     position absolute
-    width 20rem
-  &__group:not(:last-child)
-    margin-bottom 1rem
-  &__label
-    display inline-block
-    margin-right 1rem
-    width 40%
-  &__room-number,
-  &__guest-number
-    display inline-block
-    margin 0 .5rem
-  &__btn
-    display inline-block
-    border 1px solid $light-gray
-    border-radius 50%
-    cursor pointer
-    height 2.4rem
-    font-weight 600
-    text-align center
-    transition all .2s
-    user-select none
-    width 2.4rem
-    &:hover
-      background $primary
-      border-color $primary
-      color #fff
-
-
-.popup
-  border 1px solid $light-gray
-  box-shadow $shadow
-  // position relative
-  // z-index 10
-  // &:before
-  //   content ''
-  //   border-left 10px solid transparent
-  //   border-right 10px solid transparent
-  //   border-bottom 10px solid #fff
-  //   // box-shadow $shadow
-  //   height 0
-  //   left 0
-  //   right 0
-  //   margin 0 auto
-  //   top -5px
-  //   position absolute
-  //   width 0
-  //   z-index 0
+    top 0
+    width 100%
+    z-index 0

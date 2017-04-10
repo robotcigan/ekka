@@ -1,0 +1,33 @@
+extends layout.pug
+
+block content
+  .empty.empty--special
+  
+  .image-background
+
+    .grid.grid--container
+      .row
+        .col.col--lg-4.col--lg-offset-4
+          form.sending-form
+            .sending-form__title Вход для турагентств
+            .row
+              .col.col--lg-12
+                .form-group
+                  label E-mail
+                  .input-with-icon
+                    .input-with-icon__icon
+                      i.fa.fa-envelope
+                    input(type="email")
+              .col.col--lg-12
+                .form-group
+                  label Пароль
+                  .input-with-icon
+                    .input-with-icon__icon
+                      i.fa.fa-lock
+                    input(type="password")
+            .row.row--sm-center.sending-form__bottom
+              .col.col--lg-4.col--md-4
+                button.btn.btn--primary Войти
+              .col.col--lg-8.col--md-8.text-right
+                button.btn.btn--primary.btn--type-2 Зарегистрироваться
+

@@ -3,15 +3,15 @@
 $border-radius                    = $radius
 $background                       = #fff
 $color                            = $main
-$background-hover                 = $light-gray
+$background-hover                 = rgba($secondary, .3)
 $color-hover                      = $main
 $nav-color                        = $color
 $nav-color-hover                  = $color-hover
 $not-in-month                     = #999
 $not-in-month-hover               = #999
 $disabled                         = #333
-$selected                         = #fff
-$selected-background              = $primary
+$selected                         = $main
+$selected-background              = $secondary
 $not-in-month-selected-background = rgba($primary, .6)
 $day-of-week                      = $not-in-month-hover
 // $today-background                 = $primary
@@ -19,13 +19,15 @@ $day-of-week                      = $not-in-month-hover
 
 .pickmeup
   background      $background
-  box-shadow $shadow
-  border-radius   $border-radius
+  box-shadow      $shadow
+  border-radius   0 0 $border-radius $border-radius
+  border 1px solid $light-gray
   -moz-box-sizing content-box
   box-sizing      content-box
   display         inline-block
   position        absolute
-  transform translateY(48px)
+  // transform translateY(10px)
+  margin-top -1px
   touch-action    manipulation
 
   *
@@ -40,8 +42,8 @@ $day-of-week                      = $not-in-month-hover
 
   .pmu-instance
     display    : inline-block
-    height     : 17em
-    margin 20px
+    height     : 23.5rem
+    margin 8px
     padding    : .5em
     text-align : center
     width      : 15em
@@ -73,6 +75,7 @@ $day-of-week                      = $not-in-month-hover
     .pmu-selected
       background : $selected-background
       color      : $selected
+      font-weight 600
       // border-radius $radius
 
     .pmu-not-in-month.pmu-selected

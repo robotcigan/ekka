@@ -3,3 +3,17 @@ clearfix()
     content ""
     display table
     clear both
+
+shadow()
+  position relative
+  z-index 10
+  &:before
+    content ''
+    background linear-gradient(to top, rgba($main, .7), transparent)
+    display block
+    left 0
+    position absolute
+    top 0
+    height 100%
+    width 100%
+    z-index 0

@@ -58,6 +58,10 @@ $(document).ready(function () {
     $('.tabs__content').eq(index).show();
   });
 
+  $('.tabs__nav li a').on('click', function(e) {
+    e.preventDefault();
+  })
+
   $('.accordion__header .accordion__icon').on('click', function() {
     $(this).toggleClass('accordion__icon--active');
     $(this).closest('.accordion').find('.accordion__body-unvisible').stop().slideToggle()
@@ -132,11 +136,20 @@ addEventListener('DOMContentLoaded', function () {
   //   calendars : 2
   // });
 
-  pickmeup('.datepicker', {
-    position      : 'down',
+
+
+  pickmeup('.datepicker-range', {
+    position  : 'down',
     mode      : 'range',
     calendars : 2
   });
+
+  pickmeup('.datepicker');
+  pickmeup('.datepicker-1');
+  pickmeup('.datepicker-2');
+  pickmeup('.datepicker-3');
+  pickmeup('.datepicker-4');
+  pickmeup('.datepicker-5');
 
 });
 
@@ -173,6 +186,51 @@ $(document).ready(function() {
   // Чекбоксы
   $('.custom-checkbox-label').on('click', function() {
     $(this).toggleClass('custom-checkbox-label--active');
+  });
+
+  // Кастомный селект
+  $('.custom-select').select2({
+    minimumResultsForSearch: Infinity
+  });
+  $('.select2-search__field').attr('placeholder', 'Поиск...');
+
+  // Телефон маска
+  $('.phone-mask').inputmask("+7 (999) 999 99 99");
+
+
+  // Дата инпуты фокус focus
+  $('.input-with-icon input').focusin(function() {
+    $(this).parent().find('.fa').addClass('active');
+    $(this).addClass('active');
+  });
+
+  $('.input-with-icon input').focusout(function() {
+    $(this).parent().find('.fa').removeClass('active');
+    $(this).removeClass('active');
+  });
+
+  // Форма бронирования количество комнат и информация о гостях
+  $('#book-guest-count select').on('change', function() {
+    var bookGuestCount = parseInt($(this).val());
+
+    console.log(bookGuestCount)
+
+    switch(bookGuestCount) {
+      case 1:
+        $('.guest-information').hide();
+      case 2:
+        $('.guest-information').hide();
+        $('.guest-information').eq(0).show();
+      case 3:
+        $('.guest-information').hide();
+        $('.guest-information').eq(0).show();
+        $('.guest-information').eq(1).show();
+      case 4:
+        $('.guest-information').hide();
+        $('.guest-information').eq(0).show();
+        $('.guest-information').eq(1).show();
+        $('.guest-information').eq(2).show();
+    }
   })
 
 })
