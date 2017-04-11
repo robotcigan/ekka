@@ -1,5 +1,6 @@
 .country,
-.city
+.city,
+.direction-big
   display block
   margin-bottom 4rem
   overflow hidden
@@ -21,7 +22,7 @@
     color #fff
     display inline-block
     font-size 2.4rem
-    font-weight 800
+    font-weight 700
     line-height 1
     letter-spacing .5px
     text-decoration none
@@ -37,6 +38,7 @@
     transition transform .3s
   img
     display block
+    user-select none
     width 100%
 
 
@@ -45,13 +47,24 @@ a.city
   &:hover
     box-shadow $shadow
 
-.country
-  & > .relative > &__text
+.direction-big
+  &__text
     left 0
   &__title
+    bottom 2.5rem
     font-size 6rem
     left 3rem
-    bottom 2.5rem
+    line-height 1
+    margin 0
+  &__country
+    color rgba(#fff, .7)
+    display block
+    font-size 2.4rem
+    line-height 1
+    text-decoration none
+    transition color .2s
+    &:hover
+      color #fff
 
 .city
   &__text
@@ -74,5 +87,16 @@ a.city
 
 .all-objects-btn
   margin-bottom 4rem
-  margin-top 5rem
+  margin-top 2rem
   text-align center
+
+.hotels
+  .hotel
+    margin-bottom 3rem
+
+
+.special-gallery
+  margin-top 2rem
+  img
+    margin-bottom 1.6rem
+    width 100%

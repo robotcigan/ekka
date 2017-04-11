@@ -1,5 +1,6 @@
 .card-container
   border 1px solid $light-gray
+  margin-bottom 2rem
   transition box-shadow .4s, border-color .5s
   &:hover
     box-shadow 0 12px 30px rgba($gray, .3)
@@ -21,7 +22,7 @@
   &__plate
     color #fff
     border-radius $radius
-    font-weight 800
+    font-weight 600
     position absolute
     padding .5rem 1rem
     top 1rem
@@ -55,11 +56,6 @@
     font-weight 700
     line-height 1.1
     margin-bottom 1rem
-  &__adress
-    color $gray
-    margin-bottom 1rem
-    .fa
-      margin-right .4rem
   &__services
     i:not(:last-child)
       margin-right 2rem
@@ -70,11 +66,12 @@
     &_number
       color $primary
       font-size 2.4rem
-      font-weight 700
+      font-weight 600
+      letter-spacing 1.2px
       line-height 1
   &__price
     font-size 3rem
-    font-weight 700
+    font-weight 600
     line-height 1
     .ruble:before
       font-size 3rem

@@ -1,0 +1,29 @@
+.transfer
+  &__pult
+    background rgba($primary, .1)
+    border-radius $radius
+    margin-bottom 4rem
+    padding 1rem 2rem
+  &__avia
+    display inline-block
+  &__trane
+    display inline-block
+  &__header
+    font-size 2.2rem
+    font-weight 600
+    margin-bottom 1rem
+  &__blocks
+    position relative
+    width 100%
+  &__form-block
+    position absolute
+    transform translateX(-100%)
+    opacity 0
+    top 0
+    transition all .8s
+    width 100%
+    &--active
+      // left 0
+      transform translateX(0)
+      opacity 1
+  

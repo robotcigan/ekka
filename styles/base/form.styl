@@ -35,7 +35,9 @@ label
   margin-bottom .5rem
 
 
-input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
 select,
 textarea
   background #fff
@@ -104,7 +106,7 @@ option
       color $main
     &[aria-selected=true]
       background-color $secondary
-      font-weight 700
+      font-weight 500
 
 .guest-information
   display none
@@ -223,6 +225,93 @@ option
     margin-top 2rem
 
 
+
+// Checkbox
+.radio
+  cursor pointer
+  display inline-block
+  margin-right 2rem
+  margin-top .2rem
+  user-select none
+  &__input
+    display none
+    &:checked + .radio__label
+      border 2px solid $primary
+      &:after
+        opacity 1
+        height 8px
+        width 8px
+  &__label
+    border-radius 50%
+    border 1px solid $light-gray
+    cursor pointer
+    display inline-block
+    height 2.4rem
+    margin-right .8rem
+    position relative
+    vertical-align middle
+    transition border .2s
+    width 2.4rem
+    &:after
+      background $primary
+      border-radius 50%
+      content ''
+      opacity 0
+      left 0
+      right 0
+      top 0
+      bottom 0
+      margin auto
+      position absolute
+      transition opacity .2s, width .2s, height .2s
+      width 2px
+      height 2px
+  span
+    vertical-align middle
+
+
+
+.toggle
+  &__icon
+    background rgba($primary, .1)
+    border-radius $radius
+    cursor pointer
+    display inline-block
+    height .8rem
+    margin 0 1rem
+    position relative
+    width 3.6rem
+    &:after
+      background $primary
+      border-radius 50%
+      content ''
+      height 1.6rem
+      left 0
+      right initial
+      position absolute
+      top -.4rem
+      transition left .2s
+      width 1.6rem
+    &--active:after
+      left calc(100% - 1.6rem)
+  &__avia
+    cursor pointer
+    .icon
+      margin-right 1rem
+    &--active
+      .icon:before,
+      span
+        color $primary
+  &__trane
+    cursor pointer
+    .icon
+      margin-right 1rem
+    &--active
+      .icon:before,
+      span
+        color $primary
+
+
 @keyframes fadeUp
   0%
     opacity 0
@@ -230,3 +319,11 @@ option
   100%
     opacity 1
     transform none
+
+@keyframes fadeDown
+  0%
+    opacity 1
+    transform none
+  100%
+    opacity 0
+    transform translate3d(0, 10px, 0)

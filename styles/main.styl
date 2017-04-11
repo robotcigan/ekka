@@ -13,6 +13,8 @@
 @import 'pages/room'
 @import 'pages/search'
 @import 'pages/directions'
+@import 'pages/transfer'
+@import 'pages/offer'
 
 .grid--container
   max-width 1216px
@@ -23,6 +25,7 @@
 
 .background
   background #fafafa
+  padding-bottom 10rem
 
 .main-header
   background #fff
@@ -63,9 +66,9 @@
     margin 0 .8rem
     a
       color $main
-      font-size 1.1rem
-      font-weight 700
-      letter-spacing .5px
+      font-size 1.2rem
+      font-weight 600
+      letter-spacing .3px
       text-decoration none
       text-transform uppercase
 
@@ -84,6 +87,7 @@
   &__img
     margin-bottom 1rem
     img
+      display block
       width 100%
   &__header
     clearfix()
@@ -113,7 +117,7 @@
 
 .main-footer
   background #fff
-  // margin-top 8rem
+  margin-top 8rem
   padding-top 8rem
   position relative
   &:before
@@ -131,12 +135,12 @@
     margin-bottom 1rem
     & .code
       display inline-block
-      font-weight 400
+      font-weight 300
       font-size 3rem
     & .phone-number
       display inline-block
       font-size 3rem
-      font-weight 700
+      font-weight 600
   &__header
     font-weight 700
     margin-bottom 2rem

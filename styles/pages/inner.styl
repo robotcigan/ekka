@@ -146,7 +146,7 @@ h3
           color $main
         &.active
           color $main
-          font-weight 700
+          font-weight 600
           position relative
           &:before
             content ''
@@ -203,3 +203,35 @@ h3
   iframe
     height 25rem
     width 100%
+
+.transfer-success
+  background-color #fff
+  border 1px solid $light-gray
+  box-shadow $shadow
+  height 35rem
+  margin-top 4rem
+  clearfix()
+  &__img
+    background url('../../img/transfer.jpg')
+    background-size cover
+    display block
+    float left
+    height 100%
+    width 40%
+    img
+      display block
+  &__text
+    display block
+    float left
+    padding 4rem
+    width 60%
+  &__title
+    font-size 2.2rem
+    font-weight 600
+    margin-top 4rem
+  &__subtitle
+    color $gray
+    margin-bottom 4rem
+
+.aside-btn
+  margin-top 14.5rem

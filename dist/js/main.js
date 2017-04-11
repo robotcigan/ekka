@@ -52,14 +52,21 @@ $(document).ready(function () {
 
   $('.tabs__nav li').on('click', function() {
     var index = $(this).index();
-    $('.tabs__nav li a').removeClass('active');
+    $(this).parent().find('li').each(function() {
+      $(this).find('a').removeClass('active')
+    });
     $(this).find('a').addClass('active');
-    $('.tabs__content').hide();
-    $('.tabs__content').eq(index).show();
+    $(this).closest('.tabs').find('.tabs__content').hide();
+    $(this).closest('.tabs').find('.tabs__content').eq(index).show();
   });
 
   $('.tabs__nav li a').on('click', function(e) {
     e.preventDefault();
+  });
+
+  $('.tabs__nav li').each(function() {
+    var text = $(this).text();
+    console.log(text)
   })
 
   $('.accordion__header .accordion__icon').on('click', function() {
@@ -114,10 +121,21 @@ $(document).ready(function () {
     sliderValue.innerHTML = values[handle];
   });
 
+  function cardOpen(element) {
+    element.parent().toggleClass('card-container--active');
+    element.parent().find('.card__bottom').stop().slideToggle();
+  }
+
   $('.card').on('click', function() {
-    $(this).parent().toggleClass('card-container--active');
-    $(this).parent().find('.card__bottom').stop().slideToggle();
+    cardOpen($(this));
   });
+
+  // $('.card').hover(function() {
+  //   var self = $(this);
+  //   setTimeout(function() {
+  //     cardOpen(self);
+  //   }, 5000)
+  // })
 
 
 });
@@ -231,6 +249,55 @@ $(document).ready(function() {
         $('.guest-information').eq(1).show();
         $('.guest-information').eq(2).show();
     }
-  })
+  });
+
+  // Transfer трансфер пульт pult
+  var type = 'avia';
+  function traneForm() {
+    $('.toggle__avia').removeClass('toggle__avia--active');
+    $('.toggle__trane').addClass('toggle__trane--active');
+    $('.toggle__icon').addClass('toggle__icon--active');
+    type = 'avia';
+  }
+
+  function aviaForm() {
+    $('.toggle__trane').removeClass('toggle__trane--active');
+    $('.toggle__avia').addClass('toggle__avia--active');
+    $('.toggle__icon').removeClass('toggle__icon--active');
+    type = 'train';
+  }
+
+
+  $('.toggle__avia').on('click', function() {
+    aviaForm();
+  });
+
+  $('.toggle__trane').on('click', function() {
+    traneForm();
+  });
+
+  $('.toggle__icon').on('click', function() {
+
+    if(type === "avia") {
+      traneForm();
+    }
+
+    if(type === "train") {
+      aviaForm();
+    }
+  });
+
+
+  
+  // Transfer трансфер
+  $('.transfer__avia').on('click', function() {
+    $('.transfer__form-block').removeClass('transfer__form-block--active')
+    $('.transfer__avia-arrival').addClass('transfer__form-block--active');
+  });
+  $('.transfer__trane').on('click', function() {
+    $('.transfer__form-block').removeClass('transfer__form-block--active')
+    $('.transfer__trane-arrival').addClass('transfer__form-block--active');
+  });
+
 
 })

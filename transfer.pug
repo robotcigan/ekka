@@ -1,0 +1,159 @@
+extends layout.pug
+
+block content
+  .empty
+
+  .grid.grid--container.page-section
+    .row.transfer
+      .col.col--lg-8.col--lg-offset-2
+        h1 Трансфер
+        form.transfer__pult
+          .row
+            .col.col--lg-6
+              p По прибытию
+              .transfer__avia.toggle
+                label.toggle__avia
+                  i.icon.flaticon-airplane
+                  span Самолет
+              .toggle__icon
+              .transfer__trane
+                label.toggle__trane
+                  i.icon.flaticon-transport
+                  span Поезд
+            .col.col--lg-6
+              p По отъезду
+        form.transform__form
+          .row
+            .col.col--lg-6
+              .transfer__header По прибытию
+              .transfer__blocks
+                .transfer__form-block.transfer__form-block--active.transfer__avia-arrival
+                  .form-group
+                    label Пункт прибытия (аэропорт)
+                    input(type="text")
+                  .form-group
+                    label Номер рейса
+                    input(type="text")
+                  .form-group
+                    label Город вылета
+                    input(type="text")
+                  .form-group
+                    label Время прибытия рейса
+                    input(type="text")
+                  .form-group
+                    label Количество человек
+                    input(type="text")
+                  .form-group
+                    label ФИО гостя
+                    input(type="text")
+                  .form-group
+                    label Надпись на табличке
+                    input(type="text")
+                  .form-group
+                    label Контактный телефон
+                    input(type="text")
+                  .form-group
+                    label Пункт назначения
+                    input(type="text")
+                  .form-group
+                    label Выбрать класс
+                    select.custom-select
+                      option Эконом
+                      option Бизнес
+                  .form-group
+                    label Тип оплаты
+                    label.radio
+                      input(type="radio" id="payment-type-1" name="payment-type").radio__input
+                      label.radio__label(for="payment-type-1")
+                      | Наличные
+                    label.radio
+                      input(type="radio" id="payment-type-2" name="payment-type").radio__input
+                      label.radio__label(for="payment-type-2")
+                      | Безналичные
+
+                .transfer__form-block.transfer__trane-arrival
+                  .form-group
+                    label Пункт прибытия (вокзал)
+                    input(type="text")
+                  .form-group
+                    label Номер рейса
+                    input(type="text")
+                  .form-group
+                    label Город вылета
+                    input(type="text")
+                  .form-group
+                    label Время прибытия рейса
+                    input(type="text")
+                  .form-group
+                    label Количество человек
+                    input(type="text")
+                  .form-group
+                    label ФИО гостя
+                    input(type="text")
+                  .form-group
+                    label Надпись на табличке
+                    input(type="text")
+                  .form-group
+                    label Контактный телефон
+                    input(type="text")
+                  .form-group
+                    label Пункт назначения
+                    input(type="text")
+                  .form-group
+                    label Выбрать класс
+                    select.custom-select
+                      option Эконом
+                      option Бизнес
+                  .form-group
+                    label Тип оплаты
+                    label.radio
+                      input(type="radio" id="payment-type-1" name="payment-type").radio__input
+                      label.radio__label(for="payment-type-1")
+                      | Наличные
+                    label.radio
+                      input(type="radio" id="payment-type-2" name="payment-type").radio__input
+                      label.radio__label(for="payment-type-2")
+                      | Безналичные
+
+
+            .col.col--lg-6
+              .transfer__header По отъезду
+              .form-group
+                label Пункт прибытия (аэропорт)
+                input(type="text")
+              .form-group
+                label Номер рейса
+                input(type="text")
+              .form-group
+                label Город вылета
+                input(type="text")
+              .form-group
+                label Время прибытия рейса
+                input(type="text")
+              .form-group
+                label Количество человек
+                input(type="text")
+              .form-group
+                label ФИО гостя
+                input(type="text")
+              .form-group
+                label Надпись на табличке
+                input(type="text")
+              .form-group
+                label Контактный телефон
+                input(type="text")
+              .form-group
+                label Пункт назначения
+                input(type="text")
+              .form-group
+                label Выбрать класс 
+                input(type="text")
+
+
+            
+      
+
+
+
+
+

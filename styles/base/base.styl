@@ -16,8 +16,8 @@ html
 body
   color $main
   background #fff
-  // font-family 'Lato', 'Open sans', 'Arial', 'Helvetica' sans-serif
-  font-family 'Lato', sans-serif
+  // font-family 'Lato', sans-serif
+  font-family 'Proxima nova', 'Arial', 'Helvetica', sans-serif
   font-weight 400
   font-size 1.4em
   line-height 1.6
@@ -86,6 +86,11 @@ body
 .back
   color $gray
   text-decoration none
+  transition color .1s
+  &:hover
+    color $primary
+  & + .inner-h1
+    margin-top 1rem
   .fa
     margin-right 1rem
 
@@ -98,7 +103,7 @@ body
   font-size 1.4rem
   font-weight 600
   padding .5rem 2rem
-  transition background-color .2s
+  transition background-color .2s, color .2s
   text-decoration none
   &:hover
     .fa
@@ -150,7 +155,14 @@ body
     color $primary
     &:hover
       color #fff
+      background $primary
 
+
+.adress
+  color $gray
+  margin-bottom 1rem
+  .fa
+    margin-right .4rem
 
 .relative
   position relative
@@ -171,3 +183,25 @@ body
     top 0
     width 100%
     z-index 0
+
+
+.table
+  border-collapse collapse
+  max-width 100%
+  margin-bottom 2rem
+  margin-top 2rem
+  width 100%
+  thead
+    background rgba($primary, .05)
+    th
+      font-weight 600
+  th,
+  td
+    padding: 12px 15px
+    text-align: left
+    border 1px solid $light-gray
+    margin 0
+  th:first-child,
+  td:first-child
+    // padding-left 2rem
+    max-width 20rem
