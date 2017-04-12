@@ -16,9 +16,13 @@
       font-weight 600
       text-decoration none
 
+.tabs__select
+  display none
+  margin-bottom 2rem
+
 @media(max-width 1100px)
   .grid--container
-    max-width 96%
+    max-width 95%
   .header-nav
     display none
   .main-header
@@ -26,11 +30,48 @@
       display none
   .menu-toggle
     display block
+  
   .masonry
     &-column
       padding 0 1.3rem 3.2rem 1.3rem
       width 31.1rem
       width 50%
+  .tabs
+    &__nav
+      display none !important
+    &__select
+      display block
+
+  
+
+  .special-slider
+    .slide
+      display block
+      // margin-right 2rem
+      margin-left 1rem
+      &__img
+        display block
+        width 100%
+        img
+          width 100%
+  
+  .hotel
+    &__header
+      &_left
+        float none
+        width initial
+      &_right
+        float none
+        width initial
+    &__title
+      font-size 1.8rem
+  
+  .gallery
+    display block
+    margin 5rem 0
+    &__img
+      margin-bottom 1rem
+      margin-right 1rem
 
 // @media(max-width 768px)
 //   // .grid--container

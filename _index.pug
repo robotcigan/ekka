@@ -6,22 +6,22 @@ block content
     main.hero
       .grid.grid--container
         .row
-          .col.col--lg-10.col--lg-offset-1
+          .col.col--lg-10.col--md-12.col--lg-offset-1
             .hero-content
               h1.index-header Отдых на Черноморском побережье
               form.hero__form
-                .hero__input-group
-                  .hero__input
-                    input(type="text" value="Сочи, Россия")
-                  .hero__input
-                    input(type="text").datepicker-range
-                  .hero__input
-                    input(type="text" value="1 номер, 1 гость")
-                  .hero__input
-                    select
-                      option По популярности
-                      option По цене
-                      option По дате добавления
+                //- .hero__input-group
+                .hero__input
+                  input(type="text" value="Сочи, Россия")
+                .hero__input
+                  input(type="text").datepicker-range
+                .hero__input
+                  input(type="text" value="1 номер, 1 гость")
+                .hero__input
+                  select
+                    option По популярности
+                    option По цене
+                    option По дате добавления
                 input(type="submit" value="Поиск").hero__btn
 
     .page-section
@@ -122,7 +122,7 @@ block content
               i.fa.fa-angle-left
               i.fa.fa-angle-right
         .special-slider
-          .slide
+          a(href="").slide
             .slide__img
               img(src="img/hotel-1.jpg", alt="")
             .slide__text
@@ -136,7 +136,7 @@ block content
               .slide__bottom
                 .slide__price 2 500 ₽
                 .slide__price-name средняя цена
-          .slide
+          a(href="").slide
             .slide__img
               img(src="img/hotel-1.jpg", alt="")
             .slide__text
@@ -150,7 +150,7 @@ block content
               .slide__bottom
                 .slide__price 2 500 ₽
                 .slide__price-name средняя цена
-          .slide
+          a(href="").slide
             .slide__img
               img(src="img/hotel-1.jpg", alt="")
             .slide__text
@@ -175,28 +175,7 @@ block content
     .map.page-section
       iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90140.36064485228!2d38.95759305000001!3d45.08809935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1491204702601" frameborder="0" style="border:0" allowfullscreen)
 
-    .grid.grid--container
-      section.page-section
-        header.subheader
-          h2 Недавно вы смотрели
-        .hotels.row
-          - for (i = 0; i < 3; i++)
-            .col.col--lg-4.col--md-4
-              .hotel
-                .hotel__img
-                  img(src="img/_hotel-1.jpg", alt="")
-                .hotel__header
-                  .hotel__header_left
-                    .hotel__title Санаторий «Авангард» или с длинным названием
-                  .hotel__header_right
-                    .stars.hotel__stars
-                      i.fa.fa-star
-                      i.fa.fa-star
-                      i.fa.fa-star
-                      i.fa.fa-star
-                .hotel__adress г. Сочи, Курортный проспект, 83
-                .hotel__anons Уютная территория санатория прилегает непосредственно к берегу моря с великолепным
-                a(href="").link Подробнее
+    include viewed.pug
 
 
 

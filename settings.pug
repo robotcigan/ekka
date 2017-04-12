@@ -1,0 +1,92 @@
+extends layout.pug
+
+block content
+  .empty
+
+  .grid.grid--container.page-section
+    .row
+      .col.col--lg-2
+        nav.account-nav
+          li.account-nav__link: a(href="order_list.html") Список заказов
+          li.account-nav__link: a(href="favorites.html") Избранное
+          li.account-nav__link.account-nav__link--active: a(href="settings.html") Настройки
+      .col.col--lg-10
+        .row
+          .col.col--lg-6
+            h3 Настройки
+            form.account-form
+              .form-group
+                label ФИО ответственного лица
+                input(type="text" value="Панфилов Андрей Германович")
+              .form-group
+                label Старый пароль
+                input(type="password")
+              .form-group
+                label Новый пароль
+                input(type="password")
+              .form-group
+                label Новый пароль еще раз
+                input(type="password")
+              .form-group
+                label Адрес электронной почты
+                input(type="text" value="silvertiger82@example.com")
+              .form-group
+                label Телефон (с кодом города)
+                input(type="text" value="7 495 458-71-84")
+              .form-group
+                label Факс (с кодом города)
+                input(type="text" value="7 495 458-71-84")
+              button.btn.btn--primary Сохранить
+          .col.col--lg-6
+            h3 Информация об организации:
+            .organisation-info
+              .row
+                .col.col--lg-5
+                  p Организация:
+                .col.col--lg-7
+                  strong blablatravel
+              .row
+                .col.col--lg-5
+                  p Страна:
+                .col.col--lg-7
+                  strong Россия
+              .row
+                .col.col--lg-5
+                  p Город:
+                .col.col--lg-7
+                  strong Краснодар
+              .row
+                .col.col--lg-5
+                  p Юридический адрес:
+                .col.col--lg-7
+                  strong Краснодар, ул. Карасунская, дом 4
+              .row
+                .col.col--lg-5
+                  p Фактический адрес:
+                .col.col--lg-7
+                  strong Краснодар, ул. Карасунская, дом 4
+              .row
+                .col.col--lg-5
+                  p ИНН:
+                .col.col--lg-7
+                  strong 8 800 555 35 35
+              .row
+                .col.col--lg-5
+                  p Банковские реквизиты:
+                .col.col--lg-7
+                  strong 8 800 555 35 35
+
+
+                
+
+
+  include viewed.pug
+
+
+
+
+
+
+
+
+

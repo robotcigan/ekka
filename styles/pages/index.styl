@@ -20,6 +20,8 @@
   &-content
     position relative
     z-index 5
+  &__form
+    display flex
   .index-header
     color #fff
     font-size 3.6rem
@@ -31,6 +33,17 @@
   &__input
     display inline
     position relative
+    width 20%
+    &:before
+      background-color $light-gray
+      content ''
+      height 2.4rem
+      position absolute
+      right 0
+      top 1.2rem
+      width 1px
+    &:nth-child(4):before
+      display none
     &--active
       &:after
         background $secondary
@@ -39,7 +52,7 @@
         height 3px
         left -21.5rem
         position absolute
-        width 21.5rem
+        // width 21.5rem
     input, select
       border none
       border-radius 0
@@ -50,17 +63,11 @@
       height 4.8rem
       margin 0
       padding 0 2rem
-      width 21.5rem
-    &:first-child input
-      border-radius $radius 0 0 $radius
-    &:not(:last-child):before
-      background-color $light-gray
-      content ''
-      height 2.4rem
-      position absolute
-      right 0
-      top 1.2rem
-      width 1px
+      width 100%
+    &:first-child
+      width 25%
+      input
+        border-radius $radius 0 0 $radius
   &__btn
     background-color $secondary
     border none
@@ -70,8 +77,8 @@
     font-size 1.8rem
     font-weight 600
     height 4.8rem
-    padding 0 4rem
-    width initial
+    text-align center
+    width 15%
 
 
 
@@ -155,11 +162,11 @@
   .left
     display block
     float left
-    width 60%
+    width 40%
   .right
     display block
     float left
-    width 40%
+    width 60%
   .btn-group
     float right
     .btn
@@ -183,6 +190,9 @@
           color $main
   .slide
     display flex
+    text-decoration none
+    & *
+      text-decoration none
     &__img
       display inline-block
       margin-right 1.6rem
@@ -200,6 +210,7 @@
       padding-bottom 1rem
       width 100%
     &__title
+      color $main
       font-weight 600
       font-size 1.8rem
     &__price

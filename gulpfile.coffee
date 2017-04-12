@@ -14,7 +14,7 @@ reload = browserSync.reload
 
 gulp.task 'stylus', ->
 	gulp.src 'styles/*.styl'
-		.pipe sourcemaps.init()
+		# .pipe sourcemaps.init()
 		.pipe stylus
 			'include css': true
 			use: [nib(), rupture()]
@@ -24,7 +24,7 @@ gulp.task 'stylus', ->
 		# .pipe autoprefixer({browsers: ['> 1%', 'last 5 version','IE 10'], cascade: false})
 		# .pipe uglifycss
 		# 	'uglyComments': true
-		.pipe sourcemaps.write('.')
+		# .pipe sourcemaps.write('.')
 		.pipe gulp.dest 'dist/styles/css/'
 		.pipe(reload({stream: true}))
 
@@ -61,6 +61,7 @@ gulp.task 'default', ['pug', 'stylus', 'watch'], ->
 	browserSync
 		server: 'dist/'
 		notify: false
+		open: false
 
 	gulp.watch('styles/*.styl', ['stylus'])
 	# gulp.watch('js/*.coffee',     ['coffee'])

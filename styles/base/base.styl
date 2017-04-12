@@ -97,13 +97,15 @@ body
 .btn
   border none
   border-radius $radius
+  box-shadow 0 0 0 transparent
   color $main
   cursor pointer
   display inline-block
   font-size 1.4rem
   font-weight 600
   padding .5rem 2rem
-  transition background-color .2s, color .2s
+  // transition background-color .2s, color .2s, box-shadow .5s
+  transition all .6s
   text-decoration none
   &:hover
     .fa
@@ -115,12 +117,16 @@ body
     background-color $primary
     color #fff
     &:hover
-      background-color $primary - 8%
+      // background-color $primary - 8%
+      // box-shadow 0 .3rem 1.6rem rgba($primary, .5)
+      filter: drop-shadow(0 8px 12px rgba($primary, .5))
+      // transform: translate3d(0,-2px,0)
   &--secondary
     background-color $secondary
     color $main
     &:hover
       background-color $secondary - 15%
+      filter: drop-shadow(0 8px 12px rgba($secondary, .6))
   &--gray
     background-color #f6f6f6
   &--dashed
@@ -184,6 +190,9 @@ body
     width 100%
     z-index 0
 
+.responsive-table
+  min-height .01%
+  overflow-x auto
 
 .table
   border-collapse collapse
@@ -195,13 +204,18 @@ body
     background rgba($primary, .05)
     th
       font-weight 600
+      line-height 1.2
   th,
   td
-    padding: 12px 15px
-    text-align: left
+    padding 1.2rem 1.5rem
+    padding-right 1rem
+    // text-align: left
     border 1px solid $light-gray
     margin 0
   th:first-child,
   td:first-child
-    // padding-left 2rem
-    max-width 20rem
+    max-width 35rem
+  tfoot
+    td
+      border none
+      font-weight 600

@@ -37,88 +37,104 @@
         <li class="mobile-nav__link"><a href="">Контакты</a></li>
       </nav>
     </div>
-    <div class="empty empty--special"></div>
-    <div class="image-background">
+    <div class="empty"></div>
+    <header class="inner-header">
+      <div class="grid grid--container"><a class="btn btn--inner" href=""><i class="fa fa-angle-left"></i><span>Назад</span></a>
+        <h1>Контакты</h1>
+      </div>
+    </header>
+    <div class="contacts-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90140.36064485228!2d38.95759305000001!3d45.08809935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1491204702601" frameborder="0" style="border:0;" allowfullscreen="allowfullscreen"></iframe>
+    </div>
+    <div class="grid grid--container">
+      <div class="row">
+        <div class="col col--lg-6">
+          <h3>Обратная связь</h3>
+          <form class="feedback">
+            <div class="row">
+              <div class="col col--lg-12">
+                <div class="form-group">
+                  <label>Ваше имя</label>
+                  <input type="text"/>
+                </div>
+              </div>
+              <div class="col col--lg-6">
+                <div class="form-group">
+                  <label>Контактный телефон</label>
+                  <input type="text"/>
+                </div>
+              </div>
+              <div class="col col--lg-6">
+                <div class="form-group">
+                  <label>E-mail</label>
+                  <input type="text"/>
+                </div>
+              </div>
+              <div class="col col--lg-12">
+                <div class="form-group">
+                  <label>Ваше сообщеие</label>
+                  <textarea></textarea>
+                </div>
+                <button class="btn btn--primary">Отправить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col col--lg-6">
+          <h3>Контактные данные</h3>
+          <div class="contacts-data">
+            <div class="contacts-data__title">
+              <div class="contacts-data__icon"><i class="icon fa fa-map-marker"></i></div><span>Адрес</span>
+            </div>
+            <div class="contacts-data__desc">354000, Россия, г. Сочи, ул. Роз, 31, офис 32</div>
+            <div class="contacts-data__title">
+              <div class="contacts-data__icon"><i class="icon fa fa-envelope"></i></div><span>E-mail</span>
+            </div>
+            <div class="contacts-data__desc">354000, Россия, г. Сочи, ул. Роз, 31, офис 32</div>
+            <div class="contacts-data__title">
+              <div class="contacts-data__icon"><i class="icon fa fa-phone"></i></div><span>Телефоны</span>
+            </div>
+            <div class="contacts-data__desc">Москва:<br/>+7 (495) 232-91-23<br/></div>
+            <div class="contacts-data__desc">Сочи:<br/>+7 (8622) 66-50-46; 64-06-27; 66-54-46; 64-58-23.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contacts-team">
       <div class="grid grid--container">
+        <h3>Сотрудники ЭККА-Сочи-Трэвел</h3>
         <div class="row">
-          <div class="col col--lg-6 col--lg-offset-3">
-            <form class="sending-form">
-              <div class="sending-form__title">Регистрация организации</div>
-              <div class="row">
-                <div class="col col--lg-6 col--md-6">
-                  <div class="form-group">
-                    <label>Организация</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-                <div class="col col--lg-6 col--md-6">
-                  <div class="form-group">
-                    <label>ФИО ответственного лица</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-                <div class="col col--lg-6 col--md-6">
-                  <div class="form-group">
-                    <label>Страна</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-                <div class="col col--lg-6 col--md-6">
-                  <div class="form-group">
-                    <label>Город</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-                <div class="col col--lg-12">
-                  <div class="form-group">
-                    <label>Юридический адрес</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-                <div class="col col--lg-12">
-                  <div class="form-group">
-                    <label>Почтовый адрес</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-                <div class="col col--lg-6 col--md-6">
-                  <div class="form-group">
-                    <label>ИНН</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-                <div class="col col--lg-6 col--md-6">
-                  <div class="form-group">
-                    <label>Банковские реквизиты</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-                <div class="col col--lg-12">
-                  <div class="form-group">
-                    <label>E-mail</label>
-                    <input type="email"/>
-                  </div>
-                </div>
-                <div class="col col--lg-6 col--md-6">
-                  <div class="form-group">
-                    <label>Пароль</label>
-                    <input type="password"/>
-                  </div>
-                </div>
-                <div class="col col--lg-6 col--md-6">
-                  <div class="form-group">
-                    <label>Повторите пароль</label>
-                    <input type="password"/>
-                  </div>
-                </div>
-              </div>
-              <div class="row row--sm-center sending-form__bottom">
-                <div class="col col--lg-6 col--md-6">
-                  <button class="btn btn--primary">Зарегистрироваться</button>
-                </div>
-                <div class="col col--lg-6 col--md-6 text-right"><a class="link" href="">На главную</a></div>
-              </div>
-            </form>
+          <div class="col col--lg-3 col--md-6 col--lg-flex">
+            <div class="contacts-team__item">
+              <div class="contacts-team__name">Значко Ольга</div>
+              <div class="contacts-team__position">Коммерческий директор</div>
+              <div class="contacts-team__number">8 8622 64-06-27</div>
+              <div class="contacts-team__skype"><i class="fa fa-skype"></i><span>ekka-olga</span></div>
+            </div>
+          </div>
+          <div class="col col--lg-3 col--md-6 col--lg-flex">
+            <div class="contacts-team__item">
+              <div class="contacts-team__name">Мартиросян Карина</div>
+              <div class="contacts-team__position">Специалист по тендерному направлению</div>
+              <div class="contacts-team__number">8 8622 64-06-27</div>
+              <div class="contacts-team__skype"><i class="fa fa-skype"></i><span>ekka-karina</span></div>
+            </div>
+          </div>
+          <div class="col col--lg-3 col--md-6 col--lg-flex">
+            <div class="contacts-team__item">
+              <div class="contacts-team__name">Калашникова Елена</div>
+              <div class="contacts-team__position">Менеджер по продажам</div>
+              <div class="contacts-team__number">8 8622 64-06-27</div>
+              <div class="contacts-team__skype"><i class="fa fa-skype"></i><span>ekka-erik</span></div>
+            </div>
+          </div>
+          <div class="col col--lg-3 col--md-6 col--lg-flex">
+            <div class="contacts-team__item">
+              <div class="contacts-team__name">Мартиросян Эрик</div>
+              <div class="contacts-team__position">Менеджер по продажам</div>
+              <div class="contacts-team__number">8 8622 64-06-27</div>
+              <div class="contacts-team__skype"><i class="fa fa-skype"></i><span>ekka-erik</span></div>
+            </div>
           </div>
         </div>
       </div>

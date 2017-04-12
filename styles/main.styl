@@ -15,6 +15,7 @@
 @import 'pages/directions'
 @import 'pages/transfer'
 @import 'pages/offer'
+@import 'pages/contacts'
 
 .grid--container
   max-width 1216px
@@ -25,7 +26,7 @@
 
 .background
   background #fafafa
-  padding-bottom 10rem
+  padding-bottom 1rem
 
 .main-header
   background #fff
@@ -99,7 +100,7 @@
   &__title
     line-height 1.2
     font-size 2.2rem
-    font-weight 700
+    font-weight 600
     margin-bottom 1rem
   // &__stars
     // width 20%
@@ -153,8 +154,10 @@
     line-height 1
     margin-top -.5rem
     & .social
+      color $main
       display inline-block
       margin-right 1rem
+      text-decoration none
       .fa
         color $gray
         margin-right 1rem
@@ -164,6 +167,11 @@
     margin-top 8rem
     padding-bottom 1rem
     padding-top 2.5rem
+
+.image-background + .main-footer,
+.background + .main-footer,
+.contacts-team + .main-footer
+  margin-top 0
 
 // .webformula
 //   text-align right

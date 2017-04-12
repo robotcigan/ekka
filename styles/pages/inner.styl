@@ -235,3 +235,41 @@ h3
 
 .aside-btn
   margin-top 14.5rem
+
+.account-nav
+  border 1px solid $light-gray
+  a
+    color $gray
+    line-height 4rem
+    text-decoration none
+  &__link
+    display block
+    height 4rem
+    padding-left 1.8rem
+    &--active
+      position relative
+      &:before
+        content ''
+        background $primary
+        height 100%
+        left -1px
+        position absolute
+        top 0
+        width 2px
+      a
+        color $primary
+        font-weight 600
+    &:not(:last-child)
+      border-bottom 1px solid $light-gray
+
+
+.organisation-info
+  margin-top 3rem
+  p
+    margin 0
+    margin-bottom 1rem
+  strong
+    display block
+    // margin .8rem 0
+
+

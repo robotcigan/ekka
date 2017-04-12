@@ -1,0 +1,27 @@
+extends layout.pug
+
+block content
+  .empty
+
+  .grid.grid--container.page-section
+    .row
+      .col.col--lg-2
+        nav.account-nav
+          li.account-nav__link: a(href="order_list.html") Список заказов
+          li.account-nav__link.account-nav__link--active: a(href="favorites.html") Избранное
+          li.account-nav__link: a(href="settings.html") Настройки
+      .col.col--lg-10
+        h3 Избранное
+        - for(var z = 0; z < 2; z++)
+          include card.pug
+
+  include viewed.pug
+
+
+
+
+
+
+
+
+

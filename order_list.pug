@@ -1,0 +1,79 @@
+extends layout.pug
+
+block content
+  .empty
+
+  .grid.grid--container.page-section
+    .row
+      .col.col--lg-2
+        nav.account-nav
+          li.account-nav__link.account-nav__link--active: a(href="order_list.html") Список заказов
+          li.account-nav__link: a(href="favorites.html") Избранное
+          li.account-nav__link: a(href="settings.html") Настройки
+      .col.col--lg-10
+        h3 Список заказов
+        .responsive-table
+          table.table
+            thead
+              th Информация о заказе
+              th Дата заказа
+              th Статус
+              th Стоимость
+                span.ruble
+              th Стоимость для клиента
+              th Агентское вознаграждение %
+              th Ваш доход
+                span.ruble
+            tbody
+              tr
+                td Отель «Немецкая слобода» Номер люкс с двухместной кроватью
+                td 26.01.2017
+                td В обработке
+                td.text-right 1 600
+                td.text-right 1 600
+                td 12
+                td.text-right  800
+              tr
+                td Отель «Немецкая слобода» Номер люкс с двухместной кроватью
+                td 26.01.2017
+                td В обработке
+                td.text-right  1 600
+                td.text-right  1 600
+                td 12
+                td.text-right  800
+              tr
+                td Отель «Немецкая слобода» Номер люкс с двухместной кроватью
+                td 26.01.2017
+                td В обработке
+                td.text-right  1 600
+                td.text-right  1 600
+                td 12
+                td.text-right  800
+              tr
+                td Отель «Немецкая слобода» Номер люкс с двухместной кроватью
+                td 26.01.2017
+                td В обработке
+                td.text-right  1 600
+                td.text-right  1 600
+                td 12
+                td.text-right  800
+            tfoot
+              tr
+                td
+                td
+                td Итого
+                td.text-right  4 800
+                td.text-right  6 000
+                td
+                td.text-right  2 700
+
+  include viewed.pug
+
+
+
+
+
+
+
+
+
