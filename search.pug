@@ -7,63 +7,64 @@ block content
   .grid.grid--container
     .row
       .col.col--lg-2
-        h3 Фильтры
-        form
-          .form-group
-            label.form-label Категории
-            select.custom-select
-              option Санатории
-              option Отели
-          .form-group
-            label.form-label Цены
-            #range-slider
-          .form-group
-            label.form-label Рейтинг
-            #slider
-            #slider-value
-            span.slider-value-text и выше
-          .form-group
-            label.form-label Звездность
-            small от
-            .stars
-              i.fa.fa-star
-              i.fa.fa-star
-              i.fa.fa-star
-              i.fa.fa-star.disable
-              i.fa.fa-star.disable
-            small до
-            .stars
-              i.fa.fa-star
-              i.fa.fa-star
-              i.fa.fa-star
-              i.fa.fa-star
-              i.fa.fa-star
-          .form-group
-            label.form-label Услуги
-            label(for="service-1").custom-checkbox-label
-              i.icon.icon--big.flaticon-cocktail
-            input(type="checkbox" id="service-1").custom-checkbox
-            label(for="service-2").custom-checkbox-label
-              i.icon.icon--big.flaticon-bed
-            input(type="checkbox" id="service-2").custom-checkbox
-            label(for="service-3").custom-checkbox-label
-              i.icon.icon--big.flaticon-television
-            input(type="checkbox" id="service-3").custom-checkbox
-            label(for="service-4").custom-checkbox-label
-              i.icon.icon--big.flaticon-buthtub
-            input(type="checkbox" id="service-4").custom-checkbox
-            label(for="service-5").custom-checkbox-label
-              i.icon.icon--big.flaticon-air-conditioner
-            input(type="checkbox" id="service-5").custom-checkbox
-            label(for="service-6").custom-checkbox-label
-              i.icon.icon--big.flaticon-cocktail
-            input(type="checkbox" id="service-6").custom-checkbox
-            label(for="service-7").custom-checkbox-label
-              i.icon.icon--big.flaticon-cocktail
-            input(type="checkbox" id="service-7").custom-checkbox
-            label(for="service-8").custom-checkbox-label
-              i.icon.icon--big.flaticon-cocktail
-            input(type="checkbox" id="service-8").custom-checkbox
+        .search-aside
+          h3 Фильтры
+          form
+            .form-group
+              label.form-label Категории
+              select.custom-select
+                option Санатории
+                option Отели
+            .form-group
+              label.form-label Цены
+              #range-slider
+            .form-group
+              label.form-label Рейтинг
+              #slider
+              #slider-value
+              span.slider-value-text и выше
+            .form-group
+              label.form-label Звездность
+              small от
+              .stars
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star.disable
+                i.fa.fa-star.disable
+              small до
+              .stars
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+            .form-group
+              label.form-label Услуги
+              label(for="service-1").custom-checkbox-label
+                i.icon.icon--big.flaticon-cocktail
+              input(type="checkbox" id="service-1").custom-checkbox
+              label(for="service-2").custom-checkbox-label
+                i.icon.icon--big.flaticon-bed
+              input(type="checkbox" id="service-2").custom-checkbox
+              label(for="service-3").custom-checkbox-label
+                i.icon.icon--big.flaticon-television
+              input(type="checkbox" id="service-3").custom-checkbox
+              label(for="service-4").custom-checkbox-label
+                i.icon.icon--big.flaticon-buthtub
+              input(type="checkbox" id="service-4").custom-checkbox
+              label(for="service-5").custom-checkbox-label
+                i.icon.icon--big.flaticon-air-conditioner
+              input(type="checkbox" id="service-5").custom-checkbox
+              label(for="service-6").custom-checkbox-label
+                i.icon.icon--big.flaticon-cocktail
+              input(type="checkbox" id="service-6").custom-checkbox
+              label(for="service-7").custom-checkbox-label
+                i.icon.icon--big.flaticon-cocktail
+              input(type="checkbox" id="service-7").custom-checkbox
+              label(for="service-8").custom-checkbox-label
+                i.icon.icon--big.flaticon-cocktail
+              input(type="checkbox" id="service-8").custom-checkbox
       .col.col--lg-10
         - for (var y = 0; y < 5; y++)
           include card.pug

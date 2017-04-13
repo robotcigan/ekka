@@ -32,7 +32,7 @@ block content
             h2 Специальные предложения
           .row.special-offers
             - for (var i = 0; i < 3; i++)
-              .col.col--lg-4.col--md-4
+              .col.col--lg-4.col--md-4.col--sm-4
                 .offer
                   .offer__plate
                     span от 3430
@@ -110,6 +110,26 @@ block content
                     .direction__text
                       .direction__city Красная поляна
                       .direction__country Россия
+
+
+                .masonry-column.masonry__country
+                  .direction
+                    img(src="img/direction-1.jpg", alt="").direction__img
+                    .direction__text
+                      .direction__city dgadgdgs
+                      .direction__country Россия
+                .masonry-column.masonry__country
+                  .direction.direction--type-2
+                    img(src="img/direction-2.jpg", alt="").direction__img
+                    .direction__text
+                      .direction__city asdgasdg
+                      .direction__country Россия
+                .masonry-column.masonry__country
+                  .direction.direction--type-3
+                    img(src="img/direction-3.jpg", alt="").direction__img
+                    .direction__text
+                      .direction__city asdadhbs
+                      .direction__country Армения
 
 
     .white-block.page-section

@@ -32,6 +32,7 @@ html(lang="ru")
           .menu-toggle
 
     .mobile-menu
+      a(href="").logo
       nav.mobile-nav
         li.mobile-nav__link: a(href="") Специальные предложения
         li.mobile-nav__link: a(href="") Направления
@@ -40,60 +41,62 @@ html(lang="ru")
         li.mobile-nav__link: a(href="") Агенствам
         li.mobile-nav__link: a(href="") Контакты
 
-    block content
+    main.site-content
+      block content
+
 
     
-    footer.main-footer
-      .grid.grid--container
-        .row
-          .col.col--lg-3.col--md-6
-            .main-footer__phone
-              .code 8 (622) 
-              .phone-number 66 50 46
-            .main-footer__phone
-              .code 8 (622) 
-              .phone-number 66 50 46
-            a(href="").link info@ekka.info
-          .col.col--lg-6.col--md-12
-            header.main-footer__header Навигация
-            .row
-              .col.col--lg-4.col--md-4
-                nav.main-footer__navigation
-                  li: a(href="") Онлайн бронирование
-                  li: a(href="") Направления
-                  li: a(href="") Агентствам
-                  li: a(href="") Трансфер
-              .col.col--lg-4.col--md-4
-                nav.main-footer__navigation
-                  li: a(href="") Специальные предложения
-                  li: a(href="") Туристам
-                  li: a(href="") Контакты
-                  li: a(href="") О компании
-              .col.col--lg-4.col--md-4
-                nav.main-footer__navigation
-                  li: a(href="") Условия использования сайта
-                  li: a(href="") Вакансии
-                  li: a(href="") Вход для тур. агенств
-                  li: a(href="") Карта сайта
-          .col.col--lg-3.col--md-6
-            header.main-footer__header Мы в соцсетях
-            .main-footer__socials
-              a(href="").social
-                i.fa.fa-vk
-                span.title ВКонтакте
-              a(href="").social
-                i.fa.fa-facebook-square
-                span.title Facebook
-
-      footer.main-footer__bottom
+      footer.main-footer
         .grid.grid--container
           .row
-            .col.col--lg-9
-              span &copy; 2017, Все права защишены. ЭККА-СОЧИ-ТРЭВЕЛ
-            .col.col--lg-3
-              .webformula
-                span Разработка сайта &mdash; 
-                a(href="").link Webformula
+            .col.col--lg-3.col--md-8
+              .main-footer__phone
+                .code 8 (622) 
+                .phone-number 66 50 46
+              .main-footer__phone
+                .code 8 (622) 
+                .phone-number 66 50 46
+              a(href="").link info@ekka.info
+            .col.col--lg-6.col--md-12.main-footer__middle
+              header.main-footer__header Навигация
+              .row
+                .col.col--lg-4.col--md-4
+                  nav.main-footer__navigation
+                    li: a(href="") Онлайн бронирование
+                    li: a(href="") Направления
+                    li: a(href="") Агентствам
+                    li: a(href="") Трансфер
+                .col.col--lg-4.col--md-4
+                  nav.main-footer__navigation
+                    li: a(href="") Специальные предложения
+                    li: a(href="") Туристам
+                    li: a(href="") Контакты
+                    li: a(href="") О компании
+                .col.col--lg-4.col--md-4
+                  nav.main-footer__navigation
+                    li: a(href="") Условия использования сайта
+                    li: a(href="") Вакансии
+                    li: a(href="") Вход для тур. агенств
+                    li: a(href="") Карта сайта
+            .col.col--lg-3.col--md-4
+              header.main-footer__header Мы в соцсетях
+              .main-footer__socials
+                a(href="").social
+                  i.fa.fa-vk
+                  span.title ВКонтакте
+                a(href="").social
+                  i.fa.fa-facebook-square
+                  span.title Facebook
+
+        footer.main-footer__bottom
+          .grid.grid--container
+            .row
+              .col.col--lg-9
+                span &copy; 2017, Все права защишены. ЭККА-СОЧИ-ТРЭВЕЛ
+              .col.col--lg-3
+                .webformula
+                  span Разработка сайта &mdash; 
+                  a(href="").link Webformula
 
 
 

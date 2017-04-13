@@ -29,6 +29,6 @@ font-style: normal;
 margin-left: 20px;
 }*/
 
-.flaticon-social:before { content: "\f100"; }
-.flaticon-transport:before { content: "\f101"; }
-.flaticon-airplane:before { content: "\f102"; }
+.another-icon-social:before { content: "\f160"; }
+.another-icon-transport:before { content: "\f161"; }
+.another-icon-airplane:before { content: "\f162"; }

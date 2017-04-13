@@ -11,6 +11,22 @@ $(document).ready(function () {
     itemSelector: '.masonry-column',
   });
 
+  $('.btn-group .btn--dashed').on('click', function() {
+
+    $(this).toggleClass('btn--dashed-active');
+    $('.masonry').masonry('remove', $('.masonry-column'));
+
+    if($(this).text() === "Страны") {
+
+      $('.masonry-column.masonry__country').each(function() {
+        var $item = $(this);
+        $('.masonry').prepend($item).masonry('prepended', $item);
+      });
+
+    }
+
+  })
+
   // Специальный слайдер на главной
   $('.special-slider').slick({
     arrows: false,
@@ -110,7 +126,6 @@ $(document).ready(function () {
 
 
   // Header шапка
-  $('.main-header').addClass('main-header--scroll')
 
   var page = window.location.pathname;
 
@@ -118,8 +133,22 @@ $(document).ready(function () {
     $('.main-header').addClass('main-header--black');
   }
 
+  $(window).scroll(function () {
+    if( $(window).scrollTop() > 20 ) {
+      $('.main-header').addClass('main-header--scroll');
+      console.log('fgd')
+    } else {
+      $('.main-header').removeClass('main-header--scroll');
+    }
+  })
+
+
+
   $('.menu-toggle').on('click', function() {
     $(this).toggleClass('menu-toggle--active');
+    $('.mobile-menu').toggleClass('mobile-menu--active');
+    $('.site-content').toggleClass('site-content--active');
+    $('.main-header').toggleClass('main-header--menu');
   });
 
   var rangeSlider = document.getElementById('range-slider');

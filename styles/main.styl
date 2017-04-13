@@ -30,14 +30,13 @@
 
 .main-header
   background #fff
+  border-bottom 1px solid $light-gray
   left 0
   position fixed
   top 0
+  transition box-shadow .4s, border-bottom .1s, background-color .2s, color .2s
   width 100%
-  z-index 100
-  &--scroll
-    box-shadow 0 0 40px rgba($gray, .3)
-    top 0 !important
+  z-index 200
   &__container
     align-items center
     justify-content space-between
@@ -72,17 +71,46 @@
       letter-spacing .3px
       text-decoration none
       text-transform uppercase
+  .phone
+    color $main
 
-.main-header--black
-  background-color rgba($main, .7)
-  li
-    a
+
+.main-header
+  &--black
+    background-color rgba($main, .7)
+    border-bottom none
+    li
+      a
+        color #fff
+    & .main-header__phone
       color #fff
-  & .main-header__phone
-    color #fff
-  .logo
-    background url('../../img/logo.png') no-repeat
+    .logo
+      background url('../../img/logo.png') no-repeat
+  &--scroll
+    background-color #fff
+    border-color transparent
+    box-shadow 5px 2px 48px rgba($gray, .3)
+    top 0 !important
+    li
+      a
+        color $main
+    .logo
+      background url('../../img/logo_white.png') no-repeat
+  &--menu
+    background-color #030616
+    border-bottom none
+    .logo
+      background url('../../img/logo.png') no-repeat
+    .menu-toggle
+      &:before,
+      &:after
+        background #fff
 
+
+.site-content
+  transition transform .4s cubic-bezier(1, 0.1, 0, 0.7) .2s
+  &--active
+    transform translateX(70%)
 
 .hotel
   &__img
@@ -193,7 +221,7 @@
   &
     position: relative
     background: $main
-    transition: all 0ms 300ms
+    transition: all 0ms .2s
     &--active
       background: rgba(255, 255, 255, 0) 
   &:before
@@ -202,22 +230,22 @@
     left: 0
     bottom: 8px
     background: $main
-    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+    transition: bottom .2s .2s cubic-bezier(0.2, 1, 0.3, 1), transform .2s cubic-bezier(0.2, 1, 0.3, 1)
   &:after
     content: ""
     position: absolute
     left: 0
     top: 8px
     background: $main
-    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+    transition: top .2s .2s cubic-bezier(0.2, 1, 0.3, 1), transform .2s cubic-bezier(0.2, 1, 0.3, 1)
   &--active:after
     top: 0
     transform: rotate(45deg)
-    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+    transition: top .2s cubic-bezier(0.2, 1, 0.3, 1), transform .2s .2s cubic-bezier(0.2, 1, 0.3, 1)
   &--active:before
     bottom: 0
     transform: rotate(-45deg)
-    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+    transition: bottom .2s cubic-bezier(0.2, 1, 0.3, 1), transform .2s .2s cubic-bezier(0.2, 1, 0.3, 1)
 
 
 @import 'base/adapt'

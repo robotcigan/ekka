@@ -1,3 +1,9 @@
+.search-aside
+  h3
+    margin-top 0
+  .form-group
+    margin-bottom 3rem
+
 .card-container
   border 1px solid $light-gray
   margin-bottom 2rem
@@ -19,6 +25,11 @@
     position relative
     img
       display block
+  &--offer &__img
+    max-width 35rem
+    img
+      max-height 21rem
+      width 100%
   &__plate
     color #fff
     border-radius $radius
@@ -60,6 +71,8 @@
     i:not(:last-child)
       margin-right 2rem
   &__rating
+    display block
+    width 100%
     &_title
       color $primary
       font-size 1.1rem
