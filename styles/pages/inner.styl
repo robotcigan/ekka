@@ -18,7 +18,11 @@
   .btn--inner
     position absolute
     left 0
-    top .2rem
+    height 3.2rem
+    // top .2rem
+    margin 0 auto
+    top 0
+    bottom 0
 
 
 .gallery
@@ -105,11 +109,16 @@ h3
     margin 0 1rem
   img
     width 100%
+  p
+    line-height 1.4
 
 
 .slick-prev,
 .slick-next
   top 35%
+  &:before
+    &:hover
+      color $primary
 
 .slick-prev:before,
 .slick-next:before
@@ -117,12 +126,13 @@ h3
   font-family FontAwesome
   font-size 2.4rem
 
+
 .slick-prev:before
   content '\f104'
 
+
 .slick-next:before
   content '\f105'
-
 
 .tabs
   &__nav

@@ -12,7 +12,7 @@ $not-in-month-hover               = #999
 $disabled                         = #333
 $selected                         = $main
 $selected-background              = $secondary
-$not-in-month-selected-background = rgba($primary, .6)
+$not-in-month-selected-background = rgba($secondary, .3)
 $day-of-week                      = $not-in-month-hover
 // $today-background                 = $primary
 // $today-color                      = #fff
@@ -58,7 +58,7 @@ $day-of-week                      = $not-in-month-hover
     .pmu-today
       // background : $today-background
       // color      : $today-color
-      font-weight 800
+      font-weight 700
 
     .pmu-button:hover
       background : $background-hover
@@ -75,7 +75,6 @@ $day-of-week                      = $not-in-month-hover
     .pmu-selected
       background : $selected-background
       color      : $selected
-      font-weight 600
       // border-radius $radius
 
     .pmu-not-in-month.pmu-selected
@@ -93,9 +92,11 @@ $day-of-week                      = $not-in-month-hover
 
       .pmu-prev,
       .pmu-next
+        content '\f104'
         display : none
         height  : 2em
         width   : 1em
+      
 
       .pmu-month
         width : 14em

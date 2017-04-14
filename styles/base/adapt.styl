@@ -1,26 +1,77 @@
 .mobile-menu
-  background #030616
-  // visibility hidden
+  background #fff
   height 100%
   opacity 1
+  overflow auto
+  left 0
+  // padding 4rem 3rem
+  padding 5% 8%
   position fixed
   transform translateX(-100%)
-  transition transform .4s cubic-bezier(1, 0.1, 0, 0.7) .2s, opacity .1s
+  transition transform .4s cubic-bezier(1, .15, .2, .9) .2s, opacity .1s
+  top 0
   width 100%
   z-index 200
   &--active
     opacity 1
     transform translateX(0)
+  &__name
+    color $main
+    font-size 1.6rem
+    font-weight 600
+    letter-spacing 1px
+    line-height .9
+    text-decoration none
+    text-transform uppercase
+  &__close
+    height 3rem
+    position absolute
+    right 1rem
+    top 3.3rem
+    padding-right 15%
+    width 3rem
+    &:before,
+    &:after
+      content ''
+      background $main
+      height 2px
+      left 15%
+      position absolute
+      top 45%
+      width 2rem
+    &:before
+      transform rotate(45deg)
+    &:after
+      transform rotate(-45deg)
+  &__header
+    color $primary
+    font-size 2.4rem
+    font-weight 700
+    letter-spacing 1px
+    line-height 1.4
+    margin-bottom 0
+    margin-top 5rem
+    text-transform uppercase
+    max-width 30rem
+  &__phone
+    color #aaa
+    font-size 1.8rem
+    font-weight 600
+    letter-spacing 1px
 
 .mobile-nav
-  margin-top 20rem
+  margin-top 5.5rem
   &__link
-    margin-bottom 1rem
+    display block
+    margin-bottom 2rem
     a
-      color #fff
-      font-size 2.4rem
+      color $main
+      font-size 1.4rem
       font-weight 600
+      letter-spacing 1px
+      line-height 1
       text-decoration none
+      text-transform uppercase
 
 .tabs__select
   display none
@@ -34,8 +85,10 @@
   .main-header
     &__phone
       display none
-  .menu-toggle
+  .menu-open
     display block
+  .hero
+    height 40rem
   .masonry
     &-column
       padding 0 1.3rem 3.2rem 1.3rem
@@ -112,15 +165,29 @@
         font-size 1.4rem
     &__middle
       margin-bottom 4rem
+  
+  .transfer-success
+    img
+      width 30%
 
 
 @media(max-width 767px)
+  .mobile-menu
+    padding 4rem 3rem
+    &__close
+      top 3.3rem
+      padding-right 15%
   .hero
+    height 50rem
+    &__bg
+      animation none
     .index-header
+      animation none
       line-height 1
       font-size 3rem
       margin-bottom 2rem
     &__form
+      animation none
       display initial
     .hero__input
       &:before
@@ -138,6 +205,8 @@
   .map
     iframe
       height 25rem
+  .offer
+    margin-bottom 4rem
   .card
     display block
     &__img
@@ -203,10 +272,11 @@
   .inner-header
     height 7rem
     h1
-      font-size 2.4rem
+      font-size 2.2rem
+      padding 0 3rem
     .btn--inner
       padding 0.5rem 1rem
-      top -3px
+      // top 15%
       .fa
         transform translate(4px, 0)
       span
@@ -345,3 +415,8 @@
   .card
     &__rating
       width initial
+
+@media(max-width 400px)
+  .hero
+    .index-header
+      font-size 2.4rem

@@ -1,37 +1,47 @@
 .hero
   align-items center
-  background url('../../img/hero.jpg') no-repeat 50%
-  background-position-Y 75%
-  background-size cover
   display flex
   height 55rem
+  overflow hidden
   margin-bottom 8rem
   position relative
   width 100%
-  &:before
-    content ''
-    background rgba($main, .6)
+  &__bg
+    animation heroScale 2s ease
+    background url('../../img/hero.jpg') no-repeat 50%
+    background-position-Y 75%
+    background-size cover
     left 0
     height 100%
     position absolute
     top 0
+    transition transform .2s
     width 100%
-    z-index 0
+    &:before
+      content ''
+      background rgba($main, .6)
+      left 0
+      height 100%
+      position absolute
+      top 0
+      width 100%
+      z-index 0
   &-content
     position relative
     z-index 5
   &__form
     display flex
+    animation heroUp 1s forwards
   .index-header
+    animation heroDown 1s forwards
     color #fff
     font-size 3.6rem
     font-weight 800
     margin 0
     margin-bottom 1rem
-  // &__input-group
-  //   border 1px solid $gray
   &__input
     display inline
+    overflow hidden
     position relative
     width 20%
     &:before
@@ -42,17 +52,20 @@
       right 0
       top 1.2rem
       width 1px
+    &:after
+        background $secondary
+        bottom -1rem
+        content ''
+        height 3px
+        left 0
+        position absolute
+        transition bottom .3s
+        width 100%
     &:nth-child(4):before
       display none
     &--active
       &:after
-        background $secondary
-        bottom -4.8rem
-        content ''
-        height 3px
-        left -21.5rem
-        position absolute
-        // width 21.5rem
+        bottom 0
     input, select
       border none
       border-radius 0
@@ -62,7 +75,8 @@
       float left
       height 4.8rem
       margin 0
-      padding 0 2rem
+      padding-left 2rem
+      padding-right 1rem
       width 100%
     &:first-child
       width 25%
@@ -79,6 +93,9 @@
     height 4.8rem
     text-align center
     width 15%
+  
+  &-pickmeup
+    margin-top 48px
 
 
 
@@ -164,11 +181,11 @@
   .left
     display block
     float left
-    width 40%
+    width 60%
   .right
     display block
     float left
-    width 60%
+    width 40%
   .btn-group
     float right
     .btn

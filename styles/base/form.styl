@@ -79,8 +79,8 @@ option
 
 .select2.select2-container.select2-container--default.select2-container--below.select2-container--focus
   width 100% !important
-  min-width 100% !important
-  max-width 100% !important
+  // min-width 100% !important
+  // max-width 100% !important
 
 .select2-container--default
   width 100% !important
@@ -315,20 +315,3 @@ option
       .icon:before,
       span
         color $primary
-
-
-@keyframes fadeUp
-  0%
-    opacity 0
-    transform translate3d(0, 10px, 0)
-  100%
-    opacity 1
-    transform none
-
-@keyframes fadeDown
-  0%
-    opacity 1
-    transform none
-  100%
-    opacity 0
-    transform translate3d(0, 10px, 0)

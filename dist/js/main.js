@@ -55,7 +55,7 @@ $(document).ready(function () {
 
 
   // Обычный слайдер
-  $('.regular-slider').slick({
+  $('.regular-slider--agencies').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
@@ -77,6 +77,30 @@ $(document).ready(function () {
       }
     ]
   });
+
+  $('.regular-slider--different-width').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    // variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  })
 
 
 
@@ -136,49 +160,57 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if( $(window).scrollTop() > 20 ) {
       $('.main-header').addClass('main-header--scroll');
-      console.log('fgd')
     } else {
       $('.main-header').removeClass('main-header--scroll');
     }
   })
 
 
-
-  $('.menu-toggle').on('click', function() {
-    $(this).toggleClass('menu-toggle--active');
-    $('.mobile-menu').toggleClass('mobile-menu--active');
-    $('.site-content').toggleClass('site-content--active');
-    $('.main-header').toggleClass('main-header--menu');
+  // Мобильное меню
+  $('.menu-open').on('click', function() {
+    $('.mobile-menu').addClass('mobile-menu--active');
+    $('.site-content__background').addClass('site-content__background--active');
   });
 
-  var rangeSlider = document.getElementById('range-slider');
+  $('.mobile-menu__close').on('click', function() {
+    $('.mobile-menu').removeClass('mobile-menu--active');
+    $('.site-content__background').removeClass('site-content__background--active');
+  })
 
-  noUiSlider.create(rangeSlider, {
-    start: [1000, 7000],
-    connect: true,
-    tooltips: true,
-    range: {
-      'min': 0,
-      'max': 8000
-    }
-  });
 
-  var slider = document.getElementById('slider');
+  // Ползунки
+  if(rangeSlider != null) {
 
-  noUiSlider.create(slider, {
-    start: [7],
-    step: 1,
-    range: {
-      'min': 0,
-      'max': 10
-    }
-  });
+    var rangeSlider = document.getElementById('range-slider');
 
-  var sliderValue = document.getElementById('slider-value');
+    noUiSlider.create(rangeSlider, {
+      start: [1000, 7000],
+      connect: true,
+      tooltips: true,
+      range: {
+        'min': 0,
+        'max': 8000
+      }
+    });
+    var slider = document.getElementById('slider');
 
-  slider.noUiSlider.on('update', function( values, handle ) {
-    sliderValue.innerHTML = values[handle];
-  });
+    noUiSlider.create(slider, {
+      start: [7],
+      step: 1,
+      range: {
+        'min': 0,
+        'max': 10
+      }
+    });
+
+    var sliderValue = document.getElementById('slider-value');
+
+    slider.noUiSlider.on('update', function( values, handle ) {
+      sliderValue.innerHTML = values[handle];
+    });
+
+  }
+
 
 
   // Карточка
@@ -240,6 +272,7 @@ $(document).ready(function() {
   $('.hero__input').on('click', function() {
     $('.hero__input').removeClass('hero__input--active');
     $(this).addClass('hero__input--active');
+    $('.pickmeup').addClass('hero-pickmeup');
   });
 
   $('.guest-clicker__input').val('1 номер., 1 гость');
