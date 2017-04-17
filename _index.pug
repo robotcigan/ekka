@@ -16,8 +16,19 @@ block content
                   input(type="text" value="Сочи, Россия")
                 .hero__input
                   input(type="text").datepicker-range
-                .hero__input
-                  input(type="text" value="1 номер, 1 гость")
+                .hero__input.guest-clicker
+                  input(type="text" value="1 номер, 1 гость").guest-clicker__input
+                  .guest-clicker__modal.popup
+                    .guest-clicker__group
+                      .guest-clicker__label Номера
+                      .guest-clicker__btn.js-room-minus -
+                      .guest-clicker__room-number 1
+                      .guest-clicker__btn.js-room-plus +
+                    .guest-clicker__group
+                      .guest-clicker__label Гости
+                      .guest-clicker__btn.js-guest-minus -
+                      .guest-clicker__guest-number 1
+                      .guest-clicker__btn.js-guest-plus +
                 .hero__input
                   select
                     option По популярности
@@ -50,7 +61,12 @@ block content
             .left
               h2 Популярные направления
             .right
-              .btn-group
+              .popular-direction-mobile
+                select.custom-select
+                  option Все направления
+                  option Страны
+                  option Города
+              .popular-direction-desktop
                 .btn.btn--dashed.btn--dashed-active Все направления
                 .btn.btn--dashed Страны
                 .btn.btn--dashed Города
@@ -143,48 +159,21 @@ block content
               i.fa.fa-angle-left
               i.fa.fa-angle-right
         .special-slider
-          a(href="").slide
-            .slide__img
-              img(src="img/hotel-1.jpg", alt="")
-            .slide__text
-              .slide__top
-                .slide__title Radisson Blu Paradise Resort &amp; Spa Sоchi
-                .stars
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star
-              .slide__bottom
-                .slide__price 2 500 ₽
-                .slide__price-name средняя цена
-          a(href="").slide
-            .slide__img
-              img(src="img/hotel-1.jpg", alt="")
-            .slide__text
-              .slide__top
-                .slide__title Radisson Blu Paradise Resort &amp; Spa Sоchi
-                .stars
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star
-              .slide__bottom
-                .slide__price 2 500 ₽
-                .slide__price-name средняя цена
-          a(href="").slide
-            .slide__img
-              img(src="img/hotel-1.jpg", alt="")
-            .slide__text
-              .slide__top
-                .slide__title Radisson Blu Paradise Resort &amp; Spa Sоchi
-                .stars
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star
-              .slide__bottom
-                .slide__price 2 500 ₽
-                .slide__price-name средняя цена
+          - for (var x = 0; x < 5; x++)
+            a(href="").slide
+              .slide__img
+                img(src="img/hotel-1.jpg", alt="")
+              .slide__text
+                .slide__top
+                  .slide__title Radisson Blu Paradise Resort &amp; Spa Sоchi
+                  .stars
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                    i.fa.fa-star
+                .slide__bottom
+                  .slide__price 2 500 ₽
+                  .slide__price-name средняя цена
 
 
 
@@ -194,7 +183,8 @@ block content
         header.subheader
           h2 Мы на карте
     .map.page-section
-      iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90140.36064485228!2d38.95759305000001!3d45.08809935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1491204702601" frameborder="0" style="border:0" allowfullscreen)
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2816.8159145447253!2d38.98807731561053!3d45.08952597909836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDA1JzIyLjMiTiAzOMKwNTknMjUuMCJF!5e0!3m2!1sru!2sru!4v1492419346070" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+
 
     include viewed.pug
 

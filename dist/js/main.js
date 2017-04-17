@@ -116,16 +116,17 @@ $(document).ready(function () {
     $(this).closest('.tabs').find('.tabs__content').eq(index).show();
   });
 
-  $('.tabs__select').on('click', function() {
-    var index = $(this).index();
-    console.log('sad')
-    $(this).closest('.tabs').find('.tabs__content').hide();
-    $(this).closest('.tabs').find('.tabs__content').eq(index).show();
-  })
+  // $('.tabs__select .custom-select').on('click', function() {
+  //   var index = $(this).index();
+  //   console.log('sad')
+  //   $(this).closest('.tabs').find('.tabs__content').hide();
+  //   $(this).closest('.tabs').find('.tabs__content').eq(index).show();
+  // })
 
   $('.tabs__nav li a').on('click', function(e) {
     e.preventDefault();
   });
+
 
   // Табы адапт в селект
   $('.tabs__nav').each(function() {
@@ -135,7 +136,14 @@ $(document).ready(function () {
       var text = $(this).text();
       parent.find('.tabs__select .custom-select').append("<option>" + text + "</option>");
     })
-  })
+  });
+
+  $('.tabs__select').on('change', function() {
+    var parent = $(this).parent();
+    var index = $(this).find('option:selected').index();
+    parent.find('.tabs__content').hide();
+    parent.find('.tabs__content').eq(index).show();
+  });
 
 
   // Аккордион
@@ -217,7 +225,6 @@ $(document).ready(function () {
   function cardOpen(element) {
     element.parent().toggleClass('card-container--active');
     element.parent().find('.card__bottom').stop().slideToggle();
-    console.log('open')
   }
 
   $('.card').on('click', function() {
@@ -263,6 +270,8 @@ addEventListener('DOMContentLoaded', function () {
   pickmeup('.datepicker-4');
   pickmeup('.datepicker-5');
 
+  $('.pmu-button').text('');
+
 });
 
 $(document).ready(function() {
@@ -274,6 +283,13 @@ $(document).ready(function() {
     $(this).addClass('hero__input--active');
     $('.pickmeup').addClass('hero-pickmeup');
   });
+
+  $('.guest-clicker__input').on('click', function() {
+    // var position = $(this).find('.guest-clicker__input').position();
+    var modal = $(this).parent().find('.guest-clicker__modal');
+    modal.toggleClass('guest-clicker__modal--active');
+    // modal.css('left', position.left);
+  })
 
   $('.guest-clicker__input').val('1 номер., 1 гость');
   var roomCount = 1;
@@ -295,6 +311,10 @@ $(document).ready(function() {
     $('.guest-clicker__guest-number').text(guestCount);
     $('.guest-clicker__input').val(roomCount + ' номер., ' + guestCount + ' гостя');
   });
+
+  $('.hero__form--search').on('click', function() {
+    $('.pickmeup').addClass('pickmeup--search')
+  })
 
   // Чекбоксы
   $('.custom-checkbox-label').on('click', function() {
@@ -325,24 +345,23 @@ $(document).ready(function() {
   $('#book-guest-count select').on('change', function() {
     var bookGuestCount = parseInt($(this).val());
 
-    console.log(bookGuestCount)
-
-    switch(bookGuestCount) {
-      case 1:
-        $('.guest-information').hide();
-      case 2:
-        $('.guest-information').hide();
-        $('.guest-information').eq(0).show();
-      case 3:
-        $('.guest-information').hide();
-        $('.guest-information').eq(0).show();
-        $('.guest-information').eq(1).show();
-      case 4:
-        $('.guest-information').hide();
-        $('.guest-information').eq(0).show();
-        $('.guest-information').eq(1).show();
-        $('.guest-information').eq(2).show();
+    if(bookGuestCount === 1) $('.guest-information').hide();
+    if(bookGuestCount === 2) {
+      $('.guest-information').hide();
+      $('.guest-information').eq(0).css('display', 'flex');
     }
+    if(bookGuestCount === 3) {
+      $('.guest-information').hide();
+      $('.guest-information').eq(0).css('display', 'flex');
+      $('.guest-information').eq(1).css('display', 'flex');
+    }
+    if(bookGuestCount === 4) {
+      $('.guest-information').hide();
+      $('.guest-information').eq(0).css('display', 'flex');
+      $('.guest-information').eq(1).css('display', 'flex');
+      $('.guest-information').eq(2).css('display', 'flex');
+    }
+
   });
 
   // Transfer трансфер пульт pult
@@ -393,13 +412,59 @@ $(document).ready(function() {
     $('.transfer__trane-arrival').addClass('transfer__form-block--active');
   });
 
+
+  // Сердечки лайки
   $('.comment-form .likes .fa').on('click', function() {
     var index = $(this).index();
     $('.comment-form .likes .fa').removeClass('active');
     for (var x = 0; x < index; x++) {
       $('.comment-form .likes .fa').eq(x).addClass('active');
     }
-  })
+  });
+
+
+  // Поиск звезды
+  $('.search-aside .fa-star').on('click', function() {
+
+    var index = $(this).index();
+    $(this).closest('.stars').find('.fa').removeClass('active');
+
+    for (var x = -1; x < index; x++) {
+      $(this).closest('.stars').find('.fa').eq(x+1).addClass('active');
+    }
+
+  });
+
+
+  // Яндекс карта
+  // ymaps.ready(function () {
+  //   var myMap = new ymaps.Map('map', {
+  //       center: [45.05193253419377,38.979282307006734],
+  //       zoom: 13
+  //     }, {
+  //         searchControlProvider: 'yandex#search'
+  //     }),
+  //     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+  //       hintContent: 'Собственный значок метки',
+  //       balloonContent: 'Это красивая метка'
+  //     }, {
+  //       // Необходимо указать данный тип макета.
+  //       iconLayout: 'default#image',
+  //       // Своё изображение иконки метки.
+  //       iconImageHref: '../img/placeholder.png',
+  //       // Размеры метки.
+  //       iconImageSize: [30, 42],
+  //       // Смещение левого верхнего угла иконки относительно
+  //       // её "ножки" (точки привязки).
+  //       iconImageOffset: [-5, -38]
+  //     });
+
+  //   myMap.geoObjects.add(myPlacemark);
+  // });
+
+  $('.book').on('click', function() {
+    $('.pickmeup').addClass('pickmeup--book');
+  });
 
 
 })

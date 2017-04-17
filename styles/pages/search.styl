@@ -1,4 +1,54 @@
+.hero__form--search
+  animation none
+  margin-bottom 4rem
+  .hero__input
+    border-bottom 1px solid $light-gray
+    border-top 1px solid $light-gray
+    box-sizing border-box
+    width 23%
+    &:before
+      top .8rem
+    &:first-child
+      border-left 1px solid $light-gray
+      border-radius $radius 0 0 $radius
+    & input,
+    & select
+      height 4rem
+  .hero__btn
+    height 4.2rem
+    font-weight 400
+    line-height 4.2rem
+    width 8%
+
+.objects-on-map
+  background url('../../img/map btn.jpg') 50% no-repeat
+  background-size cover
+  border-radius $radius
+  color #fff
+  cursor pointer
+  display block
+  font-weight 600
+  height 4.2rem
+  line-height 4.2rem
+  margin-bottom 4.2rem
+  position relative
+  text-align center
+  width calc(100% + 1.6rem)
+  &:before
+    background rgba($main, .2)
+    border-radius $radius
+    content ''
+    height 100%
+    left 0
+    position absolute
+    width 100%
+    z-index 0
+  span
+    position relative
+    z-index 5
+
 .search-aside
+  margin-right -1.6rem
   h3
     margin-top 0
   .form-group
@@ -66,7 +116,7 @@
     text-align right
   &__title
     font-size 2.2rem
-    font-weight 700
+    font-weight 600
     line-height 1.1
     margin-bottom 1rem
   &__services
@@ -106,26 +156,3 @@
 
 .search-checkbox
   margin-top 1.5rem
-  // .custom-checkbox-label
-  //   display inline-block
-  //   height 5rem
-  //   position relative
-  //   width 4rem
-  //   &:hover
-  //     i
-  //       transform translateY(-7px)
-  //       &:before
-  //         color $primary
-  //     span
-  //       color $primary
-  //       opacity 1
-  //       transform translateY(7px)
-  //   i
-  //     position absolute
-  //     transition transform .2s
-  //   span
-  //     bottom 0
-  //     opacity 0
-  //     line-height 1
-  //     position absolute
-  //     transition transform .2s, opacity .2s

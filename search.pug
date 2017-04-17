@@ -7,6 +7,8 @@ block content
   .grid.grid--container
     .row
       .col.col--lg-2
+        .objects-on-map
+          span Смотреть на карте
         .search-aside
           h3 Фильтры
           form
@@ -43,29 +45,53 @@ block content
               label.form-label Услуги
               .search-checkbox
                 label(for="service-1").custom-checkbox-label
-                  i.icon.icon--big.flaticon-cocktail
+                  i.icon.flaticon-cocktail
+                  span Мини бар
                 input(type="checkbox" id="service-1").custom-checkbox
                 label(for="service-2").custom-checkbox-label
-                  i.icon.icon--big.flaticon-bed
+                  i.icon.flaticon-bed
+                  span Большая кровать
                 input(type="checkbox" id="service-2").custom-checkbox
                 label(for="service-3").custom-checkbox-label
-                  i.icon.icon--big.flaticon-television
+                  i.icon.flaticon-television
+                  span Телевизор
                 input(type="checkbox" id="service-3").custom-checkbox
                 label(for="service-4").custom-checkbox-label
-                  i.icon.icon--big.flaticon-buthtub
+                  i.icon.flaticon-bathtub
+                  span Ванная
                 input(type="checkbox" id="service-4").custom-checkbox
                 label(for="service-5").custom-checkbox-label
-                  i.icon.icon--big.flaticon-air-conditioner
+                  i.icon.flaticon-air-conditioner
+                  span Сплит система
                 input(type="checkbox" id="service-5").custom-checkbox
-                label(for="service-6").custom-checkbox-label
-                  i.icon.icon--big.flaticon-cocktail
-                input(type="checkbox" id="service-6").custom-checkbox
-                label(for="service-7").custom-checkbox-label
-                  i.icon.icon--big.flaticon-cocktail
-                input(type="checkbox" id="service-7").custom-checkbox
-                label(for="service-8").custom-checkbox-label
-                  i.icon.icon--big.flaticon-cocktail
-                input(type="checkbox" id="service-8").custom-checkbox
       .col.col--lg-10
-        - for (var y = 0; y < 5; y++)
+        form.hero__form.hero__form--search
+          .hero__input
+            input(type="text" value="Сочи, Россия")
+          .hero__input
+            input(type="text").datepicker-range
+          .hero__input.guest-clicker
+            input(type="text" value="1 номер, 1 гость").guest-clicker__input
+            .guest-clicker__modal.popup
+              .guest-clicker__group
+                .guest-clicker__label Номера
+                .guest-clicker__btn.js-room-minus -
+                .guest-clicker__room-number 1
+                .guest-clicker__btn.js-room-plus +
+              .guest-clicker__group
+                .guest-clicker__label Гости
+                .guest-clicker__btn.js-guest-minus -
+                .guest-clicker__guest-number 1
+                .guest-clicker__btn.js-guest-plus +
+          .hero__input
+            select
+              option По популярности
+              option По цене
+              option По дате добавления
+          .hero__btn
+            i.fa.fa-search
+
+        - for (var y = 0; y < 12; y++)
           include card.pug
+
+        

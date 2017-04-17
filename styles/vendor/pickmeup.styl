@@ -27,7 +27,8 @@ $day-of-week                      = $not-in-month-hover
   display         inline-block
   position        absolute
   // transform translateY(10px)
-  margin-top -1px
+  // margin-top -1px
+  margin-top 32px
   touch-action    manipulation
 
   *
@@ -92,11 +93,15 @@ $day-of-week                      = $not-in-month-hover
 
       .pmu-prev,
       .pmu-next
-        content '\f104'
-        display : none
-        height  : 2em
-        width   : 1em
-      
+        height 2em
+        width 1em
+        &:after
+          content '\f104'
+          font-family 'FontAwesome'
+          color $main
+      .pmu-next
+        &:after
+          content '\f105'
 
       .pmu-month
         width : 14em

@@ -37,6 +37,13 @@
   font-weight 400
   margin-left .5rem
 
+.smile:before
+  content ':('
+  color $primary
+  font-family 'Proxima Nova', 'Segoe UI', 'Arial', 'Helvetica';
+  font-size 3rem
+  margin-left 1rem
+
 .likes
   color $light-gray
   display inline-block
@@ -58,3 +65,11 @@
     color $secondary
     &.disable
       color #eee
+
+.search-aside
+  .stars
+    .fa
+      color #eee
+      cursor pointer
+      &.active
+        color $secondary

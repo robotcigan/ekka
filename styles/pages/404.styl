@@ -1,0 +1,54 @@
+.fzf
+  animation background 10s ease forwards
+  font-size 28rem
+  color $light-gray
+  line-height 1
+  text-align center
+  .four
+    animation fade 5s ease forwards
+    display inline-block
+    margin 0
+  .zero
+    background $secondary
+    display inline-block
+    border-radius 50%
+    height 20rem
+    margin-left -4rem
+    margin-right -5.5rem
+    position relative
+    width 20rem
+    &:after
+      animation sun 10s ease forwards
+      border-radius 50%
+      content ''
+      height 21rem
+      right 0
+      top -.5rem
+      position absolute
+      width 21rem
+
+.sorry
+  font-size 3rem
+  color $main
+
+
+// @keyframes background
+//   0%
+//     background #fff
+//   100%
+//     background $main
+
+// @keyframes sun
+//   0%
+//     background #fff
+//     transformX(-100%)
+//   100%
+//     background $main
+//     right -.5rem
+
+// @keyframes fade
+//   0%
+//     opacity 1
+//   100%
+//     opacity 0
+

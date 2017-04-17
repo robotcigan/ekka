@@ -33,9 +33,9 @@ block content
               p Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.
 
         .row.room-change
-          .col.col--lg-4
+          .col.col--lg-5
             h2 Доступные номера
-          .col.col--lg-8
+          .col.col--lg-7
             form.room-change__form
               input(type="text").datepicker-range
               .guest-clicker
@@ -51,7 +51,7 @@ block content
                     .guest-clicker__btn.js-guest-minus -
                     .guest-clicker__guest-number 1
                     .guest-clicker__btn.js-guest-plus +
-              input(type="submit" value="Обновить").btn.btn--secondary
+              button.btn.btn--secondary Обновить
 
 
 
@@ -239,7 +239,9 @@ block content
 
       .col.col--lg-3
         aside.inner-aside
-          .btn.btn--gray.btn--middle.btn--full-size Поделиться
+          .btn.btn--secondary.btn--middle.btn--full-size
+            span Поделиться
+            i.fa.fa-share-alt
           .gallery
             a(href="img/room-1.jpg" data-lightbox="room").gallery__img
               img(src="img/room-1.jpg", alt="")

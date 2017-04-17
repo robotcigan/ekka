@@ -3868,15 +3868,27 @@ textarea {
   font-style: italic;
 }
 @font-face {
-  font-family: 'Proxima Nova ';
+  font-family: 'Proxima Nova';
   src: local('Proxima Nova Bold'), local('Proxima Nova Bold'), url("../../fonts/Proxima Nova/Proxima Nova Bold.woff2") format('woff2'), url("../../fonts/Proxima Nova/Proxima Nova Bold.woff") format('woff'), url("../../fonts/Proxima Nova/Proxima Nova Bold.ttf") format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Proxima Nova ';
-  src: local('Proxima Nova  Bold Italic'), local('Proxima Nova -BoldItalic'), url("../../fonts/Proxima Nova/Proxima Nova Bold Italic.woff2") format('woff2'), url("../../fonts/Proxima Nova/Proxima Nova Bold Italic.woff") format('woff'), url("../../fonts/Proxima Nova/Proxima Nova Bold Italic.ttf") format('truetype');
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova Bold Italic'), local('Proxima Nova Bold Italic'), url("../../fonts/Proxima Nova/Proxima Nova Bold Italic.woff2") format('woff2'), url("../../fonts/Proxima Nova/Proxima Nova Bold Italic.woff") format('woff'), url("../../fonts/Proxima Nova/Proxima Nova Bold Italic.ttf") format('truetype');
   font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova Heavy'), local('Proxima Nova Heavy'), url("../../fonts/Proxima Nova/Proxima Nova Heavy.woff2") format('woff2'), url("../../fonts/Proxima Nova/Proxima Nova Heavy.woff") format('woff'), url("../../fonts/Proxima Nova/Proxima Nova Heavy.ttf") format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova Heavy Italic'), local('Proxima Nova Heavy Italic'), url("../../fonts/Proxima Nova/Proxima Nova Heavy Italic.woff2") format('woff2'), url("../../fonts/Proxima Nova/Proxima Nova Heavy Italic.woff") format('woff'), url("../../fonts/Proxima Nova/Proxima Nova Heavy Italic.ttf") format('truetype');
+  font-weight: 800;
   font-style: italic;
 }
 	/*
@@ -4733,7 +4745,7 @@ font-style: normal;
   box-sizing: content-box;
   display: inline-block;
   position: absolute;
-  margin-top: -1px;
+  margin-top: 32px;
   touch-action: manipulation;
 }
 .pickmeup * {
@@ -4794,10 +4806,17 @@ font-style: normal;
 }
 .pickmeup .pmu-instance nav .pmu-prev,
 .pickmeup .pmu-instance nav .pmu-next {
-  content: '\f104';
-  display: none;
   height: 2em;
   width: 1em;
+}
+.pickmeup .pmu-instance nav .pmu-prev:after,
+.pickmeup .pmu-instance nav .pmu-next:after {
+  content: '\f104';
+  font-family: 'FontAwesome';
+  color: #111;
+}
+.pickmeup .pmu-instance nav .pmu-next:after {
+  content: '\f105';
 }
 .pickmeup .pmu-instance nav .pmu-month {
   width: 14em;

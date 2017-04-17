@@ -84,7 +84,6 @@ option
 
 .select2-container--default
   width 100% !important
-  min-width 100% !important
   max-width 100% !important
   .select2-selection--single
     border-color $light-gray
@@ -130,24 +129,33 @@ option
 
 .guest-clicker
   position relative
+  clearfix()
   &__modal
-    bottom -113px
-    border-radius $radius
-    display block
-    left 0
+    animation fadeUp .2s
+    bottom -79px
+    border-radius 0 $radius $radius $radius
+    display none
+    left -1px
     padding 1rem 2rem
     position absolute
     width 20rem
+    &--active
+      display block
   &__group:not(:last-child)
     margin-bottom 1rem
   &__label
     display inline-block
     margin-right 1rem
     width 40%
+  &__input
+    &:focus
+      border-color $light-gray !important
   &__room-number,
   &__guest-number
     display inline-block
     margin 0 .5rem
+    text-align center
+    width 1rem
   &__btn
     display inline-block
     border 1px solid $light-gray
@@ -194,10 +202,26 @@ option
   &-label
     display inline-block
     cursor pointer
-    margin-right 1rem
+    margin-bottom 1rem
+    margin-right .5rem
+    text-align center
+    vertical-align top
+    width 5.5rem
+    &:nth-chile(3n+3)
+      margin-right 0
     &--active
-      i:before
+      .icon:before
         color $primary
+      span
+        color $primary
+    .icon
+      margin-bottom .5rem
+    span
+      display block
+      font-size 1.2rem
+      line-height 1
+      // max-width 6rem
+      
 
 .datepicker
   &.active
@@ -211,6 +235,12 @@ option
 
 .datepicker-range
   margin-top 48px
+
+.pickmeup--book
+  margin-top 0
+
+.pickmeup--search
+  margin-top 40px !important
 
 
 .sending-form

@@ -1,6 +1,6 @@
 .mobile-menu
   background #fff
-  height 100%
+  height 110%
   opacity 1
   overflow auto
   left 0
@@ -8,7 +8,7 @@
   padding 5% 8%
   position fixed
   transform translateX(-100%)
-  transition transform .4s cubic-bezier(1, .15, .2, .9) .2s, opacity .1s
+  transition transform .4s cubic-bezier(1, 0, .2, .9) .1s, opacity .1s
   top 0
   width 100%
   z-index 200
@@ -50,7 +50,7 @@
     letter-spacing 1px
     line-height 1.4
     margin-bottom 0
-    margin-top 5rem
+    margin-top 4rem
     text-transform uppercase
     max-width 30rem
   &__phone
@@ -60,7 +60,7 @@
     letter-spacing 1px
 
 .mobile-nav
-  margin-top 5.5rem
+  margin-top 4rem
   &__link
     display block
     margin-bottom 2rem
@@ -79,7 +79,7 @@
 
 @media(max-width 1100px)
   .grid--container
-    max-width 95%
+    max-width 98%
   .header-nav
     display none
   .main-header
@@ -95,11 +95,10 @@
       width 31.1rem
       width 50%
 
+
   .special-slider
     .slide
       display block
-      // margin-right 2rem
-      margin-left 1rem
       &__img
         display block
         width 100%
@@ -116,15 +115,25 @@
         width initial
     &__title
       font-size 1.8rem
-  
-  .gallery
-    display block
-    margin 5rem 0
+  .room
     &__img
+      margin-right 0
+    &__parameters
+      padding 1rem
+    .btn
+      padding .5rem 1rem
+  .gallery
+    &__img
+      height 10.5rem
       margin-bottom 1rem
-      margin-right 1rem
+      width 10.5rem
   
+  .aside-map
+    margin-top 4rem
+
   .card
+    &__img
+      height 22rem
     &__middle
       padding 2rem 1rem
       &_top
@@ -164,11 +173,52 @@
       a
         font-size 1.4rem
     &__middle
-      margin-bottom 4rem
+      margin-top 2rem
+      order 2
+    &__bottom
+      margin-top 4rem
+
+
+@media(max-width 768px)
+  .search-aside
+    margin-right 0
+  .objects-on-map
+    width 100%
+  .card
+    .btn
+      text-align initial
+      padding .5rem 1.5rem
+  .room
+    &__img
+      overflow hidden
+      margin-right 0
+      text-align center
+      width 14rem
+      img
+        display block
+        margin-left -25%
+    &__parameters
+      height initial
+      padding 1rem
+    &__title
+      max-width initial
+    &__services
+      i
+        margin-right 1rem
+  .accordion
+    &__icon
+      &:hover,
+      &:active
+        background transparent
+        .fa
+          color $primary
   
-  .transfer-success
-    img
-      width 30%
+  .gallery
+    justify-content initial
+    &__img
+      height 11.3rem
+      margin-right 1rem
+      width 11.3rem
 
 
 @media(max-width 767px)
@@ -190,7 +240,8 @@
       animation none
       display initial
     .hero__input
-      &:before
+      &:before,
+      &:after
         display none
       &:first-child input
         border-radius $radius $radius 0 0
@@ -202,9 +253,24 @@
   .inner-h1
     font-size 2.4rem
     margin 2rem 0
+  .gallery
+    justify-content initial
+    &__img
+      height 8.5rem
+      margin-right 1rem
+      width 8.5rem
+  .page-section
+    margin-bottom 6rem
+  .subheader
+    .popular-direction-mobile
+      display block
+  .popular-direction-desktop
+    display none
   .map
     iframe
       height 25rem
+  .special-offers .col:nth-child(3) .offer
+    margin-bottom 0
   .offer
     margin-bottom 4rem
   .card
@@ -263,6 +329,12 @@
       display inline-block
       float right
       width 50%
+  
+  .custom-checkbox-label
+    margin-right 1.5rem
+    .icon
+      &:before
+        font-size 3rem
 
   .title-stars
     display block
@@ -298,6 +370,8 @@
     width 16px
   
 
+  
+
   .room
     &__img
       float none
@@ -313,7 +387,6 @@
       margin-bottom 1px
     &__parameters
       height initial
-      padding 1rem
       &__items
         display block
     &__services
@@ -338,6 +411,7 @@
       h3
         width initial
         margin-right 1rem
+
 
   .tabs
     &__nav
@@ -384,7 +458,9 @@
       left 2rem
     &__title
       font-size 3rem
-
+  
+  .feedback
+    margin-bottom 4rem
 
   
   .main-footer
@@ -396,9 +472,19 @@
         font-size 1.6rem
     &__bottom
       margin-top 4rem
-      text-align center
-    &__header
-      margin-top 2rem
+  
+  .webformula
+    text-align right
+  
+  .fzf
+    font-size 10rem
+    .zero
+      height 7rem
+      width 7rem
+      margin 0
+    .sorry
+      font-size 1.6rem
+
 
 
 
@@ -415,8 +501,55 @@
   .card
     &__rating
       width initial
+  .room
+    &__img
+      width initial
+      img
+        margin-left initial
+  .main-footer
+    &__header
+      margin-top 2rem
+    &__bottom
+      text-align center
+  .webformula
+    text-align center
+  .gallery
+    justify-content space-between
+    &__img
+      height 8.5rem
+      margin-right 1rem
+      width 8.5rem
+      &:nth-child(4n)
+        margin-right 0
+  .subheader
+    h2
+      font-size 2.2rem
+      line-height 1.2
+  .transfer-success
+    margin-top 0rem
+    height initial
+    &__img
+      height 25rem
+      width 100%
+    &__text
+      padding 2rem
+      width 100%
+    &__title
+      margin-top 0
 
 @media(max-width 400px)
   .hero
     .index-header
       font-size 2.4rem
+  .gallery
+    display flex
+    &__img
+      height 10rem
+      margin-bottom 1rem
+      width 10rem
+      &:nth-child(3n)
+        margin-right 0
+      &:nth-child(4n)
+        margin-right 1rem
+      &:last-of-type
+        margin-right 0

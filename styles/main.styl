@@ -17,6 +17,7 @@
 @import 'pages/transfer'
 @import 'pages/offer'
 @import 'pages/contacts'
+@import 'pages/404'
 
 .grid--container
   max-width 1216px
@@ -75,9 +76,6 @@
       text-transform uppercase
       transition color .2s
     &:hover
-      // &:after
-      //   opacity 1
-      //   transform translateY(-5px)
       a
         color $primary
   .phone
@@ -103,7 +101,7 @@
   &--scroll
     background-color #fff
     border-color transparent
-    box-shadow 5px 2px 48px rgba($gray, .3)
+    box-shadow 5px 2px 8px rgba($gray, .1)
     top 0 !important
     li
       a
@@ -127,7 +125,7 @@
 .site-content
   overflow hidden
   &__background
-    transition transform .4s cubic-bezier(1, .15, .2, .9) .2s
+    transition transform .4s cubic-bezier(1, 0, .2, .9) .1s
     &--active
       transform translateX(70%)
 
@@ -197,6 +195,8 @@
       color $main
       font-size 1.2rem
       text-decoration none
+      &:hover
+        color $primary
   &__socials
     line-height 1
     margin-top -.5rem
@@ -208,7 +208,11 @@
       .fa
         color $gray
         margin-right 1rem
-  
+      &:hover
+        color $primary
+        .fa
+          color $primary
+
   &__bottom
     border-top 1px solid $light-gray
     margin-top 8rem
