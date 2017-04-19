@@ -7,7 +7,7 @@ block content
       .hero__bg
       .grid.grid--container
         .row
-          .col.col--lg-10.col--md-12.col--sm-10.col--sm-offset-1.col--lg-offset-1
+          .col.col--lg-10.col--md-12.col--sm-10.col--md-offset-0.col--sm-offset-1.col--lg-offset-1
             .hero-content
               h1.index-header Отдых на Черноморском побережье
               form.hero__form
@@ -15,7 +15,7 @@ block content
                 .hero__input
                   input(type="text" value="Сочи, Россия")
                 .hero__input
-                  input(type="text").datepicker-range
+                  input(type="text" readonly="true").datepicker-range
                 .hero__input.guest-clicker
                   input(type="text" value="1 номер, 1 гость").guest-clicker__input
                   .guest-clicker__modal.popup
@@ -30,10 +30,10 @@ block content
                       .guest-clicker__guest-number 1
                       .guest-clicker__btn.js-guest-plus +
                 .hero__input
-                  select
-                    option По популярности
-                    option По цене
-                    option По дате добавления
+                  select.custom-select
+                    option По рейтингу
+                    option Цена по возрастанию
+                    option Цена по убыванию
                 input(type="submit" value="Поиск").hero__btn
 
     .page-section
@@ -41,7 +41,8 @@ block content
       .grid.grid--container
         section.page-section
           header.subheader
-            h2 Специальные предложения
+            a(href="")
+              h2 Специальные предложения
           .row.special-offers
             - for (var i = 0; i < 3; i++)
               .col.col--lg-4.col--md-4.col--sm-4
@@ -50,7 +51,7 @@ block content
                     span от 3430
                     span.ruble
                   .offer__img
-                    img(src="../../img/special-1.jpg", alt="")
+                    img(src="img/special-1.jpg", alt="")
                   .offer__title Горнолыжный отдых в ГК «Bridge Resort»
                   .offer__anons
                     p В дни школьных каникул предлагаем совершить увлекательную поездку в  яркий в любое время года Олимпийский Сочи!
@@ -59,7 +60,8 @@ block content
         section
           header.subheader
             .left
-              h2 Популярные направления
+              a(href="")
+                h2 Популярные направления
             .right
               .popular-direction-mobile
                 select.custom-select
@@ -72,88 +74,69 @@ block content
                 .btn.btn--dashed Города
           .popular-directions
             .masonry
-              .masonry-row
-                .masonry-column
-                  .direction
-                    img(src="img/direction-1.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city Красная поляна
-                      .direction__country Россия
-                .masonry-column
-                  .direction.direction--type-2
-                    img(src="img/direction-2.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city Сочи
-                      .direction__country Россия
-                .masonry-column
-                  .direction.direction--type-3
-                    img(src="img/direction-3.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city Ереван
-                      .direction__country Армения
-                .masonry-column
-                  .direction.direction--type-3
-                    img(src="img/direction-3.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city Красная поляна
-                      .direction__country Россия
-                .masonry-column
-                  .direction
-                    img(src="img/direction-1.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city Красная поляна
-                      .direction__country Россия
-                .masonry-column
-                  .direction.direction--type-2
-                    img(src="img/direction-2.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city Красная поляна
-                      .direction__country Россия
-                .masonry-column
-                  .direction
-                    img(src="img/direction-1.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city Красная поляна
-                      .direction__country Россия
-                .masonry-column
-                  .direction.direction--type-3
-                    img(src="img/direction-3.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city Красная поляна
-                      .direction__country Россия
-                .masonry-column
-                  .direction.direction--type-2
-                    img(src="img/direction-2.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city Красная поляна
-                      .direction__country Россия
+              .masonry-column.masonry-column__country
+                a(href="").direction
+                  img(src="img/direction-1.jpg", alt="").direction__img
+                  .direction__text
+                    .direction__city Красная поляна
+                    .direction__country Россия
+              .masonry-column.masonry-column__country
+                a(href="").direction.direction--type-2
+                  img(src="img/direction-2.jpg", alt="").direction__img
+                  .direction__text
+                    .direction__city Сочи
+                    .direction__country Россия
+              .masonry-column.masonry-column__city
+                a(href="").direction.direction--type-3
+                  img(src="img/direction-3.jpg", alt="").direction__img
+                  .direction__text
+                    .direction__city Ереван
+                    .direction__country Армения
+              .masonry-column.masonry-column__country
+                a(href="").direction.direction--type-3
+                  img(src="img/direction-3.jpg", alt="").direction__img
+                  .direction__text
+                    .direction__city Красная поляна
+                    .direction__country Россия
+              .masonry-column.masonry-column__country
+                a(href="").direction
+                  img(src="img/direction-1.jpg", alt="").direction__img
+                  .direction__text
+                    .direction__city Красная поляна
+                    .direction__country Россия
+              .masonry-column.masonry-column__city
+                a(href="").direction.direction--type-2
+                  img(src="img/direction-2.jpg", alt="").direction__img
+                  .direction__text
+                    .direction__city Красная поляна
+                    .direction__country Россия
+              .masonry-column.masonry-column__city
+                a(href="").direction
+                  img(src="img/direction-1.jpg", alt="").direction__img
+                  .direction__text
+                    .direction__city Красная поляна
+                    .direction__country Россия
+              .masonry-column.masonry-column__country
+                a(href="").direction.direction--type-3
+                  img(src="img/direction-3.jpg", alt="").direction__img
+                  .direction__text
+                    .direction__city Красная поляна
+                    .direction__country Россия
+              .masonry-column.masonry-column__country
+                a(href="").direction.direction--type-2
+                  img(src="img/direction-2.jpg", alt="").direction__img
+                  .direction__text
+                    .direction__city Красная поляна
+                    .direction__country Россия
 
-
-                .masonry-column.masonry__country
-                  .direction
-                    img(src="img/direction-1.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city dgadgdgs
-                      .direction__country Россия
-                .masonry-column.masonry__country
-                  .direction.direction--type-2
-                    img(src="img/direction-2.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city asdgasdg
-                      .direction__country Россия
-                .masonry-column.masonry__country
-                  .direction.direction--type-3
-                    img(src="img/direction-3.jpg", alt="").direction__img
-                    .direction__text
-                      .direction__city asdadhbs
-                      .direction__country Армения
 
 
     .white-block.page-section
       .grid.grid--container
         header.subheader
           .left
-            h2 Специальные предложения отелей
+            a(href="")
+              h2 Специальные предложения отелей
           .right
             .special-slider-nav
               i.fa.fa-angle-left
@@ -181,12 +164,28 @@ block content
     section
       .grid.grid--container
         header.subheader
-          h2 Мы на карте
-    .map.page-section
-      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2816.8159145447253!2d38.98807731561053!3d45.08952597909836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDA1JzIyLjMiTiAzOMKwNTknMjUuMCJF!5e0!3m2!1sru!2sru!4v1492419346070" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+          a(href="")
+            h2 Контакты
+    .index-map
+      .map.page-section
+        .grid.grid--container
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2816.8159145447253!2d38.98807731561053!3d45.08952597909836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDA1JzIyLjMiTiAzOMKwNTknMjUuMCJF!5e0!3m2!1sru!2sru!4v1492419346070" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+      .index-map__info
+        .index-map__title Адрес
+        .index-map__text 354000, г. Сочи, ул. Роз, 31, оффис 32
+        .index-map__title email
+        .index-map__text info@ekka.info
+        .index-map__title Телефоны
+        .indxe-map__text +7 (8622) 66 50  46
+        .indxe-map__text +7 (8622) 66 50  46
+        .indxe-map__text +7 (8622) 66 50  46
+        .indxe-map__text +7 (8622) 66 50  46
 
 
     include viewed.pug
+
+
+
 
 
 

@@ -18,24 +18,29 @@ block content
             i.fa.fa-star
             i.fa.fa-star
         img(src="img/room.jpg", alt="").room-img
-        .tabs
+        .tabs.tabs--offset
           nav.tabs__nav
             li: a(href="#Улуги_и_удобства").active Улуги и удобства
             li: a(href="#Регистрация") Регистрация
-            li: a(href="#Описнаие номеров") Описнаие номеров
+            li: a(href="#Описание номеров") Описание номеров
             li: a(href="#Важная информация") Важная информация
             li: a(href="#Об отеле") Об отеле
           .tabs__content.tabs__content--active
             p Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить значение направлений прогрессивного развития. Не следует, однако забывать, что укрепление и развитие структуры представляет собой интересный эксперимент проверки новых предложений. Повседневная практика показывает, что рамки и место обучения кадров в значительной степени обуславливает создание направлений прогрессивного развития. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Повседневная практика показывает, что начало повседневной работы по формированию позиции требуют определения и уточнения соответствующий условий активизации. Повседневная практика показывает, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке систем массового участия.
             p Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.
-          - for (var x = 0; x < 4; x++)
+          .tabs__content
+            p Медицинский профиль: Санаторий оказывает помощь в рамках Федеральных стандартов и с учетом разработанных специалистами Детского медицинского центра Управления делами Президента РФ программ пациентам с заболевания костно-мышечной системы и соединительной ткани, нервной, эндокринной системы, болезнями системы кровообращения, глаза, часто и длительно болеющим детям
+          - for (var x = 0; x < 2; x++)
             .tabs__content
               p Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.
+          .tabs__content
+            p Уютная территория санатория прилегает непосредственно к берегу моря с великолепным пляжем. В радиусе пешеходной доступности находятся такие знаковые места как Дендрарий, цирк, городская набережная.
+            p Санаторий Управления делами Президента Российской Федерации Федеральное Государственное Бюджетное Учреждение "РУСИЧ" располагает современной лечебно-диагностической базой, оснащенной новейшей медицинской аппаратурой. При проведении оздоровительных мероприятий приоритетно используются природные, климатические лечебные факторы, методы бальнеологии и аппаратной физиотерапии.
 
-        .row.room-change
-          .col.col--lg-5
+        .row.room-change.row--md-center
+          .col.col--lg-5.col--md-5
             h2 Доступные номера
-          .col.col--lg-7
+          .col.col--lg-7.col--md-7
             form.room-change__form
               input(type="text").datepicker-range
               .guest-clicker
@@ -199,8 +204,9 @@ block content
         h3.inner-h3 Отзывы
         form.comment.comment-form
           .comment__left
-            .comment__photo
-              img(src="img/user.jpg", alt="")
+            label(for="nophoto").comment__photo.nophoto
+              input(type="file" id="nophoto")
+                //- img(src="img/nophoto.jpg", alt="")
           .comment__right
             .comment__name Александр Романов
             .date-choose.comment__date
@@ -239,33 +245,33 @@ block content
 
       .col.col--lg-3
         aside.inner-aside
-          .btn.btn--secondary.btn--middle.btn--full-size
+          a(href="#social-share").social-share.btn.btn--secondary.btn--middle.btn--full-size
             span Поделиться
             i.fa.fa-share-alt
           .gallery
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-2.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
-            a(href="img/room-1.jpg" data-lightbox="room").gallery__img
+            a(href="img/gallery-big-1.jpg").gallery__img
               img(src="img/room-1.jpg", alt="")
             .btn.btn--primary.btn--middle.btn--full-size Все фотографии
 
@@ -275,6 +281,14 @@ block content
 
   include viewed.pug
 
+
+  #social-share.modal
+    .modal__header Поделиться этим объектом
+    .form-group
+      label Поделитесь ссылкой
+      input(type="text" value="https://www.ekka.info/hotels/Nyu-Iork,NY,SSHA-c15830-h382262/2017-04-20/2017-05-08/4adults?sharing=1")
+    p Поделиться через социальные сети
+    .share42init
 
 
 

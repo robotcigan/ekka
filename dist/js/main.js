@@ -8,24 +8,59 @@ $(document).ready(function () {
 
   // Masonry сетка
   $('.masonry').masonry({
-    itemSelector: '.masonry-column',
+    itemSelector: '.masonry-column'
   });
 
-  $('.btn-group .btn--dashed').on('click', function() {
+  $('.masonry').isotope({ filter: '*' });
 
-    $(this).toggleClass('btn--dashed-active');
-    $('.masonry').masonry('remove', $('.masonry-column'));
-
-    if($(this).text() === "Страны") {
-
-      $('.masonry-column.masonry__country').each(function() {
-        var $item = $(this);
-        $('.masonry').prepend($item).masonry('prepended', $item);
-      });
-
-    }
-
+  $('.btn.btn--dashed').eq(0).on('click', function() {
+    $('.masonry').isotope({ filter: '*' });
   })
+
+  $('.btn.btn--dashed').eq(1).on('click', function() {
+    $('.masonry').isotope({ filter: '.masonry-column__country' });
+  })
+
+  $('.btn.btn--dashed').eq(2).on('click', function() {
+    $('.masonry').isotope({ filter: '.masonry-column__city' });
+  })
+
+  // $('.popular-direction-mobile select').on('change', function() {
+  //   if($(this).find('option').index(0)) {
+  //     $('.masonry-row').isotope({ filter: '*' });
+  //     console.log(0)
+  //   }
+  //   if($(this).find('option').index(1)) {
+  //     $('.masonry-row').isotope({ filter: '.masonry-column__country' });
+  //     console.log(1)
+  //   }
+  //   if($(this).find('option').index(2)) {
+  //     $('.masonry-row').isotope({ filter: '.masonry-column__city' });
+  //     console.log(2)
+  //   }
+  // })
+
+  $('.btn.btn--dashed').on('click', function() {
+    $('.btn.btn--dashed').removeClass('btn--dashed-active');
+    $(this).addClass('btn--dashed-active');
+  })
+
+  // $('.popular-direction-desktop').on('click', function() {
+  //   console.log('adsg')
+
+  //   // $(this).toggleClass('btn--dashed-active');
+  //   $('.masonry').masonry('remove', $('.masonry-column'));
+
+  //   if($(this).text() === "Страны") {
+
+  //     $('.masonry-column.masonry__country').each(function() {
+  //       var $item = $(this);
+  //       $('.masonry').prepend($item).masonry('prepended', $item);
+  //     });
+
+  //   }
+
+  // })
 
   // Специальный слайдер на главной
   $('.special-slider').slick({
@@ -34,6 +69,22 @@ $(document).ready(function () {
     slidesToShow: 2,
     slidesToScroll: 1,
     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          arrows: false,
+          slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 780,
+        settings: {
+          arrows: false,
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
       {
         breakpoint: 500,
         settings: {
@@ -77,6 +128,29 @@ $(document).ready(function () {
       }
     ]
   });
+
+  $('.hotels-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  })
 
   $('.regular-slider--different-width').slick({
     slidesToShow: 4,
@@ -161,7 +235,7 @@ $(document).ready(function () {
 
   var page = window.location.pathname;
 
-  if(page === '/_index.html') {
+  if(page === '/ekka/_index.html') {
     $('.main-header').addClass('main-header--black');
   }
 
@@ -187,27 +261,44 @@ $(document).ready(function () {
 
 
   // Ползунки
+
+  var rangeSlider = document.getElementById('range-slider');
+  
   if(rangeSlider != null) {
 
-    var rangeSlider = document.getElementById('range-slider');
-
     noUiSlider.create(rangeSlider, {
+      format: wNumb({
+        decimals: 0
+      }),
       start: [1000, 7000],
       connect: true,
-      tooltips: true,
       range: {
         'min': 0,
         'max': 8000
       }
     });
+
+    var rangeSliderValueLeft = document.getElementById('range-slider-left');
+    var rangeSliderValueRight = document.getElementById('range-slider-right');
+
+
+    rangeSlider.noUiSlider.on('update', function( values, handle ) {
+      rangeSliderValueLeft.innerHTML = values[0];
+      rangeSliderValueRight.innerHTML = values[1];
+    });
+
     var slider = document.getElementById('slider');
 
     noUiSlider.create(slider, {
-      start: [7],
+      format: wNumb({
+        decimals: 0
+      }),
+      connect: [true, false],
+      start: [4],
       step: 1,
       range: {
         'min': 0,
-        'max': 10
+        'max': 5
       }
     });
 
@@ -260,8 +351,13 @@ addEventListener('DOMContentLoaded', function () {
   pickmeup('.datepicker-range', {
     position  : 'down',
     mode      : 'range',
-    calendars : 2
+    calendars : 2,
+    // hide_on_select : true
   });
+
+  pickmeup('.datepicker-small-range', {
+    mode: 'range'
+  })
 
   pickmeup('.datepicker');
   pickmeup('.datepicker-1');
@@ -284,11 +380,21 @@ $(document).ready(function() {
     $('.pickmeup').addClass('hero-pickmeup');
   });
 
+  $('.datepicker-range').on('click', function(e) {
+    e.preventDefault();
+    $('.guest-clicker__modal').removeClass('guest-clicker__modal--active');
+  })
+
+  $(document).on('click', function(event) {
+    var div = $(".guest-clicker__modal"); // тут указываем ID элемента
+    if (!$(event.target).closest('.guest-clicker__modal').length && !$(event.target).closest('.guest-clicker__input').length) {
+      $(".guest-clicker__modal").removeClass('guest-clicker__modal--active');
+    }
+  });
+
   $('.guest-clicker__input').on('click', function() {
-    // var position = $(this).find('.guest-clicker__input').position();
     var modal = $(this).parent().find('.guest-clicker__modal');
     modal.toggleClass('guest-clicker__modal--active');
-    // modal.css('left', position.left);
   })
 
   $('.guest-clicker__input').val('1 номер., 1 гость');
@@ -302,18 +408,44 @@ $(document).ready(function() {
     if ( $(this).hasClass('js-guest-minus') ) guestCount--;
     if ( $(this).hasClass('js-guest-plus') ) guestCount++;
 
-    if(roomCount < 1) roomCount = 1;
-    if(roomCount > 4) roomCount = 4;
-    if(guestCount > 4) guestCount = 4;
-    if(guestCount < 1) guestCount = 1;
+    var roomWord = ' номер, ';
+    var guestWord = ' гость';
+
+    if(roomCount < 1) {
+      roomCount = 1;
+    }
+    if(roomCount > 4) {
+      roomCount = 4;
+    }
+    if(roomCount >= 2) {
+      roomWord = ' номера, ';
+    } else {
+      roomWord = ' номер, ';
+    }
+    if(guestCount < 1) {
+      guestCount = 1;
+    }
+    if(guestCount > 4) {
+      guestCount = 4;
+    }
+    if(guestCount >= 2) {
+      guestWord = ' гостя';
+    } else {
+      guestWord = ' гость';
+    }
+
     
     $('.guest-clicker__room-number').text(roomCount);
     $('.guest-clicker__guest-number').text(guestCount);
-    $('.guest-clicker__input').val(roomCount + ' номер., ' + guestCount + ' гостя');
+    $('.guest-clicker__input').val(roomCount + roomWord + guestCount + guestWord);
   });
 
   $('.hero__form--search').on('click', function() {
     $('.pickmeup').addClass('pickmeup--search')
+  })
+
+  $('.room-form-book').on('click', function() {
+    $('.pickmeup').addClass('pickmeup--room')
   })
 
   // Чекбоксы
@@ -364,6 +496,7 @@ $(document).ready(function() {
 
   });
 
+
   // Transfer трансфер пульт pult
   var type = 'avia';
   function traneForm() {
@@ -372,6 +505,24 @@ $(document).ready(function() {
     $('.toggle__icon').addClass('toggle__icon--active');
     type = 'avia';
   }
+
+  $('#transfer-checkbox-1').addClass('active');
+  $('#transfer-checkbox-2').addClass('active');
+
+  $('#transfer-checkbox-1').on('click', function() {
+    $('.transfer__arrival').hide();
+    $(this).toggleClass('active');
+    if( $('#transfer-checkbox-1').hasClass('active') ) {
+      $('.transfer__arrival').show();
+    }
+  })
+  $('#transfer-checkbox-2').on('click', function() {
+    $('.transfer__departure').hide();
+    $(this).toggleClass('active');
+    if( $('#transfer-checkbox-2').hasClass('active') ) {
+      $('.transfer__departure').show();
+    }
+  })
 
   function aviaForm() {
     $('.toggle__trane').removeClass('toggle__trane--active');
@@ -391,9 +542,11 @@ $(document).ready(function() {
 
   $('.toggle__icon').on('click', function() {
 
+    console.log(type)
     if(type === "avia") {
       traneForm();
     }
+
 
     if(type === "train") {
       aviaForm();
@@ -402,11 +555,12 @@ $(document).ready(function() {
 
 
   
-  // Transfer трансфер
+  // Transfer трансфер блоки
   $('.transfer__avia').on('click', function() {
     $('.transfer__form-block').removeClass('transfer__form-block--active')
     $('.transfer__avia-arrival').addClass('transfer__form-block--active');
   });
+
   $('.transfer__trane').on('click', function() {
     $('.transfer__form-block').removeClass('transfer__form-block--active')
     $('.transfer__trane-arrival').addClass('transfer__form-block--active');
@@ -436,35 +590,45 @@ $(document).ready(function() {
   });
 
 
-  // Яндекс карта
-  // ymaps.ready(function () {
-  //   var myMap = new ymaps.Map('map', {
-  //       center: [45.05193253419377,38.979282307006734],
-  //       zoom: 13
-  //     }, {
-  //         searchControlProvider: 'yandex#search'
-  //     }),
-  //     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-  //       hintContent: 'Собственный значок метки',
-  //       balloonContent: 'Это красивая метка'
-  //     }, {
-  //       // Необходимо указать данный тип макета.
-  //       iconLayout: 'default#image',
-  //       // Своё изображение иконки метки.
-  //       iconImageHref: '../img/placeholder.png',
-  //       // Размеры метки.
-  //       iconImageSize: [30, 42],
-  //       // Смещение левого верхнего угла иконки относительно
-  //       // её "ножки" (точки привязки).
-  //       iconImageOffset: [-5, -38]
-  //     });
-
-  //   myMap.geoObjects.add(myPlacemark);
-  // });
-
+  // Датапикер календарь
   $('.book').on('click', function() {
     $('.pickmeup').addClass('pickmeup--book');
   });
 
+  // Image gallery
+  $('.gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    mainClass: 'mfp-animation',
+    gallery: {
+      enabled:true
+    }
+  });
+
+  // Modal модальное окно
+  $('.objects-on-map').magnificPopup({
+      type: 'inline',
+      callbacks: {
+        beforeOpen: function() {
+          myMap()
+        }
+      }
+  });
+
+  $('.social-share').magnificPopup({
+    type: 'inline'
+  })
+
+  $(window).scroll(function () {
+    if( $(window).scrollTop() > 500 ) {
+      $('.up-btn').addClass('up-btn--active');
+    } else {
+      $('.up-btn').removeClass('up-btn--active');
+    }
+  })
+
+  $('.up-btn').on('click', function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  })
 
 })

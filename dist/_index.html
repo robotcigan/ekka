@@ -13,13 +13,13 @@
     <header class="main-header">
       <div class="grid grid--container">
         <div class="main-header__container">
-          <div class="main-header__logo"><a class="logo" href="/"></a></div>
+          <div class="main-header__logo"><a class="logo" href=""></a></div>
           <nav class="header-nav">
             <li class="header-nav__link"><a href="offers.html">Специальные предложения</a></li>
             <li class="header-nav__link"><a href="directions.html">Направления</a></li>
             <li class="header-nav__link"><a href="tourists.html">Туристам</a></li>
             <li class="header-nav__link"><a href="about.html">О компании</a></li>
-            <li class="header-nav__link"><a href="agencies.html">Агенствам</a></li>
+            <li class="header-nav__link"><a href="agencies.html">Агентствам</a></li>
             <li class="header-nav__link"><a href="contacts.html">Контакты</a></li>
           </nav>
           <div class="main-header__phone">+7 999 55-32-41</div>
@@ -47,7 +47,7 @@
             <div class="hero__bg"></div>
             <div class="grid grid--container">
               <div class="row">
-                <div class="col col--lg-10 col--md-12 col--sm-10 col--sm-offset-1 col--lg-offset-1">
+                <div class="col col--lg-10 col--md-12 col--sm-10 col--md-offset-0 col--sm-offset-1 col--lg-offset-1">
                   <div class="hero-content">
                     <h1 class="index-header">Отдых на Черноморском побережье</h1>
                     <form class="hero__form">
@@ -55,7 +55,7 @@
                         <input type="text" value="Сочи, Россия"/>
                       </div>
                       <div class="hero__input">
-                        <input class="datepicker-range" type="text"/>
+                        <input class="datepicker-range" type="text" readonly="true"/>
                       </div>
                       <div class="hero__input guest-clicker">
                         <input class="guest-clicker__input" type="text" value="1 номер, 1 гость"/>
@@ -75,10 +75,10 @@
                         </div>
                       </div>
                       <div class="hero__input">
-                        <select>
-                          <option>По популярности</option>
-                          <option>По цене</option>
-                          <option>По дате добавления</option>
+                        <select class="custom-select">
+                          <option>По рейтингу</option>
+                          <option>Цена по возрастанию</option>
+                          <option>Цена по убыванию</option>
                         </select>
                       </div>
                       <input class="hero__btn" type="submit" value="Поиск"/>
@@ -91,14 +91,13 @@
           <div class="page-section">
             <div class="grid grid--container">
               <section class="page-section">
-                <header class="subheader">
-                  <h2>Специальные предложения</h2>
-                </header>
+                <header class="subheader"><a href="">
+                    <h2>Специальные предложения</h2></a></header>
                 <div class="row special-offers">
                   <div class="col col--lg-4 col--md-4 col--sm-4">
                     <div class="offer">
                       <div class="offer__plate"><span>от 3430</span><span class="ruble"></span></div>
-                      <div class="offer__img"><img src="../../img/special-1.jpg" alt=""/></div>
+                      <div class="offer__img"><img src="img/special-1.jpg" alt=""/></div>
                       <div class="offer__title">Горнолыжный отдых в ГК «Bridge Resort»</div>
                       <div class="offer__anons">
                         <p>В дни школьных каникул предлагаем совершить увлекательную поездку в  яркий в любое время года Олимпийский Сочи!</p>
@@ -108,7 +107,7 @@
                   <div class="col col--lg-4 col--md-4 col--sm-4">
                     <div class="offer">
                       <div class="offer__plate"><span>от 3430</span><span class="ruble"></span></div>
-                      <div class="offer__img"><img src="../../img/special-1.jpg" alt=""/></div>
+                      <div class="offer__img"><img src="img/special-1.jpg" alt=""/></div>
                       <div class="offer__title">Горнолыжный отдых в ГК «Bridge Resort»</div>
                       <div class="offer__anons">
                         <p>В дни школьных каникул предлагаем совершить увлекательную поездку в  яркий в любое время года Олимпийский Сочи!</p>
@@ -118,7 +117,7 @@
                   <div class="col col--lg-4 col--md-4 col--sm-4">
                     <div class="offer">
                       <div class="offer__plate"><span>от 3430</span><span class="ruble"></span></div>
-                      <div class="offer__img"><img src="../../img/special-1.jpg" alt=""/></div>
+                      <div class="offer__img"><img src="img/special-1.jpg" alt=""/></div>
                       <div class="offer__title">Горнолыжный отдых в ГК «Bridge Resort»</div>
                       <div class="offer__anons">
                         <p>В дни школьных каникул предлагаем совершить увлекательную поездку в  яркий в любое время года Олимпийский Сочи!</p>
@@ -129,9 +128,8 @@
               </section>
               <section>
                 <header class="subheader">
-                  <div class="left">
-                    <h2>Популярные направления</h2>
-                  </div>
+                  <div class="left"><a href="">
+                      <h2>Популярные направления</h2></a></div>
                   <div class="right">
                     <div class="popular-direction-mobile">
                       <select class="custom-select">
@@ -149,104 +147,51 @@
                 </header>
                 <div class="popular-directions">
                   <div class="masonry">
-                    <div class="masonry-row">
-                      <div class="masonry-column">
-                        <div class="direction"><img class="direction__img" src="img/direction-1.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">Красная поляна</div>
-                            <div class="direction__country">Россия</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column">
-                        <div class="direction direction--type-2"><img class="direction__img" src="img/direction-2.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">Сочи</div>
-                            <div class="direction__country">Россия</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column">
-                        <div class="direction direction--type-3"><img class="direction__img" src="img/direction-3.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">Ереван</div>
-                            <div class="direction__country">Армения</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column">
-                        <div class="direction direction--type-3"><img class="direction__img" src="img/direction-3.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">Красная поляна</div>
-                            <div class="direction__country">Россия</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column">
-                        <div class="direction"><img class="direction__img" src="img/direction-1.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">Красная поляна</div>
-                            <div class="direction__country">Россия</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column">
-                        <div class="direction direction--type-2"><img class="direction__img" src="img/direction-2.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">Красная поляна</div>
-                            <div class="direction__country">Россия</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column">
-                        <div class="direction"><img class="direction__img" src="img/direction-1.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">Красная поляна</div>
-                            <div class="direction__country">Россия</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column">
-                        <div class="direction direction--type-3"><img class="direction__img" src="img/direction-3.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">Красная поляна</div>
-                            <div class="direction__country">Россия</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column">
-                        <div class="direction direction--type-2"><img class="direction__img" src="img/direction-2.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">Красная поляна</div>
-                            <div class="direction__country">Россия</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column masonry__country">
-                        <div class="direction"><img class="direction__img" src="img/direction-1.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">dgadgdgs</div>
-                            <div class="direction__country">Россия</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column masonry__country">
-                        <div class="direction direction--type-2"><img class="direction__img" src="img/direction-2.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">asdgasdg</div>
-                            <div class="direction__country">Россия</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="masonry-column masonry__country">
-                        <div class="direction direction--type-3"><img class="direction__img" src="img/direction-3.jpg" alt=""/>
-                          <div class="direction__text">
-                            <div class="direction__city">asdadhbs</div>
-                            <div class="direction__country">Армения</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <div class="masonry-column masonry-column__country"><a class="direction" href=""><img class="direction__img" src="img/direction-1.jpg" alt=""/>
+                        <div class="direction__text">
+                          <div class="direction__city">Красная поляна</div>
+                          <div class="direction__country">Россия</div>
+                        </div></a></div>
+                    <div class="masonry-column masonry-column__country"><a class="direction direction--type-2" href=""><img class="direction__img" src="img/direction-2.jpg" alt=""/>
+                        <div class="direction__text">
+                          <div class="direction__city">Сочи</div>
+                          <div class="direction__country">Россия</div>
+                        </div></a></div>
+                    <div class="masonry-column masonry-column__city"><a class="direction direction--type-3" href=""><img class="direction__img" src="img/direction-3.jpg" alt=""/>
+                        <div class="direction__text">
+                          <div class="direction__city">Ереван</div>
+                          <div class="direction__country">Армения</div>
+                        </div></a></div>
+                    <div class="masonry-column masonry-column__country"><a class="direction direction--type-3" href=""><img class="direction__img" src="img/direction-3.jpg" alt=""/>
+                        <div class="direction__text">
+                          <div class="direction__city">Красная поляна</div>
+                          <div class="direction__country">Россия</div>
+                        </div></a></div>
+                    <div class="masonry-column masonry-column__country"><a class="direction" href=""><img class="direction__img" src="img/direction-1.jpg" alt=""/>
+                        <div class="direction__text">
+                          <div class="direction__city">Красная поляна</div>
+                          <div class="direction__country">Россия</div>
+                        </div></a></div>
+                    <div class="masonry-column masonry-column__city"><a class="direction direction--type-2" href=""><img class="direction__img" src="img/direction-2.jpg" alt=""/>
+                        <div class="direction__text">
+                          <div class="direction__city">Красная поляна</div>
+                          <div class="direction__country">Россия</div>
+                        </div></a></div>
+                    <div class="masonry-column masonry-column__city"><a class="direction" href=""><img class="direction__img" src="img/direction-1.jpg" alt=""/>
+                        <div class="direction__text">
+                          <div class="direction__city">Красная поляна</div>
+                          <div class="direction__country">Россия</div>
+                        </div></a></div>
+                    <div class="masonry-column masonry-column__country"><a class="direction direction--type-3" href=""><img class="direction__img" src="img/direction-3.jpg" alt=""/>
+                        <div class="direction__text">
+                          <div class="direction__city">Красная поляна</div>
+                          <div class="direction__country">Россия</div>
+                        </div></a></div>
+                    <div class="masonry-column masonry-column__country"><a class="direction direction--type-2" href=""><img class="direction__img" src="img/direction-2.jpg" alt=""/>
+                        <div class="direction__text">
+                          <div class="direction__city">Красная поляна</div>
+                          <div class="direction__country">Россия</div>
+                        </div></a></div>
                   </div>
                 </div>
               </section>
@@ -255,9 +200,8 @@
           <div class="white-block page-section">
             <div class="grid grid--container">
               <header class="subheader">
-                <div class="left">
-                  <h2>Специальные предложения отелей</h2>
-                </div>
+                <div class="left"><a href="">
+                    <h2>Специальные предложения отелей</h2></a></div>
                 <div class="right">
                   <div class="special-slider-nav"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></div>
                 </div>
@@ -323,23 +267,36 @@
           </div>
           <section>
             <div class="grid grid--container">
-              <header class="subheader">
-                <h2>Мы на карте</h2>
-              </header>
+              <header class="subheader"><a href="">
+                  <h2>Контакты</h2></a></header>
             </div>
           </section>
-          <div class="map page-section">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2816.8159145447253!2d38.98807731561053!3d45.08952597909836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDA1JzIyLjMiTiAzOMKwNTknMjUuMCJF!5e0!3m2!1sru!2sru!4v1492419346070" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="allowfullscreen"></iframe>
+          <div class="index-map">
+            <div class="map page-section">
+              <div class="grid grid--container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2816.8159145447253!2d38.98807731561053!3d45.08952597909836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDA1JzIyLjMiTiAzOMKwNTknMjUuMCJF!5e0!3m2!1sru!2sru!4v1492419346070" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="allowfullscreen"></iframe>
+              </div>
+            </div>
+            <div class="index-map__info">
+              <div class="index-map__title">Адрес</div>
+              <div class="index-map__text">354000, г. Сочи, ул. Роз, 31, оффис 32</div>
+              <div class="index-map__title">email</div>
+              <div class="index-map__text">info@ekka.info</div>
+              <div class="index-map__title">Телефоны</div>
+              <div class="indxe-map__text">+7 (8622) 66 50  46</div>
+              <div class="indxe-map__text">+7 (8622) 66 50  46</div>
+              <div class="indxe-map__text">+7 (8622) 66 50  46</div>
+              <div class="indxe-map__text">+7 (8622) 66 50  46</div>
+            </div>
           </div>
           <div class="grid grid--container">
             <section class="page-section">
               <header class="subheader">
                 <h2>Недавно вы смотрели</h2>
               </header>
-              <div class="hotels row">
+              <div class="hotels hotels-slider row">
                 <div class="col col--lg-4 col--md-4 col--sm-4">
-                  <div class="hotel">
-                    <div class="hotel__img"><img src="img/_hotel-1.jpg" alt=""/></div>
+                  <div class="hotel"><a class="hotel__img" href=""><img src="img/_hotel-1.jpg" alt=""/></a>
                     <div class="hotel__header">
                       <div class="hotel__header_left">
                         <div class="hotel__title">Санаторий &laquo;Авангард&raquo; или с&nbsp;длинным названием</div>
@@ -353,8 +310,7 @@
                   </div>
                 </div>
                 <div class="col col--lg-4 col--md-4 col--sm-4">
-                  <div class="hotel">
-                    <div class="hotel__img"><img src="img/_hotel-1.jpg" alt=""/></div>
+                  <div class="hotel"><a class="hotel__img" href=""><img src="img/_hotel-1.jpg" alt=""/></a>
                     <div class="hotel__header">
                       <div class="hotel__header_left">
                         <div class="hotel__title">Санаторий &laquo;Авангард&raquo; или с&nbsp;длинным названием</div>
@@ -368,8 +324,35 @@
                   </div>
                 </div>
                 <div class="col col--lg-4 col--md-4 col--sm-4">
-                  <div class="hotel">
-                    <div class="hotel__img"><img src="img/_hotel-1.jpg" alt=""/></div>
+                  <div class="hotel"><a class="hotel__img" href=""><img src="img/_hotel-1.jpg" alt=""/></a>
+                    <div class="hotel__header">
+                      <div class="hotel__header_left">
+                        <div class="hotel__title">Санаторий &laquo;Авангард&raquo; или с&nbsp;длинным названием</div>
+                      </div>
+                      <div class="hotel__header_right">
+                        <div class="stars hotel__stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                      </div>
+                    </div>
+                    <div class="hotel__adress">г. Сочи, Курортный проспект, 83</div>
+                    <div class="hotel__anons">Уютная территория санатория прилегает непосредственно к берегу моря с великолепным</div><a class="link" href="">Подробнее</a>
+                  </div>
+                </div>
+                <div class="col col--lg-4 col--md-4 col--sm-4">
+                  <div class="hotel"><a class="hotel__img" href=""><img src="img/_hotel-1.jpg" alt=""/></a>
+                    <div class="hotel__header">
+                      <div class="hotel__header_left">
+                        <div class="hotel__title">Санаторий &laquo;Авангард&raquo; или с&nbsp;длинным названием</div>
+                      </div>
+                      <div class="hotel__header_right">
+                        <div class="stars hotel__stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                      </div>
+                    </div>
+                    <div class="hotel__adress">г. Сочи, Курортный проспект, 83</div>
+                    <div class="hotel__anons">Уютная территория санатория прилегает непосредственно к берегу моря с великолепным</div><a class="link" href="">Подробнее</a>
+                  </div>
+                </div>
+                <div class="col col--lg-4 col--md-4 col--sm-4">
+                  <div class="hotel"><a class="hotel__img" href=""><img src="img/_hotel-1.jpg" alt=""/></a>
                     <div class="hotel__header">
                       <div class="hotel__header_left">
                         <div class="hotel__title">Санаторий &laquo;Авангард&raquo; или с&nbsp;длинным названием</div>
@@ -449,11 +432,15 @@
     </main>
     <script src="js/jquery.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/wNumb.js"></script>
+    <script src="share42/share42.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/pickmeup.js"></script>
     <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

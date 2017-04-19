@@ -13,13 +13,13 @@
     <header class="main-header">
       <div class="grid grid--container">
         <div class="main-header__container">
-          <div class="main-header__logo"><a class="logo" href="/"></a></div>
+          <div class="main-header__logo"><a class="logo" href=""></a></div>
           <nav class="header-nav">
             <li class="header-nav__link"><a href="offers.html">Специальные предложения</a></li>
             <li class="header-nav__link"><a href="directions.html">Направления</a></li>
             <li class="header-nav__link"><a href="tourists.html">Туристам</a></li>
             <li class="header-nav__link"><a href="about.html">О компании</a></li>
-            <li class="header-nav__link"><a href="agencies.html">Агенствам</a></li>
+            <li class="header-nav__link"><a href="agencies.html">Агентствам</a></li>
             <li class="header-nav__link"><a href="contacts.html">Контакты</a></li>
           </nav>
           <div class="main-header__phone">+7 999 55-32-41</div>
@@ -50,11 +50,11 @@
                 <h1 class="inner-h1">Имеретинский курорт «Русские сезоны» с очень длинным и красивым названием</h1>
                 <div class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
               </header><img class="room-img" src="img/room.jpg" alt=""/>
-              <div class="tabs">
+              <div class="tabs tabs--offset">
                 <nav class="tabs__nav">
                   <li><a class="active" href="#Улуги_и_удобства">Улуги и удобства</a></li>
                   <li><a href="#Регистрация">Регистрация</a></li>
-                  <li><a href="#Описнаие номеров">Описнаие номеров</a></li>
+                  <li><a href="#Описание номеров">Описание номеров</a></li>
                   <li><a href="#Важная информация">Важная информация</a></li>
                   <li><a href="#Об отеле">Об отеле</a></li>
                 </nav>
@@ -63,7 +63,7 @@
                   <p>Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.</p>
                 </div>
                 <div class="tabs__content">
-                  <p>Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.</p>
+                  <p>Медицинский профиль: Санаторий оказывает помощь в рамках Федеральных стандартов и с учетом разработанных специалистами Детского медицинского центра Управления делами Президента РФ программ пациентам с заболевания костно-мышечной системы и соединительной ткани, нервной, эндокринной системы, болезнями системы кровообращения, глаза, часто и длительно болеющим детям</p>
                 </div>
                 <div class="tabs__content">
                   <p>Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.</p>
@@ -72,14 +72,15 @@
                   <p>Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.</p>
                 </div>
                 <div class="tabs__content">
-                  <p>Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.</p>
+                  <p>Уютная территория санатория прилегает непосредственно к берегу моря с великолепным пляжем. В радиусе пешеходной доступности находятся такие знаковые места как Дендрарий, цирк, городская набережная.</p>
+                  <p>Санаторий Управления делами Президента Российской Федерации Федеральное Государственное Бюджетное Учреждение "РУСИЧ" располагает современной лечебно-диагностической базой, оснащенной новейшей медицинской аппаратурой. При проведении оздоровительных мероприятий приоритетно используются природные, климатические лечебные факторы, методы бальнеологии и аппаратной физиотерапии.</p>
                 </div>
               </div>
-              <div class="row room-change">
-                <div class="col col--lg-5">
+              <div class="row room-change row--md-center">
+                <div class="col col--lg-5 col--md-5">
                   <h2>Доступные номера</h2>
                 </div>
-                <div class="col col--lg-7">
+                <div class="col col--lg-7 col--md-7">
                   <form class="room-change__form">
                     <input class="datepicker-range" type="text"/>
                     <div class="guest-clicker">
@@ -336,7 +337,9 @@
               <h3 class="inner-h3">Отзывы</h3>
               <form class="comment comment-form">
                 <div class="comment__left">
-                  <div class="comment__photo"><img src="img/user.jpg" alt=""/></div>
+                  <label class="comment__photo nophoto" for="nophoto">
+                    <input type="file" id="nophoto"/>
+                  </label>
                 </div>
                 <div class="comment__right">
                   <div class="comment__name">Александр Романов</div>
@@ -384,9 +387,8 @@
               </div>
             </div>
             <div class="col col--lg-3">
-              <aside class="inner-aside">
-                <div class="btn btn--secondary btn--middle btn--full-size"><span>Поделиться</span><i class="fa fa-share-alt"></i></div>
-                <div class="gallery"><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/room-1.jpg" data-lightbox="room"><img src="img/room-1.jpg" alt=""/></a>
+              <aside class="inner-aside"><a class="social-share btn btn--secondary btn--middle btn--full-size" href="#social-share"><span>Поделиться</span><i class="fa fa-share-alt"></i></a>
+                <div class="gallery"><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-2.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a><a class="gallery__img" href="img/gallery-big-1.jpg"><img src="img/room-1.jpg" alt=""/></a>
                   <div class="btn btn--primary btn--middle btn--full-size">Все фотографии</div>
                 </div>
               </aside>
@@ -401,10 +403,9 @@
             <header class="subheader">
               <h2>Недавно вы смотрели</h2>
             </header>
-            <div class="hotels row">
+            <div class="hotels hotels-slider row">
               <div class="col col--lg-4 col--md-4 col--sm-4">
-                <div class="hotel">
-                  <div class="hotel__img"><img src="img/_hotel-1.jpg" alt=""/></div>
+                <div class="hotel"><a class="hotel__img" href=""><img src="img/_hotel-1.jpg" alt=""/></a>
                   <div class="hotel__header">
                     <div class="hotel__header_left">
                       <div class="hotel__title">Санаторий &laquo;Авангард&raquo; или с&nbsp;длинным названием</div>
@@ -418,8 +419,7 @@
                 </div>
               </div>
               <div class="col col--lg-4 col--md-4 col--sm-4">
-                <div class="hotel">
-                  <div class="hotel__img"><img src="img/_hotel-1.jpg" alt=""/></div>
+                <div class="hotel"><a class="hotel__img" href=""><img src="img/_hotel-1.jpg" alt=""/></a>
                   <div class="hotel__header">
                     <div class="hotel__header_left">
                       <div class="hotel__title">Санаторий &laquo;Авангард&raquo; или с&nbsp;длинным названием</div>
@@ -433,8 +433,35 @@
                 </div>
               </div>
               <div class="col col--lg-4 col--md-4 col--sm-4">
-                <div class="hotel">
-                  <div class="hotel__img"><img src="img/_hotel-1.jpg" alt=""/></div>
+                <div class="hotel"><a class="hotel__img" href=""><img src="img/_hotel-1.jpg" alt=""/></a>
+                  <div class="hotel__header">
+                    <div class="hotel__header_left">
+                      <div class="hotel__title">Санаторий &laquo;Авангард&raquo; или с&nbsp;длинным названием</div>
+                    </div>
+                    <div class="hotel__header_right">
+                      <div class="stars hotel__stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    </div>
+                  </div>
+                  <div class="hotel__adress">г. Сочи, Курортный проспект, 83</div>
+                  <div class="hotel__anons">Уютная территория санатория прилегает непосредственно к берегу моря с великолепным</div><a class="link" href="">Подробнее</a>
+                </div>
+              </div>
+              <div class="col col--lg-4 col--md-4 col--sm-4">
+                <div class="hotel"><a class="hotel__img" href=""><img src="img/_hotel-1.jpg" alt=""/></a>
+                  <div class="hotel__header">
+                    <div class="hotel__header_left">
+                      <div class="hotel__title">Санаторий &laquo;Авангард&raquo; или с&nbsp;длинным названием</div>
+                    </div>
+                    <div class="hotel__header_right">
+                      <div class="stars hotel__stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    </div>
+                  </div>
+                  <div class="hotel__adress">г. Сочи, Курортный проспект, 83</div>
+                  <div class="hotel__anons">Уютная территория санатория прилегает непосредственно к берегу моря с великолепным</div><a class="link" href="">Подробнее</a>
+                </div>
+              </div>
+              <div class="col col--lg-4 col--md-4 col--sm-4">
+                <div class="hotel"><a class="hotel__img" href=""><img src="img/_hotel-1.jpg" alt=""/></a>
                   <div class="hotel__header">
                     <div class="hotel__header_left">
                       <div class="hotel__title">Санаторий &laquo;Авангард&raquo; или с&nbsp;длинным названием</div>
@@ -449,6 +476,15 @@
               </div>
             </div>
           </section>
+        </div>
+        <div class="modal" id="social-share">
+          <div class="modal__header">Поделиться этим объектом</div>
+          <div class="form-group">
+            <label>Поделитесь ссылкой</label>
+            <input type="text" value="https://www.ekka.info/hotels/Nyu-Iork,NY,SSHA-c15830-h382262/2017-04-20/2017-05-08/4adults?sharing=1"/>
+          </div>
+          <p>Поделиться через социальные сети</p>
+          <div class="share42init"></div>
         </div>
         <footer class="main-footer">
           <div class="grid grid--container">
@@ -513,11 +549,15 @@
     </main>
     <script src="js/jquery.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/wNumb.js"></script>
+    <script src="share42/share42.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/pickmeup.js"></script>
     <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

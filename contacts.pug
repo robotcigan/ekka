@@ -26,15 +26,22 @@ block content
             .col.col--lg-6.col--md-6
               .form-group
                 label Контактный телефон
-                input(type="text")
+                input(type="text").phone-mask
             .col.col--lg-6.col--md-6
               .form-group
                 label E-mail
-                input(type="text")
+                input(type="email")
             .col.col--lg-12
               .form-group
                 label Ваше сообщеие
                 textarea
+          .row.row--sm-center
+            .col.col--lg-6
+              .form-group
+                input(type="text")
+            .col.col--lg-6
+              img(src="img/captcha.jpg", alt="")
+            .col.col--lg-6
               button.btn.btn--primary Отправить
       .col.col--lg-6
         h3 Контактные данные
@@ -48,7 +55,8 @@ block content
             .contacts-data__icon
               i.icon.fa.fa-envelope
             span E-mail
-          .contacts-data__desc 354000, Россия, г. Сочи, ул. Роз, 31, офис 32
+          .contacts-data__desc
+            a(href="").link info@ekka.info
           .contacts-data__title
             .contacts-data__icon
               i.icon.fa.fa-phone

@@ -13,13 +13,13 @@
     <header class="main-header">
       <div class="grid grid--container">
         <div class="main-header__container">
-          <div class="main-header__logo"><a class="logo" href="/"></a></div>
+          <div class="main-header__logo"><a class="logo" href=""></a></div>
           <nav class="header-nav">
             <li class="header-nav__link"><a href="offers.html">Специальные предложения</a></li>
             <li class="header-nav__link"><a href="directions.html">Направления</a></li>
             <li class="header-nav__link"><a href="tourists.html">Туристам</a></li>
             <li class="header-nav__link"><a href="about.html">О компании</a></li>
-            <li class="header-nav__link"><a href="agencies.html">Агенствам</a></li>
+            <li class="header-nav__link"><a href="agencies.html">Агентствам</a></li>
             <li class="header-nav__link"><a href="contacts.html">Контакты</a></li>
           </nav>
           <div class="main-header__phone">+7 999 55-32-41</div>
@@ -49,181 +49,37 @@
               <h1>Трансфер</h1>
               <form class="transfer__pult">
                 <div class="row">
-                  <div class="col col--lg-6">
-                    <p>По прибытию</p>
+                  <div class="col col--lg-6 col--md-6 col--sm-6">
+                    <label class="checkbox">
+                      <input type="checkbox" id="transfer-checkbox-1" checked="checked"/>
+                      <label for="transfer-checkbox-1"></label><span>По прибытию</span>
+                    </label>
                     <div class="transfer__avia toggle">
-                      <label class="toggle__avia"><i class="icon flaticon-airplane"></i><span>Самолет</span></label>
+                      <label class="toggle__avia"><i class="icon icon-avia"></i><span>Самолет</span></label>
                     </div>
                     <div class="toggle__icon"></div>
                     <div class="transfer__trane">
-                      <label class="toggle__trane"><i class="icon flaticon-transport"></i><span>Поезд</span></label>
+                      <label class="toggle__trane"><i class="icon icon-train"></i><span>Поезд</span></label>
                     </div>
                   </div>
-                  <div class="col col--lg-6">
-                    <p>По отъезду</p>
+                  <div class="col col--lg-6 col--md-6 col--sm-6">
+                    <label class="checkbox">
+                      <input type="checkbox" id="transfer-checkbox-2" checked="checked"/>
+                      <label for="transfer-checkbox-2"></label><span>По отъезду</span>
+                    </label>
                   </div>
                 </div>
               </form>
-              <form class="transform__form">
+              <form class="transferm__form">
                 <div class="row">
                   <div class="col col--lg-6">
-                    <div class="transfer__header">По прибытию</div>
-                    <div class="transfer__blocks">
-                      <div class="transfer__form-block transfer__form-block--active transfer__avia-arrival">
-                        <div class="form-group">
-                          <label>Пункт прибытия (аэропорт)</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Номер рейса</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Город вылета</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Время прибытия рейса</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Количество человек</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>ФИО гостя</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Надпись на табличке</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Контактный телефон</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Пункт назначения</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Выбрать класс</label>
-                          <select class="custom-select">
-                            <option>Эконом</option>
-                            <option>Бизнес</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label>Тип оплаты</label>
-                          <label class="radio">
-                            <input class="radio__input" type="radio" id="payment-type-1" name="payment-type"/>
-                            <label class="radio__label" for="payment-type-1"></label>Наличные
-                          </label>
-                          <label class="radio">
-                            <input class="radio__input" type="radio" id="payment-type-2" name="payment-type"/>
-                            <label class="radio__label" for="payment-type-2"></label>Безналичные
-                          </label>
-                        </div>
-                      </div>
-                      <div class="transfer__form-block transfer__trane-arrival">
-                        <div class="form-group">
-                          <label>Пункт прибытия (вокзал)</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Номер рейса</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Город вылета</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Время прибытия рейса</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Количество человек</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>ФИО гостя</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Надпись на табличке</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Контактный телефон</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Пункт назначения</label>
-                          <input type="text"/>
-                        </div>
-                        <div class="form-group">
-                          <label>Выбрать класс</label>
-                          <select class="custom-select">
-                            <option>Эконом</option>
-                            <option>Бизнес</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label>Тип оплаты</label>
-                          <label class="radio">
-                            <input class="radio__input" type="radio" id="payment-type-1" name="payment-type"/>
-                            <label class="radio__label" for="payment-type-1"></label>Наличные
-                          </label>
-                          <label class="radio">
-                            <input class="radio__input" type="radio" id="payment-type-2" name="payment-type"/>
-                            <label class="radio__label" for="payment-type-2"></label>Безналичные
-                          </label>
-                        </div>
-                      </div>
+                    <div class="transfer__arrival">
+                      <div class="transfer__header">По прибытию</div>
                     </div>
                   </div>
                   <div class="col col--lg-6">
-                    <div class="transfer__header">По отъезду</div>
-                    <div class="form-group">
-                      <label>Пункт прибытия (аэропорт)</label>
-                      <input type="text"/>
-                    </div>
-                    <div class="form-group">
-                      <label>Номер рейса</label>
-                      <input type="text"/>
-                    </div>
-                    <div class="form-group">
-                      <label>Город вылета</label>
-                      <input type="text"/>
-                    </div>
-                    <div class="form-group">
-                      <label>Время прибытия рейса</label>
-                      <input type="text"/>
-                    </div>
-                    <div class="form-group">
-                      <label>Количество человек</label>
-                      <input type="text"/>
-                    </div>
-                    <div class="form-group">
-                      <label>ФИО гостя</label>
-                      <input type="text"/>
-                    </div>
-                    <div class="form-group">
-                      <label>Надпись на табличке</label>
-                      <input type="text"/>
-                    </div>
-                    <div class="form-group">
-                      <label>Контактный телефон</label>
-                      <input type="text"/>
-                    </div>
-                    <div class="form-group">
-                      <label>Пункт назначения</label>
-                      <input type="text"/>
-                    </div>
-                    <div class="form-group">
-                      <label>Выбрать класс </label>
-                      <input type="text"/>
+                    <div class="transfer__departure">
+                      <div class="transfer__header">По убытию</div>
                     </div>
                   </div>
                 </div>
@@ -294,11 +150,15 @@
     </main>
     <script src="js/jquery.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/wNumb.js"></script>
+    <script src="share42/share42.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/pickmeup.js"></script>
     <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

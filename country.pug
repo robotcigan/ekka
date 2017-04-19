@@ -24,7 +24,6 @@ block content
             a(href="").direction-link__title Имеретенский курорт
             .direction-link__objects 312 объектов
 
-    - for(var y = 0; y < 3; y++)
 
       h2.inner-h2 Лучшие объекты Сочи
       .tabs
@@ -54,9 +53,409 @@ block content
                   .hotel__adress г. Сочи, Курортный проспект, 83
                   a(href="").link Подробнее
 
-        - for (var x = 0; x < 5; x++)
-          .tabs__content
-            p Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. С другой стороны новая модель организационной деятельности.
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-1.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-2.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-3.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-1.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-2.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-3.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+
+      h2.inner-h2 Лучшие объекты Анапы
+      .tabs
+        nav.tabs__nav
+          li: a(href="#Санатории").active Санатории
+          li: a(href="#Пансионаты") Пансионаты
+          li: a(href="#Гостиницы") Гостиницы
+          li: a(href="#Гостевые дома") Гостевые дома
+          li: a(href="#Коттеджи") Коттеджи
+          li: a(href="#Базы отдыха") Базы отдыха
+        .tabs__content.tabs__content--active
+          .hotels.row
+            - for (i = 0; i < 3; i++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-2.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-1.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-2.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-3.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-1.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-2.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-3.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+
+      h2.inner-h2 Лучшие объекты Геленджика
+      .tabs
+        nav.tabs__nav
+          li: a(href="#Санатории").active Санатории
+          li: a(href="#Пансионаты") Пансионаты
+          li: a(href="#Гостиницы") Гостиницы
+          li: a(href="#Гостевые дома") Гостевые дома
+          li: a(href="#Коттеджи") Коттеджи
+          li: a(href="#Базы отдыха") Базы отдыха
+        .tabs__content.tabs__content--active
+          .hotels.row
+            - for (i = 0; i < 3; i++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-2.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-1.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-2.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-3.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-1.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-2.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
+        .tabs__content
+          .hotels.row
+            - for (x = 0; x < 3; x++)
+              .col.col--lg-4.col--md-4.col--sm-4
+                .hotel
+                  .hotel__img
+                    img(src="img/_hotel-3.jpg", alt="")
+                  .hotel__header
+                    .hotel__header_left
+                      .hotel__title Black Sea / Чёрное море
+                    .hotel__header_right
+                      .stars.hotel__stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                  .hotel__adress г. Сочи, Курортный проспект, 83
+                  a(href="").link Подробнее
+
 
       .all-objects-btn
         .btn.btn--primary

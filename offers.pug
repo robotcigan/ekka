@@ -6,8 +6,8 @@ block content
   .grid.grid--container.page-section
 
     - for (var y = 0; y < 4; y++)
-      .card-container
-        .card.card--offer
+      .card-container.card--offer
+        .card
           .card__img
             img(src="img/special-offer.jpg", alt="")
           .card__middle
@@ -29,6 +29,7 @@ block content
               span Подробнее
               i.fa.fa-angle-right
 
+    include pagination.pug
 
 
 

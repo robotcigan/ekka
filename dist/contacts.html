@@ -13,13 +13,13 @@
     <header class="main-header">
       <div class="grid grid--container">
         <div class="main-header__container">
-          <div class="main-header__logo"><a class="logo" href="/"></a></div>
+          <div class="main-header__logo"><a class="logo" href=""></a></div>
           <nav class="header-nav">
             <li class="header-nav__link"><a href="offers.html">Специальные предложения</a></li>
             <li class="header-nav__link"><a href="directions.html">Направления</a></li>
             <li class="header-nav__link"><a href="tourists.html">Туристам</a></li>
             <li class="header-nav__link"><a href="about.html">О компании</a></li>
-            <li class="header-nav__link"><a href="agencies.html">Агенствам</a></li>
+            <li class="header-nav__link"><a href="agencies.html">Агентствам</a></li>
             <li class="header-nav__link"><a href="contacts.html">Контакты</a></li>
           </nav>
           <div class="main-header__phone">+7 999 55-32-41</div>
@@ -68,13 +68,13 @@
                   <div class="col col--lg-6 col--md-6">
                     <div class="form-group">
                       <label>Контактный телефон</label>
-                      <input type="text"/>
+                      <input class="phone-mask" type="text"/>
                     </div>
                   </div>
                   <div class="col col--lg-6 col--md-6">
                     <div class="form-group">
                       <label>E-mail</label>
-                      <input type="text"/>
+                      <input type="email"/>
                     </div>
                   </div>
                   <div class="col col--lg-12">
@@ -82,6 +82,16 @@
                       <label>Ваше сообщеие</label>
                       <textarea></textarea>
                     </div>
+                  </div>
+                </div>
+                <div class="row row--sm-center">
+                  <div class="col col--lg-6">
+                    <div class="form-group">
+                      <input type="text"/>
+                    </div>
+                  </div>
+                  <div class="col col--lg-6"><img src="img/captcha.jpg" alt=""/></div>
+                  <div class="col col--lg-6">
                     <button class="btn btn--primary">Отправить</button>
                   </div>
                 </div>
@@ -97,7 +107,7 @@
                 <div class="contacts-data__title">
                   <div class="contacts-data__icon"><i class="icon fa fa-envelope"></i></div><span>E-mail</span>
                 </div>
-                <div class="contacts-data__desc">354000, Россия, г. Сочи, ул. Роз, 31, офис 32</div>
+                <div class="contacts-data__desc"><a class="link" href="">info@ekka.info</a></div>
                 <div class="contacts-data__title">
                   <div class="contacts-data__icon"><i class="icon fa fa-phone"></i></div><span>Телефоны</span>
                 </div>
@@ -209,11 +219,15 @@
     </main>
     <script src="js/jquery.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/wNumb.js"></script>
+    <script src="share42/share42.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/pickmeup.js"></script>
     <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

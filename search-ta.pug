@@ -1,0 +1,154 @@
+extends layout.pug
+
+block content
+
+  .empty
+
+  .grid.grid--container
+    .row
+      .col.col--lg-2
+        a(href="#modal").objects-on-map
+          span Смотреть на карте
+        .search-aside
+          h3 Фильтры
+          form
+            .form-group
+              label.form-label Категории
+              select.custom-select
+                option Санатории
+                option Отели
+            .form-group.range-sliders
+              label.form-label Цены
+              #range-slider
+              #range-slider-left
+              #range-slider-right
+            .form-group.range-sliders
+              label.form-label Рейтинг
+              #slider
+              #slider-value
+              span.slider-value-text и выше
+            .form-group
+              label.form-label Звездность
+              small от
+              .stars
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star.disable
+                i.fa.fa-star.disable
+              small до
+              .stars
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+            .form-group
+              label.form-label Услуги
+              .search-checkbox
+                label(for="service-1").custom-checkbox-label
+                  i.icon.flaticon-cocktail
+                  span Мини бар
+                input(type="checkbox" id="service-1").custom-checkbox
+                label(for="service-2").custom-checkbox-label
+                  i.icon.flaticon-bed
+                  span Большая кровать
+                input(type="checkbox" id="service-2").custom-checkbox
+                label(for="service-3").custom-checkbox-label
+                  i.icon.flaticon-television
+                  span Телевизор
+                input(type="checkbox" id="service-3").custom-checkbox
+                label(for="service-4").custom-checkbox-label
+                  i.icon.flaticon-bathtub
+                  span Ванная
+                input(type="checkbox" id="service-4").custom-checkbox
+                label(for="service-5").custom-checkbox-label
+                  i.icon.flaticon-air-conditioner
+                  span Сплит система
+                input(type="checkbox" id="service-5").custom-checkbox
+            a(href="").btn.btn--primary.btn--full-size Применить
+            br
+            br
+            a(href="").btn.btn--gray.btn--full-size Сбросить
+      .col.col--lg-10
+        form.hero__form.hero__form--search
+          .hero__input
+            input(type="text" value="Сочи, Россия")
+          .hero__input
+            input(type="text" readonly="true").datepicker-range
+          .hero__input.guest-clicker
+            input(type="text" value="1 номер, 1 гость").guest-clicker__input
+            .guest-clicker__modal.popup
+              .guest-clicker__group
+                .guest-clicker__label Номера
+                .guest-clicker__btn.js-room-minus -
+                .guest-clicker__room-number 1
+                .guest-clicker__btn.js-room-plus +
+              .guest-clicker__group
+                .guest-clicker__label Гости
+                .guest-clicker__btn.js-guest-minus -
+                .guest-clicker__guest-number 1
+                .guest-clicker__btn.js-guest-plus +
+          .hero__input
+            select.custom-select
+              option По рейтингу
+              option Цена по возрастанию
+              option Цена по убыванию
+          .hero__btn
+            i.fa.fa-search
+
+        - for (var y = 0; y < 12; y++)
+          include card-ta.pug
+
+        include pagination.pug
+
+
+
+  #modal.modal
+    .map
+      #map-objects
+  
+  //- .map
+  //-   #map-objects
+
+  script.
+
+    var myMap = function initMap() {
+
+      var map = new google.maps.Map(document.getElementById('map-objects'), {
+        zoom: 13,
+        center: {lat: 43.565570, lng: 39.746936},
+      });
+
+      google.maps.event.trigger(map, 'resize');
+
+
+      // Create an array of alphabetical characters used to label the markers.
+      var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+      // Add some markers to the map.
+      // Note: The code uses the JavaScript Array.prototype.map() method to
+      // create an array of markers based on a given "locations" array.
+      // The map() method here has nothing to do with the Google Maps API.
+      var markers = locations.map(function(location, i) {
+        return new google.maps.Marker({
+          position: location,
+          label: labels[i % labels.length]
+        });
+      });
+
+      // Add a marker clusterer to manage the markers.
+      var markerCluster = new MarkerClusterer(map, markers,
+          {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
+    }
+    var locations = [
+      {lat: 43.565570, lng: 39.746936},
+      {lat: 43.569119, lng: 39.735563},
+      {lat: 43.678581, lng: 39.607347}
+    ]
+
+
+  script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlkgQ2z5W346VN7fBAqSrbf3ign9S1mjw&callback=initMap"
+  type="text/javascript")
+  script(src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js")

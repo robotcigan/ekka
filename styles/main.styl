@@ -131,6 +131,7 @@
 
 .hotel
   &__img
+    display block
     margin-bottom 1rem
     img
       display block
@@ -234,6 +235,25 @@
     min-width 70px
 
 
+.pagination
+  text-align center
+  margin-top 5rem
+  &__link
+    border-radius 50%
+    color $main
+    display inline-block
+    height 4rem
+    font-size 1.6rem
+    line-height 3.6rem
+    margin-right 2rem
+    text-align center
+    text-decoration none
+    width 1rem
+    &--active
+      border 2px solid $secondary
+      width 4rem
+
+
 .menu-open
   background $main
   display none
@@ -259,5 +279,37 @@
     top 8px
     background $main
 
+
+.modal
+  background #fff
+  box-shadow $shadow
+  display none
+  margin 0 auto
+  max-width 96%
+  // padding 4rem
+  position relative
+  width auto
+  &__header
+    font-size 2.4rem
+    font-weight 600
+    margin-bottom 2rem
+
+#social-share
+  border-radius $radius
+  max-width 50%
+  padding 3rem
+
+.mfp-ready
+  .modal
+    display block
+.mfp-close
+  font-size 4rem
+  margin-top 0
+
+.mfp-close
+  margin-top -5rem
+
+.mfp-close-btn-in .mfp-close
+  color #fff
 
 @import 'base/adapt'

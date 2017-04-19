@@ -3,8 +3,8 @@
   	Creation date: 10/04/2017 11:25
   	*/
 
-@font-face {
-  font-family: "Flaticon";
+/*@font-face {
+  font-family: "AnotherIcons";
   src: url("../../fonts/another/Flaticon.eot");
   src: url("../../fonts/another/Flaticon.eot?#iefix") format("embedded-opentype"),
        url("../../fonts/another/Flaticon.woff") format("woff"),
@@ -16,19 +16,19 @@
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: "Flaticon";
+    font-family: "AnotherIcons";
     src: url("../../fonts/another/Flaticon.svg#Flaticon") format("svg");
   }
 }
 
-/*[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-  font-family: Flaticon;
-        font-size: 20px;
-font-style: normal;
-margin-left: 20px;
-}*/
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: AnotherIcons;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 20px;
+}
 
-.another-icon-social:before { content: "\f160"; }
-.another-icon-transport:before { content: "\f161"; }
-.another-icon-airplane:before { content: "\f162"; }
+.flaticon-social:before { content: "\f360"; }
+.flaticon-transport:before { content: "\f361"; }
+.flaticon-airplane:before { content: "\f362"; }*/

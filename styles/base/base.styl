@@ -135,6 +135,7 @@ body
     &-active
       background-color $light-gray
       border 1px solid $light-gray
+      transition background-color .2s, border-color .2s
   &--inner
     background rgba($main, .2)
     color #fff
@@ -220,3 +221,9 @@ body
     td
       border none
       font-weight 600
+  
+  a
+    color $primary
+    text-decoration none
+    &:hover
+      border-bottom 1px solid rgba($primary, .2)

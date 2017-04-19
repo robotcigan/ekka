@@ -20,7 +20,7 @@ block content
                   input(type="text")
               .col.col--lg-6.col--sm-6
                 .form-group
-                  label Агенство (организация)
+                  label Агентство (организация)
                   input(type="text")
               .col.col--lg-6.col--sm-6
                 .form-group
@@ -62,14 +62,14 @@ block content
                   .date-input.input-with-icon
                     .input-with-icon__icon
                       i.fa.fa-calendar-o
-                    input(type="text").datepicker
+                    input(type="text" readonly="true").datepicker-1
               .col.col--lg-6.col--sm-6
                 .form-group
                   label По
                   .date-input.input-with-icon
                     .input-with-icon__icon
                       i.fa.fa-calendar-o
-                    input(type="text").datepicker
+                    input(type="text" readonly="true").datepicker-2
               .col.col--lg-6.col--sm-6
                 .form-group
                   label Количество номеров
@@ -99,7 +99,7 @@ block content
                   .date-input.input-with-icon
                     .input-with-icon__icon
                       i.fa.fa-calendar-o
-                    input(type="text").datepicker
+                    input(type="text" readonly="true").datepicker
               .col.col--lg-6.col--sm-6
                 .form-group
                   label Серия
@@ -122,7 +122,7 @@ block content
                     .date-input.input-with-icon
                       .input-with-icon__icon
                         i.fa.fa-calendar-o
-                      input(type="text").datepicker
+                      input(type="text" readonly="true").datepicker-3
                 .col.col--lg-6.col--sm-6
                   .form-group
                     label Серия
@@ -131,6 +131,11 @@ block content
                   .form-group
                     label Номер паспорта
                     input(type="text")
+            .book-price
+              .book-price__title Общая сумма:
+              .book-price__sum
+                span 12 000
+                span.ruble
             .btn.btn--big.btn--mobile-full.btn--secondary Забронировать
 
 

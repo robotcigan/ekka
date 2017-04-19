@@ -41,7 +41,7 @@
     margin-bottom .5rem
   &__input
     display inline
-    overflow hidden
+    // overflow hidden
     position relative
     width 20%
     &:before
@@ -52,15 +52,23 @@
       right 0
       top 1.2rem
       width 1px
-    &:after
-        background $secondary
-        bottom -1rem
-        content ''
-        height 3px
-        left 0
-        position absolute
-        transition bottom .3s
-        width 100%
+    .select2-container--default .select2-selection--single
+      border 0
+      border-radius 0
+      height 4.8rem
+    .select2-container--default .select2-selection--single .select2-selection__rendered
+      line-height 4.8rem
+    .select2-container--default .select2-selection--single .select2-selection__arrow
+      height 4rem
+    // &:after
+    //     background $secondary
+    //     bottom -1rem
+    //     content ''
+    //     height 3px
+    //     left 0
+    //     position absolute
+    //     transition bottom .3s
+    //     width 100%
     &:nth-child(4):before
       display none
     &--active
@@ -148,6 +156,7 @@
   //   display none
 
 .direction
+  display block
   background-size cover !important
   height 47rem
   shadow()
@@ -176,6 +185,9 @@
 .subheader
   margin-bottom 4rem
   clearfix()
+  a
+    color $main
+    text-decoration none
   h2
     line-height 1
     margin 0
@@ -248,3 +260,21 @@
 #map
   width 100%
   height 55vh
+
+.index-map
+  position relative
+  &__info
+    background #fff
+    bottom 0
+    height 30rem
+    margin auto
+    padding 2rem
+    position absolute
+    right 8%
+    top 0
+  &__title
+    font-size 1.6rem
+    font-weight 600
+    text-transform uppercase
+  &__text
+    margin-bottom 2rem

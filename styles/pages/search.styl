@@ -6,6 +6,12 @@
     border-top 1px solid $light-gray
     box-sizing border-box
     width 23%
+    .select2-container--default .select2-selection--single
+      height 4rem
+    .select2-container--default .select2-selection--single .select2-selection__rendered
+      line-height 4rem
+    .select2-container--default .select2-selection--single .select2-selection__arrow
+      height 3.4rem
     &:before
       top .8rem
     &:first-child
@@ -33,6 +39,7 @@
   margin-bottom 4.2rem
   position relative
   text-align center
+  text-decoration none
   width calc(100% + 1.6rem)
   &:before
     background rgba($main, .2)
@@ -65,6 +72,13 @@
     border-color rgba($main, .7)
     &:hover
       border-color rgba($main, .7)
+    &.card--offer
+      border-color $light-gray
+      &:hover
+        border-color $light-gray
+  &.card--offer
+    &:hover
+      border-color $light-gray
 .card
   cursor pointer
   display flex
@@ -109,7 +123,7 @@
   &__right
     align-content space-between
     display flex
-    flex-basis 15rem
+    flex-basis 20%
     flex-wrap wrap
     justify-content flex-end
     padding 2rem
@@ -147,6 +161,10 @@
   &__guests
     color $gray
     font-size 1.2rem
+  .btn
+    padding .6rem 2rem
+  .btn + .btn
+    margin-top -1.6rem
 
 
 .card__bottom
@@ -156,3 +174,35 @@
 
 .search-checkbox
   margin-top 1.5rem
+
+
+
+#map-objects
+  height 60vh
+  width 100%
+
+
+
+.btn--full-size + .btn--full-size
+  margin-top 1rem
+
+.up-btn
+  color $main
+  bottom 40rem
+  border-radius 50%
+  border 2px solid $secondary
+  background-color $secondary
+  cursor pointer
+  display none
+  font-size 2.4rem
+  height 4rem
+  line-height 3.6rem
+  position fixed
+  transition all .2s
+  right 6vw
+  text-align center
+  width 4rem
+  &--active
+    display block
+  &:hover
+    background-color transparent

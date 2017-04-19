@@ -18,6 +18,21 @@
     padding 2rem
   .btn
     margin-top 2rem
+  &-price
+    border 1px solid $light-gray
+    border-radius $radius
+    padding .5rem 1rem
+    clearfix()
+    &__title
+      color $main
+      font-size 2.4rem
+      float left
+    &__sum
+      color $primary
+      font-size 2.4rem
+      float right
+      .ruble:before
+        font-size 2.4rem
 
 
 .form-header
@@ -77,13 +92,12 @@ option
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
   transform rotate(180deg)
 
-.select2.select2-container.select2-container--default.select2-container--below.select2-container--focus
-  width 100% !important
+// .select2.select2-container.select2-container--default.select2-container--below.select2-container--focus
+  // width 100% !important
   // min-width 100% !important
   // max-width 100% !important
 
 .select2-container--default
-  width 100% !important
   max-width 100% !important
   .select2-selection--single
     border-color $light-gray
@@ -113,25 +127,41 @@ option
 .guest-information
   display none
 
+#range-slider
+  &-left,
+  &-right
+    color $main
+    font-size 1.2rem
+    float left
+    margin-top 1rem
+  &-right
+    float right
+
 
 #slider-value
-  color #999
+  color $main
   display inline-block
   font-size 1.1rem
   margin-top 1rem
 .slider-value-text
-  color #999
+  color $main
   display inline-block
   font-size 1.1rem
   font-weight 600
   margin-left .5rem
   margin-top 1rem
 
+.range-sliders
+  display inline-block
+  margin-bottom 2rem
+  width 100%
+
 .guest-clicker
   position relative
   clearfix()
   &__modal
     animation fadeUp .2s
+    background #fff
     bottom -79px
     border-radius 0 $radius $radius $radius
     display none
@@ -221,7 +251,40 @@ option
       font-size 1.2rem
       line-height 1
       // max-width 6rem
-      
+
+
+.checkbox
+  cursor pointer
+  display block
+  margin-bottom 1rem
+  label
+    background transparent
+    border-radius $radius
+    border 1px solid $primary
+    cursor pointer
+    display inline-block
+    height 2.4rem
+    margin-right 1rem
+    position relative
+    vertical-align middle
+    width 2.4rem
+    &:after
+      color $primary
+      content "\f00c"
+      display none
+      font-family 'FontAwesome'
+      font-size 1.4rem
+      left 4px
+      position absolute
+      top 0
+  input
+    display none
+  input:checked + label:after
+    display block
+  span
+    color $main
+
+
 
 .datepicker
   &.active
@@ -241,7 +304,10 @@ option
 
 .pickmeup--search
   margin-top 40px !important
-
+.pickmeup--room
+  margin-top 0
+.pickmeup
+  z-index 200
 
 .sending-form
   background #fff
@@ -345,3 +411,14 @@ option
       .icon:before,
       span
         color $primary
+
+.labels
+  clearfix()
+  label
+    float left
+  a
+    float right
+
+.foggot
+  color $primary
+  text-decoration none

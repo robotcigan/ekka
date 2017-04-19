@@ -13,13 +13,13 @@
     <header class="main-header">
       <div class="grid grid--container">
         <div class="main-header__container">
-          <div class="main-header__logo"><a class="logo" href="/"></a></div>
+          <div class="main-header__logo"><a class="logo" href=""></a></div>
           <nav class="header-nav">
             <li class="header-nav__link"><a href="offers.html">Специальные предложения</a></li>
             <li class="header-nav__link"><a href="directions.html">Направления</a></li>
             <li class="header-nav__link"><a href="tourists.html">Туристам</a></li>
             <li class="header-nav__link"><a href="about.html">О компании</a></li>
-            <li class="header-nav__link"><a href="agencies.html">Агенствам</a></li>
+            <li class="header-nav__link"><a href="agencies.html">Агентствам</a></li>
             <li class="header-nav__link"><a href="contacts.html">Контакты</a></li>
           </nav>
           <div class="main-header__phone">+7 999 55-32-41</div>
@@ -45,8 +45,7 @@
         <div class="empty"></div>
         <div class="grid grid--container">
           <div class="row">
-            <div class="col col--lg-2">
-              <div class="objects-on-map"><span>Смотреть на карте</span></div>
+            <div class="col col--lg-2"><a class="objects-on-map" href="#modal"><span>Смотреть на карте</span></a>
               <div class="search-aside">
                 <h3>Фильтры</h3>
                 <form>
@@ -57,11 +56,13 @@
                       <option>Отели</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group range-sliders">
                     <label class="form-label">Цены</label>
                     <div id="range-slider"></div>
+                    <div id="range-slider-left"></div>
+                    <div id="range-slider-right"></div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group range-sliders">
                     <label class="form-label">Рейтинг</label>
                     <div id="slider"></div>
                     <div id="slider-value"></div><span class="slider-value-text">и выше</span>
@@ -85,7 +86,7 @@
                       <label class="custom-checkbox-label" for="service-5"><i class="icon flaticon-air-conditioner"></i><span>Сплит система</span></label>
                       <input class="custom-checkbox" type="checkbox" id="service-5"/>
                     </div>
-                  </div>
+                  </div><a class="btn btn--primary btn--full-size" href="">Применить</a><a class="btn btn--gray btn--full-size" href="">Сбросить</a>
                 </form>
               </div>
             </div>
@@ -95,7 +96,7 @@
                   <input type="text" value="Сочи, Россия"/>
                 </div>
                 <div class="hero__input">
-                  <input class="datepicker-range" type="text"/>
+                  <input class="datepicker-range" type="text" readonly="true"/>
                 </div>
                 <div class="hero__input guest-clicker">
                   <input class="guest-clicker__input" type="text" value="1 номер, 1 гость"/>
@@ -115,10 +116,10 @@
                   </div>
                 </div>
                 <div class="hero__input">
-                  <select>
-                    <option>По популярности</option>
-                    <option>По цене</option>
-                    <option>По дате добавления</option>
+                  <select class="custom-select">
+                    <option>По рейтингу</option>
+                    <option>Цена по возрастанию</option>
+                    <option>Цена по убыванию</option>
                   </select>
                 </div>
                 <div class="hero__btn"><i class="fa fa-search"></i></div>
@@ -4383,9 +4384,56 @@
                   </div>
                 </div>
               </div>
+              <div class="up-btn"><i class="fa fa-angle-up"></i></div>
+              <div class="pagination"><a class="pagination__link pagination__link--active" href="">1</a><a class="pagination__link" href="">2</a><a class="pagination__link" href="">3</a><a class="pagination__link" href="">&hellip;</a><a class="pagination__link" href="">10</a></div>
             </div>
           </div>
         </div>
+        <div class="modal" id="modal">
+          <div class="map">
+            <div id="map-objects"></div>
+          </div>
+        </div>
+        <script>
+          var myMap = function initMap() {
+          
+            var map = new google.maps.Map(document.getElementById('map-objects'), {
+              zoom: 13,
+              center: {lat: 43.565570, lng: 39.746936},
+            });
+          
+            google.maps.event.trigger(map, 'resize');
+          
+          
+            // Create an array of alphabetical characters used to label the markers.
+            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+          
+            // Add some markers to the map.
+            // Note: The code uses the JavaScript Array.prototype.map() method to
+            // create an array of markers based on a given "locations" array.
+            // The map() method here has nothing to do with the Google Maps API.
+            var markers = locations.map(function(location, i) {
+              return new google.maps.Marker({
+                position: location,
+                label: labels[i % labels.length]
+              });
+            });
+          
+            // Add a marker clusterer to manage the markers.
+            var markerCluster = new MarkerClusterer(map, markers,
+                {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+          
+          }
+          var locations = [
+            {lat: 43.565570, lng: 39.746936},
+            {lat: 43.569119, lng: 39.735563},
+            {lat: 43.678581, lng: 39.607347}
+          ]
+          
+          
+        </script>
+        <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlkgQ2z5W346VN7fBAqSrbf3ign9S1mjw&amp;callback=initMap" type="text/javascript"></script>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <footer class="main-footer">
           <div class="grid grid--container">
             <div class="row">
@@ -4449,11 +4497,15 @@
     </main>
     <script src="js/jquery.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/wNumb.js"></script>
+    <script src="share42/share42.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/pickmeup.js"></script>
     <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

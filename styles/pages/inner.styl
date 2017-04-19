@@ -63,6 +63,10 @@
     height 7.2rem
     overflow hidden
     width 7.2rem
+    &.nophoto
+      background url("../../img/nophoto.jpg") no-repeat 50%
+      background-size cover
+      cursor pointer
   &__name
     font-size 1.8rem
     font-weight 700
@@ -70,14 +74,15 @@
   &__textarea
     margin-bottom 1rem
 
-
+#nophoto
+  display none
 
 .room-change
   h2
     line-height 1
   &__form
     display flex
-    margin-top 3rem
+    // margin-top 3rem
     // justify-content space-between
     .datepicker-range
       border-radius $radius 0 0 $radius
@@ -177,6 +182,9 @@ h3
       margin-top 4rem
     &--active
       display block
+
+  &--offset
+    margin-bottom 5rem
 
 .accordion
   &__title

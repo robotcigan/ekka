@@ -1,84 +1,106 @@
+$src = '../../fonts/Proxima Nova/'
+
+font(name, type, weight, style)
+  font-family name
+  src url($src + name + type + '.eot?#iefix') format('embedded-opentype'),
+      url($src + name + type + '.otf') format('opentype'),
+      url($src + name + type + '.woff') format('woff'),
+      url($src + name + type + '.ttf') format('truetype')
+  font-weight weight
+  font-style style
+
 @font-face
-  font-family 'Proxima Nova'
-  src local('Proxima Nova Light'),
-  local('Proxima Nova Light'),
-  url('../../fonts/Proxima Nova/Proxima Nova light.woff2') format('woff2'),
-  url('../../fonts/Proxima Nova/Proxima Nova light.woff') format('woff'),
-  url('../../fonts/Proxima Nova/Proxima Nova light.ttf') format('truetype')
-  font-weight 300
-  font-style normal
+  font('Proxima Nova',' Regular', 400, normal)
+
 @font-face
-  font-family 'Proxima Nova'
-  src local('Proxima Nova Regular'),
-  local('Proxima Nova Regular'),
-  url('../../fonts/Proxima Nova/Proxima Nova Regular.woff2') format('woff2'),
-  url('../../fonts/Proxima Nova/Proxima Nova Regular.woff') format('woff'),
-  url('../../fonts/Proxima Nova/Proxima Nova Regular.ttf') format('truetype')
-  font-weight 400
-  font-style normal
+  font('Proxima Nova',' Semibold', 600, normal)
+
 @font-face
-  font-family 'Proxima Nova'
-  src local('Proxima Nova Italic'),
-  local('Proxima Novat Italic'),
-  url('../../fonts/Proxima Nova/Proxima Nova Italic.woff2') format('woff2'),
-  url('../../fonts/Proxima Nova/Proxima Nova Italic.woff') format('woff'),
-  url('../../fonts/Proxima Nova/Proxima Nova Italic.ttf') format('truetype')
-  font-weight 400
-  font-style italic
-@font-face
-  font-family 'Proxima Nova'
-  src local('Proxima Nova Semibold'),
-  local('Proxima Nova Semibold'),
-  url('../../fonts/Proxima Nova/Proxima Nova Semibold.woff2') format('woff2'),
-  url('../../fonts/Proxima Nova/Proxima Nova Semibold.woff') format('woff'),
-  url('../../fonts/Proxima Nova/Proxima Nova Semibold.ttf') format('truetype')
-  font-weight 600
-  font-style normal
-@font-face
-  font-family 'Proxima Nova'
-  src local('Proxima Nova Semibold Italic'),
-  local('Proxima Nova Semibold Italic'),
-  url('../../fonts/Proxima Nova/Proxima Nova Semibold Italic.woff2') format('woff2'),
-  url('../../fonts/Proxima Nova/Proxima Nova Semibold Italic.woff') format('woff'),
-  url('../../fonts/Proxima Nova/Proxima Nova Semibold Italic.ttf') format('truetype')
-  font-weight 600
-  font-style italic
-@font-face
-  font-family 'Proxima Nova'
-  src local('Proxima Nova Bold'),
-  local('Proxima Nova Bold'),
-  url('../../fonts/Proxima Nova/Proxima Nova Bold.woff2') format('woff2'),
-  url('../../fonts/Proxima Nova/Proxima Nova Bold.woff') format('woff'),
-  url('../../fonts/Proxima Nova/Proxima Nova Bold.ttf') format('truetype')
-  font-weight 700
-  font-style normal
-@font-face
-  font-family 'Proxima Nova'
-  src local('Proxima Nova Bold Italic'),
-  local('Proxima Nova Bold Italic'),
-  url('../../fonts/Proxima Nova/Proxima Nova Bold Italic.woff2') format('woff2'),
-  url('../../fonts/Proxima Nova/Proxima Nova Bold Italic.woff') format('woff'),
-  url('../../fonts/Proxima Nova/Proxima Nova Bold Italic.ttf') format('truetype')
-  font-weight 700
-  font-style italic
-@font-face
-  font-family 'Proxima Nova'
-  src local('Proxima Nova Heavy'),
-  local('Proxima Nova Heavy'),
-  url('../../fonts/Proxima Nova/Proxima Nova Heavy.woff2') format('woff2'),
-  url('../../fonts/Proxima Nova/Proxima Nova Heavy.woff') format('woff'),
-  url('../../fonts/Proxima Nova/Proxima Nova Heavy.ttf') format('truetype')
-  font-weight 800
-  font-style normal
-@font-face
-  font-family 'Proxima Nova'
-  src local('Proxima Nova Heavy Italic'),
-  local('Proxima Nova Heavy Italic'),
-  url('../../fonts/Proxima Nova/Proxima Nova Heavy Italic.woff2') format('woff2'),
-  url('../../fonts/Proxima Nova/Proxima Nova Heavy Italic.woff') format('woff'),
-  url('../../fonts/Proxima Nova/Proxima Nova Heavy Italic.ttf') format('truetype')
-  font-weight 800
-  font-style italic
+  font('Proxima Nova',' Bold', 700, normal)
+
+
+
+// @font-face
+//   font-family 'Proxima Nova'
+//   src local('Proxima Nova Light'),
+//   local('Proxima Nova Light'),
+//   url('../../fonts/Proxima Nova/Proxima Nova light.woff2') format('woff2'),
+//   url('../../fonts/Proxima Nova/Proxima Nova light.woff') format('woff'),
+//   url('../../fonts/Proxima Nova/Proxima Nova light.ttf') format('truetype')
+//   font-weight 300
+//   font-style normal
+// @font-face
+//   font-family 'Proxima Nova'
+//   src local('Proxima Nova Regular'),
+//   local('Proxima Nova Regular'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Regular.woff2') format('woff2'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Regular.woff') format('woff'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Regular.ttf') format('truetype')
+//   font-weight 400
+//   font-style normal
+// @font-face
+//   font-family 'Proxima Nova'
+//   src local('Proxima Nova Italic'),
+//   local('Proxima Novat Italic'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Italic.woff2') format('woff2'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Italic.woff') format('woff'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Italic.ttf') format('truetype')
+//   font-weight 400
+//   font-style italic
+// @font-face
+//   font-family 'Proxima Nova'
+//   src local('Proxima Nova Semibold'),
+//   local('Proxima Nova Semibold'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Semibold.woff2') format('woff2'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Semibold.woff') format('woff'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Semibold.ttf') format('truetype')
+//   font-weight 600
+//   font-style normal
+// @font-face
+//   font-family 'Proxima Nova'
+//   src local('Proxima Nova Semibold Italic'),
+//   local('Proxima Nova Semibold Italic'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Semibold Italic.woff2') format('woff2'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Semibold Italic.woff') format('woff'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Semibold Italic.ttf') format('truetype')
+//   font-weight 600
+//   font-style italic
+// @font-face
+//   font-family 'Proxima Nova'
+//   src local('Proxima Nova Bold'),
+//   local('Proxima Nova Bold'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Bold.woff2') format('woff2'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Bold.woff') format('woff'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Bold.ttf') format('truetype')
+//   font-weight 700
+//   font-style normal
+// @font-face
+//   font-family 'Proxima Nova'
+//   src local('Proxima Nova Bold Italic'),
+//   local('Proxima Nova Bold Italic'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Bold Italic.woff2') format('woff2'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Bold Italic.woff') format('woff'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Bold Italic.ttf') format('truetype')
+//   font-weight 700
+//   font-style italic
+// @font-face
+//   font-family 'Proxima Nova'
+//   src local('Proxima Nova Heavy'),
+//   local('Proxima Nova Heavy'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Heavy.woff2') format('woff2'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Heavy.woff') format('woff'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Heavy.ttf') format('truetype')
+//   font-weight 800
+//   font-style normal
+// @font-face
+//   font-family 'Proxima Nova'
+//   src local('Proxima Nova Heavy Italic'),
+//   local('Proxima Nova Heavy Italic'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Heavy Italic.woff2') format('woff2'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Heavy Italic.woff') format('woff'),
+//   url('../../fonts/Proxima Nova/Proxima Nova Heavy Italic.ttf') format('truetype')
+//   font-weight 800
+//   font-style italic
 // @font-face
 //   font-family 'Lato'
 //   src local('Lato Black'),

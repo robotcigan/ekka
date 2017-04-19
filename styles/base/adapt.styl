@@ -89,6 +89,10 @@
     display block
   .hero
     height 40rem
+    &__input
+      input,
+      select
+        padding-left 1rem
   .masonry
     &-column
       padding 0 1.3rem 3.2rem 1.3rem
@@ -128,6 +132,9 @@
       margin-bottom 1rem
       width 10.5rem
   
+  .room-change__form
+    margin-top 0
+  
   .aside-map
     margin-top 4rem
 
@@ -136,6 +143,7 @@
       height 22rem
     &__middle
       padding 2rem 1rem
+      padding-top 1rem
       &_top
         max-height initial
     &__anons
@@ -143,6 +151,7 @@
     &__right
       flex-basis 25%
       padding 2rem 1rem
+      padding-top 1rem
     &__title
       margin-bottom 0
     &__adress
@@ -177,6 +186,14 @@
       order 2
     &__bottom
       margin-top 4rem
+  
+  .noUi-horizontal .noUi-handle
+    width: 18px
+    height: 18px
+    top: -7px
+
+  #social-share
+    min-width 70%
 
 
 @media(max-width 768px)
@@ -188,6 +205,8 @@
     .btn
       text-align initial
       padding .5rem 1.5rem
+    .btn + .btn
+      margin-top 1rem
   .room
     &__img
       overflow hidden
@@ -212,6 +231,9 @@
         background transparent
         .fa
           color $primary
+  .contacts-map
+    height initial
+    margin-bottom 2rem
   
   .gallery
     justify-content initial
@@ -239,6 +261,24 @@
     &__form
       animation none
       display initial
+      &--search
+        display block
+        margin-top 2rem
+        .hero__input
+          &:first-child
+            border-left 0
+          &:before
+            display none
+          input,
+          select
+            border 1px solid $light-gray
+            border-radius 0
+            display block
+            width 100%
+          .select2-container--default
+            border 1px solid $light-gray
+        .hero__btn
+          width 100%
     .hero__input
       &:before,
       &:after
@@ -250,6 +290,7 @@
     &__btn
       border-radius 0 0 $radius $radius
       width 100%
+    
   .inner-h1
     font-size 2.4rem
     margin 2rem 0
@@ -310,6 +351,10 @@
       text-align center
       width 100%
 
+  .card
+    &__rating
+      width initial
+      
     &--offer &__img
       height initial
       max-width 100%
@@ -363,6 +408,8 @@
       display none !important
     &__select
       display block
+     .select2-container--default
+       width 100% !important
   
   .noUi-horizontal .noUi-handle
     height 16px
@@ -422,6 +469,8 @@
           padding .5rem
           
 
+
+
   .direction-big
     &__text
       bottom 2rem
@@ -461,7 +510,10 @@
   
   .feedback
     margin-bottom 4rem
-
+  
+  .index-map
+    &__info
+      display none
   
   .main-footer
     padding-top 4rem
@@ -485,8 +537,12 @@
     .sorry
       font-size 1.6rem
 
+  .up-btn
+    display none
 
 
+  #social-share
+    min-width 96%
 
 
 @media(max-width 500px)
@@ -498,9 +554,7 @@
       padding 0 1.6rem 3.2rem 1.6rem
       width 38rem
       width 100%
-  .card
-    &__rating
-      width initial
+
   .room
     &__img
       width initial
@@ -536,6 +590,39 @@
       width 100%
     &__title
       margin-top 0
+  
+  .transfer
+    &__form-block
+      display none
+      margin-bottom 5rem
+      position initial
+      transform initial
+      &--active
+        display block
+  
+  .room-form-book
+    .room__parameters__items
+      flex-wrap wrap
+    .form-group
+      margin-bottom 2rem
+      width 100%
+    .room
+      &__guests
+        margin-bottom 2rem
+        width 100%
+      &__count
+        margin-bottom 2rem
+        width 100%
+      &__main-info
+        width 100%
+      &__book
+        width 100%
+    .room__ta
+      margin-bottom 2rem
+      width 100%
+  
+  .pickmeup .pmu-instance
+    display block
 
 @media(max-width 400px)
   .hero

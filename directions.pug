@@ -12,20 +12,32 @@ block content
         .country__title Россия
 
     .row
-      - for(var i = 0; i < 9; i++)
+      -for(var a=0; a < 3; a++)
         .col.col--lg-4.col--md-4.col--sm-4
           a(href="").city
             img(src="img/directions/1.jpg", alt="")
             .city__text
               .city__title Лазаревское
               .city__objects 211 объектов
+        .col.col--lg-4.col--md-4.col--sm-4
+          a(href="").city
+            img(src="img/directions/2.jpg", alt="")
+            .city__text
+              .city__title Сочи
+              .city__objects 528 объектов
+        .col.col--lg-4.col--md-4.col--sm-4
+          a(href="").city
+            img(src="img/directions/3.jpg", alt="")
+            .city__text
+              .city__title Имеретенский курорт
+              .city__objects 528 объектов
 
 
     - for(var x = 0; x < 3; x++)
       a(href="").country
-        img(src="img/directions/russia.jpg", alt="")
+        img(src="img/directions/armenia.jpg", alt="")
         .country__text
-          .country__title Россия
+          .country__title Армения
 
       .row
         - for(var i = 0; i < 3; i++)

@@ -61,15 +61,14 @@
 }
 .noUi-horizontal .noUi-handle {
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   left: -5px;
-  top: -3px;
+  top: -6px;
   transition: all .2s;
 }
 .noUi-horizontal .noUi-handle:hover {
-  transform: scale(1.2);
-  top: -7px;
+  background: #169bd4;
 }
 .noUi-vertical {
   width: 18px;
@@ -99,7 +98,8 @@
   cursor: ns-resize;
 }
 .noUi-handle {
-  background: #169bd4;
+  background: #fff;
+  border: 2px solid #169bd4;
   cursor: pointer;
 }
 [disabled] .noUi-connect {
