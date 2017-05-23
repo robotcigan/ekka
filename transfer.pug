@@ -7,201 +7,248 @@ block content
     .row.transfer
       .col.col--lg-8.col--lg-offset-2
         h1 Трансфер
-        form.transfer__pult
-          .row
-            .col.col--lg-6.col--md-6.col--sm-6
-              label.checkbox
-                input(type="checkbox" id="transfer-checkbox-1" checked)
-                label(for="transfer-checkbox-1")
-                span По прибытию
-              .transfer__avia.toggle
-                label.toggle__avia
-                  i.icon.icon-avia
-                  span Самолет
-              .toggle__icon
-              .transfer__trane
-                label.toggle__trane
-                  i.icon.icon-train
-                  span Поезд
-            .col.col--lg-6.col--md-6.col--sm-6
-              label.checkbox
-                input(type="checkbox" id="transfer-checkbox-2" checked)
-                label(for="transfer-checkbox-2")
-                span По отъезду
+        form.transfer__pult.row
+          .col.col--lg-6.col--md-6.col--sm-6.pult-arrival
+            label.checkbox
+              input(type="checkbox" id="transfer-checkbox-1" checked)
+              label(for="transfer-checkbox-1")
+              span По прибытию
+            .transfer__avia
+              label.toggle__avia
+                i.icon.icon-avia
+                span Самолет
+            .toggle__icon
+            .transfer__train
+              label.toggle__train
+                i.icon.icon-train
+                span Поезд
+          .col.col--lg-6.col--md-6.col--sm-6.pult-department
+            label.checkbox
+              input(type="checkbox" id="transfer-checkbox-2" checked)
+              label(for="transfer-checkbox-2")
+              span По отъезду
+            .transfer__avia
+              label.toggle__avia
+                i.icon.icon-avia
+                span Самолет
+            .toggle__icon
+            .transfer__train
+              label.toggle__train
+                i.icon.icon-train
+                span Поезд
 
         form.transferm__form
           .row
-            .col.col--lg-6
+            .col.col--lg-6.col--md-6.col--sm-6
               .transfer__arrival
                 .transfer__header По прибытию
+                .transfer__blocks
+                  .transfer__form-block.transfer__form-block--active.transfer__avia-arrival
+                    .form-group
+                      label Пункт прибытия (аэропорт)
+                      input(type="text")
+                    .form-group
+                      label Номер рейса
+                      input(type="text")
+                    .form-group
+                      label Город вылета
+                      input(type="text")
+                    .form-group
+                      label Время прибытия рейса
+                      input(type="text")
+                    .form-group
+                      label Количество человек
+                      input(type="text")
+                    .form-group
+                      label ФИО гостя
+                      input(type="text")
+                    .form-group
+                      label Надпись на табличке
+                      input(type="text")
+                    .form-group
+                      label Контактный телефон
+                      input(type="text").phone-mask
+                    .form-group
+                      label Пункт назначения
+                      input(type="text")
+                    .form-group
+                      .labels
+                        label Выбрать класс
+                        .helper Подробнее о классах авто
+                          .helper__popup
+                            .helper__header Подробнее о классах авто
+                            .helper__body
+                              p Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации 
+                      select.custom-select
+                        option Эконом
+                        option Бизнес
+                    .form-group
+                      label Тип оплаты
+                      label.radio
+                        input(type="radio" id="payment-type-1" name="payment-type").radio__input
+                        label.radio__label(for="payment-type-1")
+                        | Наличные
+                      label.radio
+                        input(type="radio" id="payment-type-2" name="payment-type").radio__input
+                        label.radio__label(for="payment-type-2")
+                        | Безналичные
+
+
+                  .transfer__form-block.transfer__train-arrival
+                    .form-group
+                      label Пункт прибытия (вокзал)
+                      input(type="text")
+                    .form-group
+                      label Номер поезда
+                      input(type="text")
+                    .form-group
+                      label Номер вагона
+                      input(type="text")
+                    .form-group
+                      label Время прибытия поезда
+                      input(type="text")
+                    .form-group
+                      label Количество человек
+                      input(type="text")
+                    .form-group
+                      label ФИО гостя
+                      input(type="text")
+                    .form-group
+                      label Надпись на табличке
+                      input(type="text")
+                    .form-group
+                      label Контактный телефон
+                      input(type="text").phone-mask
+                    .form-group
+                      label Пункт назначения
+                      input(type="text")
+                    .form-group
+                      .labels
+                        label Выбрать класс
+                        .helper Подробнее о классах авто
+                          .helper__popup
+                            .helper__header Подробнее о классах авто
+                            .helper__body
+                              p Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации 
+                      select.custom-select
+                        option Эконом
+                        option Бизнес
+                    .form-group
+                      label Тип оплаты
+                      label.radio
+                        input(type="radio" id="payment-type-1" name="payment-type").radio__input
+                        label.radio__label(for="payment-type-1")
+                        | Наличные
+                      label.radio
+                        input(type="radio" id="payment-type-2" name="payment-type").radio__input
+                        label.radio__label(for="payment-type-2")
+                        | Безналичные
+
+
+
             .col.col--lg-6
               .transfer__departure
                 .transfer__header По убытию
-        //- form.transform__form
-        //-   .row
-        //-     .col.col--lg-6.col--md-6.col--sm-6
-        //-       .transfer__header По прибытию
-        //-       .transfer__blocks.transfer-arrival
-        //-         .transfer__form-block.transfer__form-block--active.transfer__avia-arrival
-        //-           .form-group
-        //-             label Пункт прибытия (аэропорт)
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Номер рейса
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Город вылета
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Время прибытия рейса
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Количество человек
-        //-             input(type="text")
-        //-           .form-group
-        //-             label ФИО гостя
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Надпись на табличке
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Контактный телефон
-        //-             input(type="text").phone-mask
-        //-           .form-group
-        //-             label Пункт назначения
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Выбрать класс
-        //-             select.custom-select
-        //-               option Эконом
-        //-               option Бизнес
-        //-           .form-group
-        //-             label Тип оплаты
-        //-             label.radio
-        //-               input(type="radio" id="payment-type-1" name="payment-type").radio__input
-        //-               label.radio__label(for="payment-type-1")
-        //-               | Наличные
-        //-             label.radio
-        //-               input(type="radio" id="payment-type-2" name="payment-type").radio__input
-        //-               label.radio__label(for="payment-type-2")
-        //-               | Безналичные
+                .transfer__blocks
+                  .transfer__form-block.transfer__form-block--active.transfer__avia-department
+                    .form-group
+                      label Пункт вылета (аэропорт)
+                      input(type="text")
+                    .form-group
+                      label Номер рейса
+                      input(type="text")
+                    .form-group
+                      label Время прибытия рейса
+                      input(type="text")
+                    .form-group
+                      label Количество человек
+                      input(type="text")
+                    .form-group
+                      label ФИО гостя
+                      input(type="text")
+                    .form-group
+                      label Контактный телефон
+                      input(type="text").phone-mask
+                    .form-group
+                      label Пункт назначения
+                      input(type="text")
+                    .form-group
+                      .labels
+                        label Выбрать класс
+                        .helper Подробнее о классах авто
+                          .helper__popup
+                            .helper__header Подробнее о классах авто
+                            .helper__body
+                              p Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации 
+                      select.custom-select
+                        option Эконом
+                        option Бизнес
+                    .form-group
+                      label Тип оплаты
+                      label.radio
+                        input(type="radio" id="payment-type-1" name="payment-type").radio__input
+                        label.radio__label(for="payment-type-1")
+                        | Наличные
+                      label.radio
+                        input(type="radio" id="payment-type-2" name="payment-type").radio__input
+                        label.radio__label(for="payment-type-2")
+                        | Безналичные
 
-        //-         .transfer__form-block.transfer__trane-arrival
-        //-           .form-group
-        //-             label Пункт прибытия (вокзал)
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Номер рейса
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Город вылета
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Время прибытия рейса
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Количество человек
-        //-             input(type="text")
-        //-           .form-group
-        //-             label ФИО гостя
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Надпись на табличке
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Контактный телефон
-        //-             input(type="text").phone-mask
-        //-           .form-group
-        //-             label Пункт назначения
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Выбрать класс
-        //-             select.custom-select
-        //-               option Эконом
-        //-               option Бизнес
-        //-           .form-group
-        //-             label Тип оплаты
-        //-             label.radio
-        //-               input(type="radio" id="payment-type-1" name="payment-type").radio__input
-        //-               label.radio__label(for="payment-type-1")
-        //-               | Наличные
-        //-             label.radio
-        //-               input(type="radio" id="payment-type-2" name="payment-type").radio__input
-        //-               label.radio__label(for="payment-type-2")
-        //-               | Безналичные
-
-
-        //-     .col.col--lg-6.col--md-6.col--sm-6
-        //-       .transfer__header По отъезду
-        //-       .transfer-departure
-        //-         .transfer__form-block.transfer__form-block--active.transfer__avia-departure
-        //-           .form-group
-        //-             label Пункт прибытия (аэропорт)
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Номер рейса
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Город вылета
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Время прибытия рейса
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Количество человек
-        //-             input(type="text")
-        //-           .form-group
-        //-             label ФИО гостя
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Надпись на табличке
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Контактный телефон
-        //-             input(type="text").phone-mask
-        //-           .form-group
-        //-             label Пункт назначения
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Выбрать класс 
-        //-             input(type="text")
-
-        //-         .transfer__form-block.transfer__trane-departure
-        //-           .form-group
-        //-             label Пункт прибытия (аэропорт)
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Номер рейса
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Город вылета
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Время прибытия рейса
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Количество человек
-        //-             input(type="text")
-        //-           .form-group
-        //-             label ФИО гостя
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Надпись на табличке
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Контактный телефон
-        //-             input(type="text").phone-mask
-        //-           .form-group
-        //-             label Пункт назначения
-        //-             input(type="text")
-        //-           .form-group
-        //-             label Выбрать класс 
-        //-             input(type="text")
-
-            
-      
+                  
+                  .transfer__form-block.transfer__train-department
+                    .form-group
+                      label Пункт отправления (вокзал)
+                      input(type="text")
+                    .form-group
+                      label Номер поезда
+                      input(type="text")
+                    .form-group
+                      label Номер вагона
+                      input(type="text")
+                    .form-group
+                      label Время прибытия поезда
+                      input(type="text")
+                    .form-group
+                      label Количество человек
+                      input(type="text")
+                    .form-group
+                      label ФИО гостя
+                      input(type="text")
+                    .form-group
+                      label Контактный телефон
+                      input(type="text").phone-mask
+                    .form-group
+                      label Пункт назначения
+                      input(type="text")
+                    .form-group
+                      .labels
+                        label Выбрать класс
+                        .helper Подробнее о классах авто
+                          .helper__popup
+                            .helper__header Подробнее о классах авто
+                            .helper__body
+                              p Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации 
+                      select.custom-select
+                        option Эконом
+                        option Бизнес
+                    .form-group
+                      label Тип оплаты
+                      label.radio
+                        input(type="radio" id="payment-type-1" name="payment-type").radio__input
+                        label.radio__label(for="payment-type-1")
+                        | Наличные
+                      label.radio
+                        input(type="radio" id="payment-type-2" name="payment-type").radio__input
+                        label.radio__label(for="payment-type-2")
+                        | Безналичные
 
 
-
-
-
+        .row.row--xs-center.transfer-book
+          .col.col--sm-9.col--xs-8
+            .transfer-book__price
+              p Общая сумма:
+              .summ
+                span 12 200
+                span.ruble
+          .col.col--sm-3.col--xs-4.text--sm-right
+            button.btn.btn--primary Заказать

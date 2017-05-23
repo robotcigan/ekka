@@ -109,11 +109,12 @@ $(document).ready(function () {
   $('.regular-slider--agencies').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 600,
         settings: {
-          arrows: false,
+          // arrows: false,
           slidesToShow: 2,
           slidesToScroll: 2
         }
@@ -121,7 +122,7 @@ $(document).ready(function () {
       {
         breakpoint: 500,
         settings: {
-          arrows: false,
+          // arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1
         }
@@ -132,11 +133,12 @@ $(document).ready(function () {
   $('.hotels-slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 600,
         settings: {
-          arrows: false,
+          // arrows: false,
           slidesToShow: 2,
           slidesToScroll: 2
         }
@@ -144,7 +146,7 @@ $(document).ready(function () {
       {
         breakpoint: 500,
         settings: {
-          arrows: false,
+          // arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1
         }
@@ -155,12 +157,13 @@ $(document).ready(function () {
   $('.regular-slider--different-width').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     // variableWidth: true,
     responsive: [
       {
         breakpoint: 600,
         settings: {
-          arrows: false,
+          // arrows: false,
           slidesToShow: 2,
           slidesToScroll: 2
         }
@@ -168,7 +171,7 @@ $(document).ready(function () {
       {
         breakpoint: 500,
         settings: {
-          arrows: false,
+          // arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1
         }
@@ -351,9 +354,15 @@ addEventListener('DOMContentLoaded', function () {
   pickmeup('.datepicker-range', {
     position  : 'down',
     mode      : 'range',
-    calendars : 2,
+    calendars : 2
     // hide_on_select : true
   });
+
+
+
+  $('.datepicker-range').on('pickmeup-change', function(e) {
+    console.log(e.detail.formatted_date);
+  })
 
   pickmeup('.datepicker-small-range', {
     mode: 'range'
@@ -397,7 +406,7 @@ $(document).ready(function() {
     modal.toggleClass('guest-clicker__modal--active');
   })
 
-  $('.guest-clicker__input').val('1 номер., 1 гость');
+  $('.guest-clicker__input').val('1 номер, 1 гость');
   var roomCount = 1;
   var guestCount = 1;
 
@@ -498,14 +507,6 @@ $(document).ready(function() {
 
 
   // Transfer трансфер пульт pult
-  var type = 'avia';
-  function traneForm() {
-    $('.toggle__avia').removeClass('toggle__avia--active');
-    $('.toggle__trane').addClass('toggle__trane--active');
-    $('.toggle__icon').addClass('toggle__icon--active');
-    type = 'avia';
-  }
-
   $('#transfer-checkbox-1').addClass('active');
   $('#transfer-checkbox-2').addClass('active');
 
@@ -515,55 +516,65 @@ $(document).ready(function() {
     if( $('#transfer-checkbox-1').hasClass('active') ) {
       $('.transfer__arrival').show();
     }
-  })
+  });
   $('#transfer-checkbox-2').on('click', function() {
     $('.transfer__departure').hide();
     $(this).toggleClass('active');
     if( $('#transfer-checkbox-2').hasClass('active') ) {
       $('.transfer__departure').show();
     }
-  })
-
-  function aviaForm() {
-    $('.toggle__trane').removeClass('toggle__trane--active');
-    $('.toggle__avia').addClass('toggle__avia--active');
-    $('.toggle__icon').removeClass('toggle__icon--active');
-    type = 'train';
-  }
-
-
-  $('.toggle__avia').on('click', function() {
-    aviaForm();
   });
-
-  $('.toggle__trane').on('click', function() {
-    traneForm();
-  });
-
-  $('.toggle__icon').on('click', function() {
-
-    console.log(type)
-    if(type === "avia") {
-      traneForm();
-    }
-
-
-    if(type === "train") {
-      aviaForm();
-    }
-  });
-
 
   
   // Transfer трансфер блоки
-  $('.transfer__avia').on('click', function() {
-    $('.transfer__form-block').removeClass('transfer__form-block--active')
+  // Прибытие
+  $('.pult-arrival .toggle__avia').addClass('toggle__avia--active');
+  $('.pult-arrival .icon-avia').addClass('icon-avia--active');
+
+
+  $('.pult-arrival .transfer__avia').on('click', function() {
+    $('.transfer__train-arrival').removeClass('transfer__form-block--active')
     $('.transfer__avia-arrival').addClass('transfer__form-block--active');
+    $('.pult-arrival .toggle__icon').removeClass('toggle__icon--active');
+    $('.pult-arrival .toggle__avia').addClass('toggle__avia--active');
+    $('.pult-arrival .toggle__train').removeClass('toggle__train--active');
+    $('.pult-arrival .icon-avia').addClass('icon-avia--active');
+    $('.pult-arrival .icon-train').removeClass('icon-train--active');
   });
 
-  $('.transfer__trane').on('click', function() {
-    $('.transfer__form-block').removeClass('transfer__form-block--active')
-    $('.transfer__trane-arrival').addClass('transfer__form-block--active');
+  $('.pult-arrival .transfer__train').on('click', function() {
+    $('.transfer__avia-arrival').removeClass('transfer__form-block--active')
+    $('.transfer__train-arrival').addClass('transfer__form-block--active');
+    $('.pult-arrival .toggle__icon').addClass('toggle__icon--active');
+    $('.pult-arrival .toggle__avia').removeClass('toggle__avia--active');
+    $('.pult-arrival .toggle__train').addClass('toggle__train--active');
+    $('.pult-arrival .icon-avia').removeClass('icon-avia--active');
+    $('.pult-arrival .icon-train').addClass('icon-train--active');
+  });
+
+
+  // Убытие
+  $('.pult-department .toggle__avia').addClass('toggle__avia--active');
+  $('.pult-department .icon-avia').addClass('icon-avia--active');
+
+  $('.pult-department .transfer__avia').on('click', function() {
+    $('.transfer__train-department').removeClass('transfer__form-block--active');
+    $('.transfer__avia-department').addClass('transfer__form-block--active');
+    $('.pult-department .toggle__icon').removeClass('toggle__icon--active');
+    $('.pult-department .toggle__avia').addClass('toggle__avia--active');
+    $('.pult-department .toggle__train').removeClass('toggle__train--active');
+    $('.pult-department .icon-avia').addClass('icon-avia--active');
+    $('.pult-department .icon-train').removeClass('icon-train--active');
+  });
+
+  $('.pult-department .transfer__train').on('click', function() {
+    $('.transfer__avia-department').removeClass('transfer__form-block--active');
+    $('.transfer__train-department').addClass('transfer__form-block--active');
+    $('.pult-department .toggle__icon').addClass('toggle__icon--active');
+    $('.pult-department .toggle__avia').removeClass('toggle__avia--active');
+    $('.pult-department .toggle__train').addClass('toggle__train--active');
+    $('.pult-department .icon-avia').removeClass('icon-avia--active');
+    $('.pult-department .icon-train').addClass('icon-train--active');
   });
 
 
@@ -605,14 +616,68 @@ $(document).ready(function() {
     }
   });
 
+    // Image gallery
+  $('.regular-slider.regular-slider--different-width').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    mainClass: 'mfp-animation',
+    gallery: {
+      enabled:true
+    }
+  });
+
   // Modal модальное окно
   $('.objects-on-map').magnificPopup({
+
       type: 'inline',
       callbacks: {
         beforeOpen: function() {
-          myMap()
+
+          var map;
+          function initMap() {
+
+            map = new google.maps.Map(document.getElementById('map-objects'), {
+              zoom: 13,
+              center: {lat: 43.565570, lng: 39.746936},
+            });
+
+
+            // Create an array of alphabetical characters used to label the markers.
+            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+            // Add some markers to the map.
+            // Note: The code uses the JavaScript Array.prototype.map() method to
+            // create an array of markers based on a given "locations" array.
+            // The map() method here has nothing to do with the Google Maps API.
+            var markers = locations.map(function(location, i) {
+              return new google.maps.Marker({
+                position: location,
+                label: labels[i % labels.length]
+              });
+            });
+
+            // Add a marker clusterer to manage the markers.
+            var markerCluster = new MarkerClusterer(map, markers,
+                {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+          
+
+          }
+          var locations = [
+            {lat: 43.565570, lng: 39.746936},
+            {lat: 43.569119, lng: 39.735563},
+            {lat: 43.678581, lng: 39.607347}
+          ]
+
+          initMap();
+
+          google.maps.event.addListenerOnce(map, 'idle', function(){
+            $('.modal').addClass('loaded');
+            google.maps.event.trigger(map, 'resize');
+          });
+
         }
       }
+
   });
 
   $('.social-share').magnificPopup({

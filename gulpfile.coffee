@@ -12,6 +12,11 @@ browserSync = require 'browser-sync'
 reload = browserSync.reload
 
 
+swallowError = (error) ->
+  console.log(error.toString())
+  this.emit('end')
+
+
 gulp.task 'stylus', ->
 	gulp.src 'styles/*.styl'
 		# .pipe sourcemaps.init()
@@ -19,8 +24,7 @@ gulp.task 'stylus', ->
 			'include css': true
 			use: [nib(), rupture()]
 			# compress: true
-		.on 'error', (err) ->
-			console.log err
+		.on 'error', swallowError
 		# .pipe autoprefixer({browsers: ['> 1%', 'last 5 version','IE 10'], cascade: false})
 		# .pipe uglifycss
 		# 	'uglyComments': true
@@ -37,6 +41,7 @@ gulp.task 'stylus', ->
 gulp.task 'pug', ->
 	gulp.src '*.pug'
 		.pipe pug {pretty: true}
+		.on 'error', swallowError
 		.pipe gulp.dest 'dist/'
 
 # gulp.task 'coffee', ->

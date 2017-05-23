@@ -53,6 +53,7 @@ label
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="number"],
 select,
 textarea
   background #fff
@@ -67,6 +68,8 @@ textarea
     border-color $light-gray - 10%
   &:focus
     border-color $primary
+  &.invalid
+    border-color $red
 
 textarea
   padding 1rem
@@ -418,6 +421,32 @@ option
     float left
   a
     float right
+  .helper
+    color $primary
+    cursor pointer
+    float right
+    position relative
+    &__popup
+      animation fadeUp .4s
+      background-color #fff
+      border 1px solid $light-gray
+      display none
+      box-shadow $shadow
+      border-radius $radius
+      color $main
+      right 0
+      padding 1rem 2rem
+      position absolute
+      top 100%
+      width 30rem
+      z-index 20
+    &__header
+      font-size 1.8rem
+      font-weight 600
+      margin-bottom .5rem
+    &:hover
+      .helper__popup
+        display block
 
 .foggot
   color $primary

@@ -47,43 +47,315 @@
           <div class="row transfer">
             <div class="col col--lg-8 col--lg-offset-2">
               <h1>Трансфер</h1>
-              <form class="transfer__pult">
-                <div class="row">
-                  <div class="col col--lg-6 col--md-6 col--sm-6">
-                    <label class="checkbox">
-                      <input type="checkbox" id="transfer-checkbox-1" checked="checked"/>
-                      <label for="transfer-checkbox-1"></label><span>По прибытию</span>
-                    </label>
-                    <div class="transfer__avia toggle">
-                      <label class="toggle__avia"><i class="icon icon-avia"></i><span>Самолет</span></label>
-                    </div>
-                    <div class="toggle__icon"></div>
-                    <div class="transfer__trane">
-                      <label class="toggle__trane"><i class="icon icon-train"></i><span>Поезд</span></label>
-                    </div>
+              <form class="transfer__pult row">
+                <div class="col col--lg-6 col--md-6 col--sm-6 pult-arrival">
+                  <label class="checkbox">
+                    <input type="checkbox" id="transfer-checkbox-1" checked="checked"/>
+                    <label for="transfer-checkbox-1"></label><span>По прибытию</span>
+                  </label>
+                  <div class="transfer__avia">
+                    <label class="toggle__avia"><i class="icon icon-avia"></i><span>Самолет</span></label>
                   </div>
-                  <div class="col col--lg-6 col--md-6 col--sm-6">
-                    <label class="checkbox">
-                      <input type="checkbox" id="transfer-checkbox-2" checked="checked"/>
-                      <label for="transfer-checkbox-2"></label><span>По отъезду</span>
-                    </label>
+                  <div class="toggle__icon"></div>
+                  <div class="transfer__train">
+                    <label class="toggle__train"><i class="icon icon-train"></i><span>Поезд</span></label>
+                  </div>
+                </div>
+                <div class="col col--lg-6 col--md-6 col--sm-6 pult-department">
+                  <label class="checkbox">
+                    <input type="checkbox" id="transfer-checkbox-2" checked="checked"/>
+                    <label for="transfer-checkbox-2"></label><span>По отъезду</span>
+                  </label>
+                  <div class="transfer__avia">
+                    <label class="toggle__avia"><i class="icon icon-avia"></i><span>Самолет</span></label>
+                  </div>
+                  <div class="toggle__icon"></div>
+                  <div class="transfer__train">
+                    <label class="toggle__train"><i class="icon icon-train"></i><span>Поезд</span></label>
                   </div>
                 </div>
               </form>
               <form class="transferm__form">
                 <div class="row">
-                  <div class="col col--lg-6">
+                  <div class="col col--lg-6 col--md-6 col--sm-6">
                     <div class="transfer__arrival">
                       <div class="transfer__header">По прибытию</div>
+                      <div class="transfer__blocks">
+                        <div class="transfer__form-block transfer__form-block--active transfer__avia-arrival">
+                          <div class="form-group">
+                            <label>Пункт прибытия (аэропорт)</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Номер рейса</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Город вылета</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Время прибытия рейса</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Количество человек</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>ФИО гостя</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Надпись на табличке</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Контактный телефон</label>
+                            <input class="phone-mask" type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Пункт назначения</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <div class="labels">
+                              <label>Выбрать класс</label>
+                              <div class="helper">Подробнее о классах авто
+                                <div class="helper__popup">
+                                  <div class="helper__header">Подробнее о классах авто</div>
+                                  <div class="helper__body">
+                                    <p>Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <select class="custom-select">
+                              <option>Эконом</option>
+                              <option>Бизнес</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Тип оплаты</label>
+                            <label class="radio">
+                              <input class="radio__input" type="radio" id="payment-type-1" name="payment-type"/>
+                              <label class="radio__label" for="payment-type-1"></label>Наличные
+                            </label>
+                            <label class="radio">
+                              <input class="radio__input" type="radio" id="payment-type-2" name="payment-type"/>
+                              <label class="radio__label" for="payment-type-2"></label>Безналичные
+                            </label>
+                          </div>
+                        </div>
+                        <div class="transfer__form-block transfer__train-arrival">
+                          <div class="form-group">
+                            <label>Пункт прибытия (вокзал)</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Номер поезда</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Номер вагона</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Время прибытия поезда</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Количество человек</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>ФИО гостя</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Надпись на табличке</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Контактный телефон</label>
+                            <input class="phone-mask" type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Пункт назначения</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <div class="labels">
+                              <label>Выбрать класс</label>
+                              <div class="helper">Подробнее о классах авто
+                                <div class="helper__popup">
+                                  <div class="helper__header">Подробнее о классах авто</div>
+                                  <div class="helper__body">
+                                    <p>Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <select class="custom-select">
+                              <option>Эконом</option>
+                              <option>Бизнес</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Тип оплаты</label>
+                            <label class="radio">
+                              <input class="radio__input" type="radio" id="payment-type-1" name="payment-type"/>
+                              <label class="radio__label" for="payment-type-1"></label>Наличные
+                            </label>
+                            <label class="radio">
+                              <input class="radio__input" type="radio" id="payment-type-2" name="payment-type"/>
+                              <label class="radio__label" for="payment-type-2"></label>Безналичные
+                            </label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="col col--lg-6">
                     <div class="transfer__departure">
                       <div class="transfer__header">По убытию</div>
+                      <div class="transfer__blocks">
+                        <div class="transfer__form-block transfer__form-block--active transfer__avia-department">
+                          <div class="form-group">
+                            <label>Пункт вылета (аэропорт)</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Номер рейса</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Время прибытия рейса</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Количество человек</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>ФИО гостя</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Контактный телефон</label>
+                            <input class="phone-mask" type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Пункт назначения</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <div class="labels">
+                              <label>Выбрать класс</label>
+                              <div class="helper">Подробнее о классах авто
+                                <div class="helper__popup">
+                                  <div class="helper__header">Подробнее о классах авто</div>
+                                  <div class="helper__body">
+                                    <p>Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <select class="custom-select">
+                              <option>Эконом</option>
+                              <option>Бизнес</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Тип оплаты</label>
+                            <label class="radio">
+                              <input class="radio__input" type="radio" id="payment-type-1" name="payment-type"/>
+                              <label class="radio__label" for="payment-type-1"></label>Наличные
+                            </label>
+                            <label class="radio">
+                              <input class="radio__input" type="radio" id="payment-type-2" name="payment-type"/>
+                              <label class="radio__label" for="payment-type-2"></label>Безналичные
+                            </label>
+                          </div>
+                        </div>
+                        <div class="transfer__form-block transfer__train-department">
+                          <div class="form-group">
+                            <label>Пункт отправления (вокзал)</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Номер поезда</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Номер вагона</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Время прибытия поезда</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Количество человек</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>ФИО гостя</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Контактный телефон</label>
+                            <input class="phone-mask" type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <label>Пункт назначения</label>
+                            <input type="text"/>
+                          </div>
+                          <div class="form-group">
+                            <div class="labels">
+                              <label>Выбрать класс</label>
+                              <div class="helper">Подробнее о классах авто
+                                <div class="helper__popup">
+                                  <div class="helper__header">Подробнее о классах авто</div>
+                                  <div class="helper__body">
+                                    <p>Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <select class="custom-select">
+                              <option>Эконом</option>
+                              <option>Бизнес</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Тип оплаты</label>
+                            <label class="radio">
+                              <input class="radio__input" type="radio" id="payment-type-1" name="payment-type"/>
+                              <label class="radio__label" for="payment-type-1"></label>Наличные
+                            </label>
+                            <label class="radio">
+                              <input class="radio__input" type="radio" id="payment-type-2" name="payment-type"/>
+                              <label class="radio__label" for="payment-type-2"></label>Безналичные
+                            </label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </form>
+              <div class="row row--xs-center transfer-book">
+                <div class="col col--sm-9 col--xs-8">
+                  <div class="transfer-book__price">
+                    <p>Общая сумма:</p>
+                    <div class="summ"><span>12 200</span><span class="ruble"></span></div>
+                  </div>
+                </div>
+                <div class="col col--sm-3 col--xs-4 text--sm-right">
+                  <button class="btn btn--primary">Заказать</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -160,5 +432,7 @@
     <script src="js/jquery.inputmask.bundle.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlkgQ2z5W346VN7fBAqSrbf3ign9S1mjw&amp;callback=initMap" type="text/javascript"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
   </body>
 </html>

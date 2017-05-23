@@ -4,9 +4,19 @@
     border-radius $radius
     margin-bottom 4rem
     padding 1rem 2rem
+  .toggle
+    &__avia,
+    &__train
+      cursor pointer
+    &__avia
+      &--active
+        color $primary
+    &__train
+      &--active
+        color $primary
   &__avia
     display inline-block
-  &__trane
+  &__train
     display inline-block
   &__header
     font-size 2.2rem
@@ -15,6 +25,9 @@
   &__blocks
     position relative
     width 100%
+  .transfer__avia-department,
+  .transfer__train-department
+    transform translateX(100%)
   &__form-block
     position absolute
     transform translateX(-100%)
@@ -24,6 +37,26 @@
     width 100%
     &--active
       // left 0
+      position relative
       transform translateX(0)
       opacity 1
-  
+      &.transfer__avia-department
+      &.transfer__train-department
+        transform translateX(0)
+  &-book
+    margin-top 2rem
+    &__price
+      border-radius $radius
+      border 1px solid $light-gray
+      padding .5rem
+      clearfix()
+      p
+        font-size 1.8rem
+        float left
+        margin 0
+      .summ
+        color $primary
+        float right
+        font-size 1.8rem
+        .ruble:before
+          font-size 1.8rem

@@ -101,7 +101,7 @@
   &--scroll
     background-color #fff
     border-color transparent
-    box-shadow 5px 2px 8px rgba($gray, .1)
+    box-shadow 0px 5px 8px rgba($gray,0.3)
     top 0 !important
     li
       a
@@ -169,6 +169,7 @@
   position relative
   &:before
     content ""
+    background url('../../img/svg/wave.png')
     background url('../../img/svg/wave.svg')
     display block
     left 0
@@ -311,5 +312,112 @@
 
 .mfp-close-btn-in .mfp-close
   color #fff
+
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close
+  right -6rem
+  top 8rem
+
+.preloader
+  display: block
+  position: absolute
+  left: 50%
+  top: 50%
+  width: 150px
+  height: 150px
+  margin: -75px 0 0 -75px
+  border-radius: 50%
+  border: 3px solid transparent
+  border-top-color: #16a085
+  animation: spin 1.7s linear infinite
+  z-index: 11
+  // &--disable
+  //   display none
+  
+  &:before
+    content: ""
+    position: absolute
+    top: 5px
+    left: 5px
+    right: 5px
+    bottom: 5px
+    border-radius: 50%
+    border: 3px solid transparent
+    border-top-color: #e74c3c
+    animation: spin-reverse .6s linear infinite
+  
+  
+  &:after
+    content: ""
+    position: absolute
+    top: 15px
+    left: 15px
+    right: 15px
+    bottom: 15px
+    border-radius: 50%
+    border: 3px solid transparent
+    border-top-color: #f9c922
+    animation: spin 1s linear infinite
+  
+
+
+// Bourbon mixins
+@keyframes spin
+  0% 
+    transform rotate(0deg)
+  
+  100%
+    transform rotate(360deg)
+  
+
+
+@keyframes spin-reverse
+  0% 
+    transform rotate(0deg)
+  
+  100%
+    transform rotate(-360deg)
+  
+
+
+.preloader-wrapper .loader-section
+  position: fixed
+  top: 0
+  width: 51%
+  height: 100%
+  background: #222
+  z-index: 10
+
+
+.preloader-wrapper .loader-section.section-left
+  left: 0
+
+
+.preloader-wrapper .loader-section.section-right
+  right: 0
+
+
+/* Loaded styles */
+
+.loaded .preloader-wrapper .loader-section.section-left
+  transform: translateX(-100%)
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000)
+
+
+.loaded .preloader-wrapper .loader-section.section-right
+  transform: translateX(100%)
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000)
+
+
+.loaded .preloader
+  opacity: 0
+  transition: all 0.3s ease-out
+
+
+.loaded .preloader-wrapper
+  visibility: hidden
+  transform: translateY(-100%)
+  transition: all 0.3s 1s ease-out
+
 
 @import 'base/adapt'
