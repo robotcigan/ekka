@@ -1,8 +1,6 @@
-import '../helpers/variables.styl',
 * {
   box-sizing: border-box;
 }
-import '../helpers/variables.styl':focus,
 *:focus {
   outline: 0;
 }
@@ -181,6 +179,16 @@ body * {
 .btn--type-2:hover {
   color: #fff;
   background: #21a5de;
+}
+.btn--disable {
+  background-color: #f6f6f6;
+  color: #999;
+}
+.btn--disable:hover {
+  filter: none;
+}
+.btn img {
+  display: inline-block;
 }
 .adress {
   color: #d1d1d1;
@@ -362,11 +370,15 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
+input[type="tel"],
 select,
-textarea {
+textarea,
+.select2-selection--single {
   background: #fff;
   border: 1px solid #eee;
   border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: 400;
   padding: 0.5rem;
   padding-left: 1rem;
   transition: border-color 0.2s;
@@ -377,24 +389,30 @@ input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="password"]:hover,
 input[type="number"]:hover,
+input[type="tel"]:hover,
 select:hover,
-textarea:hover {
+textarea:hover,
+.select2-selection--single:hover {
   border-color: #d6d6d6;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="number"]:focus,
+input[type="tel"]:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+.select2-selection--single:focus {
   border-color: #21a5de;
 }
 input[type="text"].invalid,
 input[type="email"].invalid,
 input[type="password"].invalid,
 input[type="number"].invalid,
+input[type="tel"].invalid,
 select.invalid,
-textarea.invalid {
+textarea.invalid,
+.select2-selection--single.invalid {
   border-color: #ff5e5e;
 }
 textarea {
@@ -410,6 +428,9 @@ option {
 .select2-dropdown {
   border-color: #eee;
 }
+.custom-select.error + .select2-container--default .select2-selection--single {
+  border: 1px solid #ff5e5e;
+}
 .select2-dropdown.select2-dropdown--below {
   animation: fadeUp 0.3s forwards;
 }
@@ -419,15 +440,12 @@ option {
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
   transform: rotate(180deg);
 }
-.select2-container--default {
-  max-width: 100% !important;
-}
 .select2-container--default .select2-selection--single {
   border-color: #eee;
   height: 3.4rem;
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: 3.2rem;
+  line-height: 2.2rem;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
   border: none;
@@ -811,6 +829,20 @@ option {
 .foggot {
   color: #21a5de;
   text-decoration: none;
+}
+.comment-datepicker {
+  display: inline-block;
+  margin-right: 2rem;
+}
+.comment-datepicker span {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.comment-datepicker__input {
+  border: none !important;
+  display: inline-block;
+  padding: 0 !important;
+  width: initial !important;
 }
 .icon-avatar {
   background: url("../../img/avatar.png");
@@ -2004,7 +2036,7 @@ h3 {
   height: 4rem;
 }
 .hero__form--search .hero__input .select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: 4rem;
+  line-height: 3rem;
 }
 .hero__form--search .hero__input .select2-container--default .select2-selection--single .select2-selection__arrow {
   height: 3.4rem;
@@ -2144,7 +2176,7 @@ h3 {
 .card__right {
   align-content: space-between;
   display: flex;
-  flex-basis: 20%;
+  flex-basis: 21%;
   flex-wrap: wrap;
   justify-content: flex-end;
   padding: 2rem;
@@ -2201,6 +2233,11 @@ h3 {
   background-color: #fcfcfc;
   padding: 2rem;
   display: none;
+}
+.card__bottom hr {
+  border: none;
+  border: 1px solid #ddd;
+  margin: 2rem 0;
 }
 .search-checkbox {
   margin-top: 1.5rem;
@@ -2386,26 +2423,19 @@ a.city:hover {
   position: relative;
   width: 100%;
 }
-.transfer .transfer__avia-department,
-.transfer .transfer__train-department {
-  transform: translateX(100%);
-}
 .transfer__form-block {
+  display: none;
   position: absolute;
-  transform: translateX(-100%);
   opacity: 0;
   top: 0;
   transition: all 0.8s;
   width: 100%;
 }
 .transfer__form-block--active {
+  display: block;
   position: relative;
   transform: translateX(0);
   opacity: 1;
-}
-.transfer__form-block--active.transfer__avia-department,
-.transfer__form-block--active.transfer__train-department {
-  transform: translateX(0);
 }
 .transfer-book {
   margin-top: 2rem;
@@ -2588,6 +2618,7 @@ a.city:hover {
   transition: box-shadow 0.4s, border-bottom 0.1s, background-color 0.2s, color 0.2s;
   width: 100%;
   z-index: 200;
+  -webkit-transform: translateZ(0);
 }
 .main-header__container {
   align-items: center;
@@ -2809,7 +2840,6 @@ a.city:hover {
   display: flex;
 }
 .title-stars .stars {
-  text-align: right;
   min-width: 70px;
 }
 .pagination {

@@ -3874,7 +3874,7 @@ textarea {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "Flaticon";
-    src: url("./Flaticon.svg#Flaticon") format("svg");
+    src: url("../../fonts/hotel_icons/Flaticon.svg#Flaticon") format("svg");
   }
 }
 
@@ -5177,13 +5177,8 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 
-	/*
-  	Flaticon icon font: Flaticon
-  	Creation date: 10/04/2017 11:25
-  	*/
-
-/*@font-face {
-  font-family: "AnotherIcons";
+@font-face {
+  font-family: "Another";
   src: url("../../fonts/another/Flaticon.eot");
   src: url("../../fonts/another/Flaticon.eot?#iefix") format("embedded-opentype"),
        url("../../fonts/another/Flaticon.woff") format("woff"),
@@ -5195,19 +5190,29 @@ img.mfp-img {
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: "AnotherIcons";
+    font-family: "Another";
     src: url("../../fonts/another/Flaticon.svg#Flaticon") format("svg");
   }
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-  font-family: AnotherIcons;
-  font-size: 20px;
+/*[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}*/
+
+.another-icons:before {
   font-style: normal;
-  margin-left: 20px;
+  font-family: "Another";
 }
 
-.flaticon-social:before { content: "\f360"; }
-.flaticon-transport:before { content: "\f361"; }
-.flaticon-airplane:before { content: "\f362"; }*/
+.flaticon-cupboard:before { content: "\f100"; }
+.flaticon-table:before { content: "\f101"; }
+.flaticon-terrace:before { content: "\f102"; }
+.flaticon-scale:before { content: "\f103"; }
+.flaticon-mirror:before { content: "\f104"; }
+.flaticon-antique-balcony:before { content: "\f105"; }
+.flaticon-radiator:before { content: "\f106"; }
+.flaticon-sofa:before { content: "\f107"; }

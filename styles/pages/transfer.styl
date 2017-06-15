@@ -25,24 +25,26 @@
   &__blocks
     position relative
     width 100%
-  .transfer__avia-department,
-  .transfer__train-department
-    transform translateX(100%)
+  // .transfer__avia-department,
+  // .transfer__train-department
+  //   transform translateX(100%)
   &__form-block
+    display none
     position absolute
-    transform translateX(-100%)
+    // transform translateX(-100%)
     opacity 0
     top 0
     transition all .8s
     width 100%
     &--active
       // left 0
+      display block
       position relative
       transform translateX(0)
       opacity 1
-      &.transfer__avia-department
-      &.transfer__train-department
-        transform translateX(0)
+      // &.transfer__avia-department
+      // &.transfer__train-department
+      //   transform translateX(0)
   &-book
     margin-top 2rem
     &__price

@@ -1,0 +1,216 @@
+extends layout.pug
+
+block content
+  .empty
+
+  .grid.grid--container.page-section
+    a(href="").back
+      i.fa.fa-angle-left
+      span Назад к отелю Имеретинский курорт
+    .row
+      .col.col--lg-9
+        header.hotel-header
+          h1.inner-h1 Имеретинский курорт «Русские сезоны» с очень длинным и красивым названием
+          .stars
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+        img(src="img/room.jpg", alt="").room-img
+        h2.inner-h2 Двухместный номер бизнес-класса с 1 кроватью
+        .row
+          .col.col--lg-4.col--md-4.col--sm-6
+            .services
+              .services__title Удобства
+              .service
+                .service__ico
+                  i.flaticon-bed-1
+                .service__title 1 кровать размера King
+              .service
+                .service__ico
+                  i.flaticon-laptop
+                .service__title wi-fi
+          .col.col--lg-4.col--md-4.col--sm-6
+            .services
+              .services__title Развлечения
+              .service
+                .service__ico
+                  i.flaticon-television
+                .service__title спутниковое/кабельное ТВ
+          .col.col--lg-4.col--md-4.col--sm-6
+            .services
+              .services__title Обустроенность номера
+              .service
+                .service__ico
+                  i.flaticon-air-conditioner
+                .service__title Кондиционер
+        .row
+          .col.col--lg-4.col--md-4.col--sm-6
+            .services
+              .services__title Туалетные принадлежности
+              .service
+                .service__ico
+                  i.flaticon-hairdryer
+                .service__title фен
+              .service
+                .service__ico
+                  i.flaticon-shower
+                .service__title душ
+              .service
+                .service__ico
+                  i.fa.flaticon-towel
+                .service__title полотенца
+          .col.col--lg-4.col--md-4.col--sm-6
+            .services
+              .services__title Безопасность
+              .service
+                .service__ico
+                  i.flaticon-cctv
+                .service__title камеры безопасности
+              .service
+                .service__ico
+                  i.flaticon-safebox
+                .service__title сейф
+          .col.col--lg-4.col--md-4.col--sm-6
+            .services
+              .services__title Еда и напитки
+              .service
+                .service__ico
+                  i.flaticon-air-conditioner
+                .service__title Кондиционер
+              .service
+                .service__ico
+                  i.another-icons.flaticon-cupboard
+                  i.another-icons.flaticon-table
+                  i.another-icons.flaticon-scale
+                  i.another-icons.flaticon-mirror
+                  i.another-icons.flaticon-antique-balcony
+                  i.another-icons.flaticon-radiator
+                  i.another-icons.flaticon-sofa
+                .service__title Кондиционер
+
+        
+
+        form.room.room-form-book
+          .room__parameters
+            .room__parameters__items
+              .form-group
+                .room__subtitle Дата отдыха
+                input(type="text" readonly="true").datepicker-range
+              .room__guests
+                .room__subtitle Число гостей
+                i.icon.icon-avatar
+                i.icon.icon-avatar
+                i.icon.icon-plus
+                i.icon.icon--small.icon-avatar
+              .room__count
+                .room__subtitle Количество
+                select
+                  option 1
+                  option 2
+                  option 3
+              .card__main-info
+                .card__price
+                  span 13 000
+                  span.ruble
+                .card__guests 2 ночи для 1 гостя
+              .room__book
+                .btn.btn--primary Забронировать
+
+        h3.inner-h3 Отзывы
+        form.comment.comment-form
+          .comment__left
+            .comment__photo
+              img(src="img/user.jpg", alt="")
+          .comment__right
+            .comment__name Александр Романов
+            .date-choose.comment__date
+            .likes
+              span Ваша оценка
+              i.fa.fa-heart
+              i.fa.fa-heart
+              i.fa.fa-heart
+              i.fa.fa-heart
+              i.fa.fa-heart
+            textarea(placeholder="Ваш отзыв").comment__textarea
+            button.btn.btn--primary Отправить
+        - for (var i = 0; i < 3; i++)
+          .comment
+            .comment__left
+              .comment__photo
+                img(src="img/user.jpg", alt="")
+            .comment__right
+              .comment__name Александр Романов
+              .comment__date
+                span Период пребывания
+                i.fa.fa-calendar-o
+                span Пт, 13 янв &mdash; Вс, 15 янв
+              .likes
+                span Оценка
+                i.fa.fa-heart.active
+                i.fa.fa-heart.active
+                i.fa.fa-heart.active
+                i.fa.fa-heart.active
+                i.fa.fa-heart
+              .comment-text Не следует, однако забывать, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации. С другой стороны постоянное информационно - пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения
+
+        .text-center
+          .btn.btn--primary Все отзывы
+
+
+      .col.col--lg-3
+        aside.inner-aside
+          a(href="#social-share").social-share.btn.btn--secondary.btn--middle.btn--full-size
+            span Поделиться
+            i.fa.fa-share-alt
+          .gallery
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            a(href="img/gallery-big-1.jpg").gallery__img
+              img(src="img/room-1.jpg", alt="")
+            .btn.btn--primary.btn--middle.btn--full-size Все фотографии
+
+        .aside-map
+          iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d90140.36064485228!2d38.95759305000001!3d45.08809935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1491204702601" frameborder="0" style="border:0" allowfullscreen)
+
+
+
+
+  include viewed.pug
+
+
+  #social-share.modal
+    .modal__header Поделиться этим объектом
+    .form-group
+      label Поделитесь ссылкой
+      input(type="text" value="https://www.ekka.info/hotels/Nyu-Iork,NY,SSHA-c15830-h382262/2017-04-20/2017-05-08/4adults?sharing=1")
+    p Поделиться через социальные сети
+    .share42init
+
+
+
+
+
+
+

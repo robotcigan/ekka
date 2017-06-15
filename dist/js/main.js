@@ -25,42 +25,11 @@ $(document).ready(function () {
     $('.masonry').isotope({ filter: '.masonry-column__city' });
   })
 
-  // $('.popular-direction-mobile select').on('change', function() {
-  //   if($(this).find('option').index(0)) {
-  //     $('.masonry-row').isotope({ filter: '*' });
-  //     console.log(0)
-  //   }
-  //   if($(this).find('option').index(1)) {
-  //     $('.masonry-row').isotope({ filter: '.masonry-column__country' });
-  //     console.log(1)
-  //   }
-  //   if($(this).find('option').index(2)) {
-  //     $('.masonry-row').isotope({ filter: '.masonry-column__city' });
-  //     console.log(2)
-  //   }
-  // })
-
   $('.btn.btn--dashed').on('click', function() {
     $('.btn.btn--dashed').removeClass('btn--dashed-active');
     $(this).addClass('btn--dashed-active');
   })
 
-  // $('.popular-direction-desktop').on('click', function() {
-  //   console.log('adsg')
-
-  //   // $(this).toggleClass('btn--dashed-active');
-  //   $('.masonry').masonry('remove', $('.masonry-column'));
-
-  //   if($(this).text() === "Страны") {
-
-  //     $('.masonry-column.masonry__country').each(function() {
-  //       var $item = $(this);
-  //       $('.masonry').prepend($item).masonry('prepended', $item);
-  //     });
-
-  //   }
-
-  // })
 
   // Специальный слайдер на главной
   $('.special-slider').slick({
@@ -349,7 +318,6 @@ addEventListener('DOMContentLoaded', function () {
   //   calendars : 2
   // });
 
-
   // Календарь датапикер
   pickmeup('.datepicker-range', {
     position  : 'down',
@@ -358,15 +326,19 @@ addEventListener('DOMContentLoaded', function () {
     // hide_on_select : true
   });
 
-
+  pickmeup('.comment-datepicker__input', {
+    position : 'down',
+    mode     : 'range',
+    calendars: 2
+  });
 
   $('.datepicker-range').on('pickmeup-change', function(e) {
     console.log(e.detail.formatted_date);
-  })
+  });
 
   pickmeup('.datepicker-small-range', {
     mode: 'range'
-  })
+  });
 
   pickmeup('.datepicker');
   pickmeup('.datepicker-1');
@@ -380,7 +352,6 @@ addEventListener('DOMContentLoaded', function () {
 });
 
 $(document).ready(function() {
-
 
   // Главная страница инпуты
   $('.hero__input').on('click', function() {
@@ -462,9 +433,15 @@ $(document).ready(function() {
     $(this).toggleClass('custom-checkbox-label--active');
   });
 
+  $('.radio').on('click', function () {
+    $(this).toggleClass('radio--active');
+  })
+
   // Кастомный селект
   $('.custom-select').select2({
-    minimumResultsForSearch: Infinity
+    minimumResultsForSearch: Infinity,
+    dropdownAutoWidth : true,
+    width: '100%'
   });
 
   // Телефон маска
@@ -682,7 +659,7 @@ $(document).ready(function() {
 
   $('.social-share').magnificPopup({
     type: 'inline'
-  })
+  });
 
   $(window).scroll(function () {
     if( $(window).scrollTop() > 500 ) {
@@ -690,10 +667,11 @@ $(document).ready(function() {
     } else {
       $('.up-btn').removeClass('up-btn--active');
     }
-  })
+  });
 
   $('.up-btn').on('click', function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
-  })
+  });
+
 
 })

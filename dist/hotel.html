@@ -342,8 +342,14 @@
                   </label>
                 </div>
                 <div class="comment__right">
-                  <div class="comment__name">Александр Романов</div>
-                  <div class="date-choose comment__date"></div>
+                  <div class="comment__name">
+                    <div class="form-control">
+                      <input type="text" placeholder="Введите имя"/>
+                    </div>
+                  </div>
+                  <div class="comment-datepicker"><span>Период пребывания</span>
+                    <input class="comment-datepicker__input" type="text"/>
+                  </div>
                   <div class="likes"><span>Ваша оценка</span><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i></div>
                   <textarea class="comment__textarea" placeholder="Ваш отзыв"></textarea>
                   <button class="btn btn--primary">Отправить</button>

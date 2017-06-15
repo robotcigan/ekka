@@ -54,11 +54,15 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
+input[type="tel"]
 select,
-textarea
+textarea,
+.select2-selection--single
   background #fff
   border 1px solid $light-gray
   border-radius $radius
+  font-size 1.4rem
+  font-weight 400
   padding .5rem
   padding-left 1rem
   transition border-color .2s
@@ -86,6 +90,11 @@ option
   &-dropdown
     border-color $light-gray
 
+.custom-select
+  &.error
+    & + .select2-container--default .select2-selection--single
+      border 1px solid $red
+
 .select2-dropdown.select2-dropdown--below
   animation fadeUp .3s forwards
 
@@ -101,12 +110,12 @@ option
   // max-width 100% !important
 
 .select2-container--default
-  max-width 100% !important
+  // width 100% !important
   .select2-selection--single
     border-color $light-gray
     height 3.4rem
     .select2-selection__rendered
-      line-height 3.2rem
+      line-height 2.2rem
     .select2-selection__arrow b
       border none
       background url('../../img/arrows.png') no-repeat
@@ -375,6 +384,8 @@ option
 
 
 
+
+
 .toggle
   &__icon
     background rgba($primary, .1)
@@ -451,3 +462,18 @@ option
 .foggot
   color $primary
   text-decoration none
+
+
+.comment-datepicker
+  display inline-block
+  margin-right 2rem
+  span
+    display inline-block
+    margin-right 1rem
+  &__input
+    border none !important
+    display inline-block
+    padding 0 !important
+    width initial !important
+
+

@@ -224,16 +224,19 @@ block card
                         i.flaticon-air-conditioner
                       .service__title Кондиционер
             .col.col--lg-6
-              .row.special-gallery
+              .row.special-gallery.gallery
                 - for (var a = 0; a < 2; a++)
                   .col.col--lg-6.col--md-6
-                    img(src="img/direction-city-1.jpg", alt="")
+                    a(href="img/direction-city-1.jpg")
+                      img(src="img/direction-city-1.jpg", alt="")
                 - for (var b = 0; b < 3; b++)
                   .col.col--lg-4.col--md-4
-                    img(src="img/direction-city-2.jpg", alt="")
+                    a(href="img/direction-city-2.jpg")
+                      img(src="img/direction-city-2.jpg", alt="")
                 - for (var c = 0; c < 2; c++)
                   .col.col--lg-6.col--md-6
-                    img(src="img/direction-city-1.jpg", alt="")
+                    a(href="img/direction-city-1.jpg")
+                      img(src="img/direction-city-1.jpg", alt="")
 
 
         .tabs__content

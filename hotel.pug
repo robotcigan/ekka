@@ -208,8 +208,12 @@ block content
               input(type="file" id="nophoto")
                 //- img(src="img/nophoto.jpg", alt="")
           .comment__right
-            .comment__name Александр Романов
-            .date-choose.comment__date
+            .comment__name
+              .form-control
+                input(type="text" placeholder="Введите имя")
+            .comment-datepicker
+              span Период пребывания
+              input(type="text").comment-datepicker__input
             .likes
               span Ваша оценка
               i.fa.fa-heart
